@@ -1,0 +1,36 @@
+<?php
+
+declare(strict_types=1);
+
+namespace WPMenuControl\Tests\Unit;
+
+use Brain\Monkey;
+use Mockery\Adapter\Phpunit\MockeryPHPUnitIntegration;
+use PHPUnit\Framework\TestCase;
+
+abstract class AbstractUnitTestcase extends TestCase {
+
+
+	// Adds Mockery expectations to the PHPUnit assertions count.
+	use MockeryPHPUnitIntegration;
+
+	/**
+	 * Sets up the environment.
+	 *
+	 * @return void
+	 */
+	protected function setUp(): void {
+		parent::setUp();
+		Monkey\setUp();
+	}
+
+	/**
+	 * Tears down the environment.
+	 *
+	 * @return void
+	 */
+	protected function tearDown(): void {
+		Monkey\tearDown();
+		parent::tearDown();
+	}
+}

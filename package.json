@@ -1,0 +1,25 @@
+{
+	"name": "wp-menu-control",
+	"version": "1.0.0",
+	"description": "WP Menu Control lets you conditionally display each menu item based on factors like user role, device, date, pages, and more.",
+	"author": "Reza Sarailoo",
+	"license": "GPL-2.0",
+	"scripts": {
+		"build": "wp-scripts build",
+		"build:production": "composer install && composer phpcs && npm run lint:js && npm run lint:css && composer test && npm run test:unit && composer language && npm run build && npm run plugin-zip",
+		"check-engines": "wp-scripts check-engines",
+		"check-licenses": "wp-scripts check-licenses",
+		"format": "wp-scripts format",
+		"lint:css": "wp-scripts lint-style",
+		"lint:js": "wp-scripts lint-js",
+		"lint:md:docs": "wp-scripts lint-md-docs",
+		"lint:pkg-json": "wp-scripts lint-pkg-json",
+		"packages-update": "wp-scripts packages-update",
+		"plugin-zip": "wp-scripts plugin-zip",
+		"start": "wp-scripts start",
+		"test:unit": "wp-scripts test-unit-js"
+	},
+	"devDependencies": {
+		"@wordpress/scripts": "^30.4.0"
+	}
+}

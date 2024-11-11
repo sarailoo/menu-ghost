@@ -1,0 +1,43 @@
+{
+	"name": "sarailoo/wp-menu-control",
+	"description": "WP Menu Control is a WordPress plugin that lets you conditionally display each menu item based on factors like user role, device, date, pages, and more.",
+	"keywords": [ "wordpress", "plugin" ],
+	"homepage": "https://github.com/sarailoo/wp-menu-control",
+	"type": "wordpress-plugin",
+	"license": "GPL-2.0+",
+	"authors": [
+		{
+			"name": "Reza Sarailoo",
+			"email": "sarailoo.reza@gmail.com"
+		}
+	],
+	"scripts": {
+		"phpcs": "vendor/bin/phpcs .",
+		"phpcbf": "vendor/bin/phpcbf .",
+		"language": "wp i18n make-pot . languages/wp-menu-control.pot",
+		"test": "./vendor/bin/phpunit"
+	},
+	"autoload": {
+		"psr-4": {
+			"WPMenuControl\\": "app/"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"WPMenuControl\\Tests\\Unit\\": "tests/PHPUnit/Unit/"
+		}
+	},
+	"require": {
+		"php": ">=8.2"
+	},
+	"config": {
+		"allow-plugins": {
+			"dealerdirect/phpcodesniffer-composer-installer": true
+		}
+	},
+	"require-dev": {
+		"wp-coding-standards/wpcs": "^3.0",
+		"brain/monkey": "2.*",
+		"phpunit/phpunit": "^11.3"
+	}
+}
