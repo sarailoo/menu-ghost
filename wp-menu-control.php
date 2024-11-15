@@ -46,6 +46,16 @@ if (! defined('WP_MENU_CONTROL_ASSETS_URL')) {
     define('WP_MENU_CONTROL_ASSETS_URL', WP_MENU_CONTROL_URL . '/assets');
 }
 
+// Build directory.
+if (! defined('WP_MENU_CONTROL_BUILD_DIR')) {
+    define('WP_MENU_CONTROL_BUILD_DIR', WP_MENU_CONTROL_DIR . 'build/');
+}
+
+// Build url.
+if (! defined('WP_MENU_CONTROL_BUILD_URL')) {
+    define('WP_MENU_CONTROL_BUILD_URL', WP_MENU_CONTROL_URL . 'build/');
+}
+
 // Conditions option name.
 if (! defined('WP_MENU_CONTROL_OPTION_NAME')) {
     define('WP_MENU_CONTROL_OPTION_NAME', 'wp_menu_control_conditions');

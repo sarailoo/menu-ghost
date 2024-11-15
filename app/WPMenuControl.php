@@ -64,32 +64,29 @@ class WPMenuControl {
 			return;
 		}
 
-		$buildDir = WP_MENU_CONTROL_DIR . 'build/';
-		$buildUrl = WP_MENU_CONTROL_URL . 'build/';
+		$assetFile = include( WP_MENU_CONTROL_BUILD_DIR . 'index.asset.php' );
 
-		$assetFile = include( $buildDir . 'index.asset.php' );
-
-		$this->enqueueScripts($assetFile, $buildUrl);
-		$this->enqueueStyles($assetFile, $buildUrl);
+		$this->enqueueScripts($assetFile);
+		$this->enqueueStyles($assetFile);
 
 		$this->localizeScript();
 	}
 
-	private function enqueueScripts($assetFile, $buildUrl) {
+	private function enqueueScripts($assetFile) {
 		wp_enqueue_script(
 			'wp-menu-control-script',
-			$buildUrl . 'index.js',
+			WP_MENU_CONTROL_BUILD_URL . 'index.js',
 			$assetFile['dependencies'],
 			$assetFile['version'],
 			true
 		);
 	}
 
-	private function enqueueStyles($assetFile, $buildUrl) {
+	private function enqueueStyles($assetFile) {
 		if ( ! is_rtl() ) {
 			wp_enqueue_style(
 				'wp-menu-control-style',
-				$buildUrl . 'style-index.css',
+				WP_MENU_CONTROL_BUILD_URL . 'style-index.css',
 				array(),
 				$assetFile['version']
 			);
