@@ -51,9 +51,6 @@ class WPMenuControl {
 	public function enqueueAssets() {
 		$currentScreen = get_current_screen();
 
-		error_log("enqqqqqqqqqqqqqqqqqq");
-		error_log(print_r($currentScreen, true));
-
 		if ( 'nav-menus' !== $currentScreen->id ) {
 			return;
 		}
