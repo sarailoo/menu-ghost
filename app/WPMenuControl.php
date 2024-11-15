@@ -22,20 +22,21 @@ class WPMenuControl {
 	public static function instance(): WPMenuControl {
 		if ( is_null( self::$instance ) ) {
 			self::$instance = new self();
-			$instance->init();
+			self::$instance->init();
 		}
 
 		return self::$instance;
 	}
 
 	/**
-	 * Initialize hooks.
+	 * Add hooks.
 	 *
 	 * @return void.
 	 */
 	public function init() {
 		add_action( 'init', array( $this, 'loadTextDomain' ) );
-		add_filter( 'wp_get_nav_menu_items', 'hideMnuItem', 10, 3 );
+		add_action( 'admin_enqueue_scripts', array( $this, 'enqueueAssets' ) );
+		add_filter( 'wp_get_nav_menu_items', array( $this, 'hideMnuItem' ), 10, 3 );
 	}
 
 	/**
@@ -45,6 +46,48 @@ class WPMenuControl {
 	 */
 	public function loadTextDomain(): void {
 		load_plugin_textdomain( 'wp-menu-control', false, WP_MENU_CONTROL_DIR . 'languages' );
+	}
+
+	public function enqueueAssets() {
+		$currentScreen = get_current_screen();
+
+		error_log("enqqqqqqqqqqqqqqqqqq");
+		error_log(print_r($currentScreen, true));
+
+		if ( 'nav-menus' !== $currentScreen->id ) {
+			return;
+		}
+
+		$buildDir = WP_MENU_CONTROL_DIR . 'build/';
+		$buildUrl = WP_MENU_CONTROL_URL . 'build/';
+	
+		$assetFile = include( $buildDir . 'index.asset.php' );
+	
+		wp_enqueue_script(
+			'wp-menu-control-script',
+			$buildUrl . 'index.js',
+			$assetFile['dependencies'],
+			$assetFile['version'],
+			true
+		);
+	
+		if ( ! is_rtl() ) {
+			wp_enqueue_style(
+				'wp-menu-control-style',
+				$buildUrl . 'style-index.css',
+				array(),
+				$assetFile['version']
+			);
+
+			return;
+		}
+
+		wp_enqueue_style(
+			'wp-menu-control-style-rtl',
+			$buildUrl . 'style-index-rtl.css',
+			array(),
+			$assetFile['version']
+		);
 	}
 
 	public function hideMnuItem( $items, $menu, $args ) {
