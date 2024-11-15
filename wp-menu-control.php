@@ -46,5 +46,10 @@ if (! defined('WP_MENU_CONTROL_ASSETS_URL')) {
     define('WP_MENU_CONTROL_ASSETS_URL', WP_MENU_CONTROL_URL . '/assets');
 }
 
+// Conditions option name.
+if (! defined('WP_MENU_CONTROL_OPTION_NAME')) {
+    define('WP_MENU_CONTROL_OPTION_NAME', 'wp_menu_control_conditions');
+}
+
 class_exists(WPMenuControl::class) && WPMenuControl::instance();
 ?>
