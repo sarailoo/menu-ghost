@@ -125,7 +125,7 @@ class WPMenuControl {
 	}
 
 	/**
-	 * Retrieve all menu item IDs from all menus.
+	 * Pass data to script.
 	 *
 	 * @return array.
 	 */
