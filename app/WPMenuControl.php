@@ -48,10 +48,8 @@ class WPMenuControl {
 		load_plugin_textdomain( 'wp-menu-control', false, WP_MENU_CONTROL_DIR . 'languages' );
 	}
 
-	public function enqueueAssets() {
-		$currentScreen = get_current_screen();
-
-		if ( 'nav-menus' !== $currentScreen->id ) {
+	public function enqueueAssets( $hook_suffix ) {
+		if ( 'nav-menus.php' !== $hook_suffix ) {
 			return;
 		}
 
