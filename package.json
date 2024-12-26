@@ -6,7 +6,7 @@
 	"license": "GPL-2.0",
 	"scripts": {
 		"build": "wp-scripts build",
-		"build:production": "composer install && composer phpcs && npm run lint:js && npm run lint:css && composer test && npm run test:unit && composer language && npm run build && npm run plugin-zip",
+		"build:production": "composer install && composer phpcs && npm run lint:js && npm run lint:css && composer test && npm run test:unit && composer language && && npm install npm run build && npm run plugin-zip",
 		"check-engines": "wp-scripts check-engines",
 		"check-licenses": "wp-scripts check-licenses",
 		"format": "wp-scripts format",
