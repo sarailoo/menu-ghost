@@ -1,6 +1,5 @@
 import { createRoot, render, StrictMode } from '@wordpress/element';
 import { useState } from 'react';
-import { __ } from '@wordpress/i18n';
 import DisplayConditionsButton from '../components/DisplayConditionsButton';
 import ConditionsModal from '../components/ConditionsModal';
 
@@ -8,7 +7,6 @@ const WPMenuConditions = (props) => {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     const handleOpenModal = () => {
-        console.log("opennn");
         setIsModalOpen(true);
     };
 
