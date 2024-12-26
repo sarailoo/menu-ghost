@@ -1,32 +1,49 @@
 import { createRoot, render, StrictMode } from '@wordpress/element';
-import './scss/style.scss';
+import { useState } from 'react';
+import { __ } from '@wordpress/i18n';
+import DisplayConditionsButton from '../components/DisplayConditionsButton';
+import ConditionsModal from '../components/ConditionsModal';
 
-const WPMenuConditions = () => {
-	return (
-		<>
-			<button>Display Condition</button>
-		</>
-	);
+const WPMenuConditions = (props) => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const handleOpenModal = () => {
+        console.log("opennn");
+        setIsModalOpen(true);
+    };
+
+    const handleCloseModal = () => {
+        setIsModalOpen(false);
+    };
+
+    return (
+        <>
+            <DisplayConditionsButton onClick={handleOpenModal} />
+            {isModalOpen && <ConditionsModal pageConditions={props.pageConditions} menuTitle={props.menuTitle} onClose={handleCloseModal} />}
+        </>
+    );
 };
 
-window.wp_menu_control.menu_item_ids.forEach( ( itemId ) => {
-	const domElementId = `wp-menu-control-${ itemId }`;
-	const domElement = document.getElementById( domElementId );
+const pageConditions = window.wp_menu_control.page_conditions;
 
-	if (domElement) {
-		if (createRoot) {
-			createRoot(domElement).render(
-				<StrictMode>
-					<WPMenuConditions />
-				</StrictMode>
-			);
-		} else {
-			render(
-				<StrictMode>
-					<WPMenuConditions />
-				</StrictMode>,
-				domElement
-			);
-		}
-	}
-} );
+window.wp_menu_control.menu_items.forEach(({ id, title }) => {
+    const domElementId = `wp-menu-control-${id}`;
+    const domElement = document.getElementById(domElementId);
+
+    if (domElement) {
+        if (createRoot) {
+            createRoot(domElement).render(
+                <StrictMode>
+                    <WPMenuConditions pageConditions={pageConditions} menuTitle={title} />
+                </StrictMode>
+            );
+        } else {
+            render(
+                <StrictMode>
+                    <WPMenuConditions pageConditions={pageConditions} menuTitle={title} />
+                </StrictMode>,
+                domElement
+            );
+        }
+    }
+});

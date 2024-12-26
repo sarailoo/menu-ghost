@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace WPMenuControl;
 
 use WPMenuControl\Admin\MenuItem;
+use WPMenuControl\Admin\DataProvider;
 
 /**
  * WPMenuControl class.
@@ -86,7 +87,7 @@ class WPMenuControl {
 		if ( ! is_rtl() ) {
 			wp_enqueue_style(
 				'wp-menu-control-style',
-				WP_MENU_CONTROL_BUILD_URL . 'style-index.css',
+				WP_MENU_CONTROL_BUILD_URL . 'index.css',
 				array(),
 				$assetFile['version']
 			);
@@ -103,12 +104,12 @@ class WPMenuControl {
 	}
 
 	/**
-	 * Retrieve all menu item IDs from all menus.
+	 * Retrieve all menu item IDs and titles from all menus.
 	 *
-	 * @return array.
+	 * @return array
 	 */
-	private function generateMenuItemIds() {
-		$menuItemIds = [];
+	private function generateMenuItemIdsAndTitles() {
+		$menuItems = [];
 		$menus = wp_get_nav_menus();
 
 		foreach ( $menus as $menu ) {
@@ -116,12 +117,15 @@ class WPMenuControl {
 
 			if ( $items ) {
 				foreach ( $items as $item ) {
-					$menuItemIds[] = $item->ID;
+					$menuItems[] = [
+						'id' => $item->ID,
+						'title' => $item->title,
+					];
 				}
 			}
 		}
 
-		return $menuItemIds;
+		return $menuItems;
 	}
 
 	/**
@@ -130,10 +134,12 @@ class WPMenuControl {
 	 * @return array.
 	 */
 	private function localizeScript() {
-		$menuItemIds = $this->generateMenuItemIds();
+		$menuItems = DataProvider::generateMenuItemsData();
+		$pageConditions = DataProvider::generatePageConditions();
 
 		$data = [
-			'menu_item_ids' => $menuItemIds,
+			'menu_items' => $menuItems,
+			'page_conditions' => $pageConditions,
 			'ajax_url' => admin_url('admin-ajax.php'),
 			'nonce' => wp_create_nonce('wp_menu_control'),
 			'conditions' => get_option(WP_MENU_CONTROL_OPTION_NAME),
