@@ -12,7 +12,7 @@
 		<env name="PATCHWORK_CACHE_USE_SYSTEM_TEMP_DIR" value="true"/>
 	</php>
 	<testsuites>
-		<testsuite name="WP Menu Control php unit tests">
+		<testsuite name="Menu Control php unit tests">
 			<directory suffix="Test.php">./tests/PHPUnit/Unit</directory>
 		</testsuite>
 	</testsuites>

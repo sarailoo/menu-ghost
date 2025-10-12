@@ -1,7 +1,7 @@
 {
-	"name": "wp-menu-control",
+	"name": "menu-control",
 	"version": "1.0.0",
-	"description": "WP Menu Control lets you conditionally display each menu item based on factors like user role, device, date, pages, and more.",
+	"description": "Menu Control lets you conditionally display each menu item based on factors like user role, device, date, pages, and more.",
 	"author": "Reza Sarailoo",
 	"license": "GPL-2.0",
 	"scripts": {

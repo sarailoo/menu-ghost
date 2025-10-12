@@ -52,7 +52,7 @@ class AdminAssets {
 			return;
 		}
 
-		$asset_file = include WP_MENU_CONTROL_BUILD_DIR . 'index.asset.php';
+		$asset_file = include MENU_CONTROL_BUILD_DIR . 'index.asset.php';
 
 		$this->enqueue_scripts( $asset_file );
 		$this->enqueue_styles( $asset_file );
@@ -73,10 +73,10 @@ class AdminAssets {
 	 */
 	private function enqueue_scripts( array $asset_file ): void {
 		wp_enqueue_script(
-			'wp-menu-control-script',
-			WP_MENU_CONTROL_BUILD_URL . 'index.js',
+			'menu-control-script',
+			MENU_CONTROL_BUILD_URL . 'index.js',
 			(array) ( $asset_file['dependencies'] ?? array() ),
-			(string) ( $asset_file['version'] ?? WP_MENU_CONTROL_VERSION ),
+			(string) ( $asset_file['version'] ?? MENU_CONTROL_VERSION ),
 			true
 		);
 	}
@@ -93,20 +93,20 @@ class AdminAssets {
 	private function enqueue_styles( array $asset_file ): void {
 		if ( ! is_rtl() ) {
 			wp_enqueue_style(
-				'wp-menu-control-style',
-				WP_MENU_CONTROL_BUILD_URL . 'index.css',
+				'menu-control-style',
+				MENU_CONTROL_BUILD_URL . 'index.css',
 				array(),
-				(string) ( $asset_file['version'] ?? WP_MENU_CONTROL_VERSION )
+				(string) ( $asset_file['version'] ?? MENU_CONTROL_VERSION )
 			);
 
 			return;
 		}
 
 		wp_enqueue_style(
-			'wp-menu-control-style-rtl',
-			WP_MENU_CONTROL_BUILD_URL . 'style-index-rtl.css',
+			'menu-control-style-rtl',
+			MENU_CONTROL_BUILD_URL . 'style-index-rtl.css',
 			array(),
-			(string) ( $asset_file['version'] ?? WP_MENU_CONTROL_VERSION )
+			(string) ( $asset_file['version'] ?? MENU_CONTROL_VERSION )
 		);
 	}
 
@@ -140,15 +140,15 @@ class AdminAssets {
 		}
 
 		wp_localize_script(
-			'wp-menu-control-script',
-			'wp_menu_control',
+			'menu-control-script',
+			'menu_control',
 			array(
 				'menu_items'      => $menu_items,
 				'page_conditions' => $page_conditions,
 				'advanced_meta'   => DataProvider::generate_advanced_meta(),
 				'saved_settings'  => $saved_settings,
 				'ajax_url'        => admin_url( 'admin-ajax.php' ),
-				'nonce'           => wp_create_nonce( 'wp_menu_control' ),
+				'nonce'           => wp_create_nonce( 'menu_control' ),
 			)
 		);
 	}

@@ -139,7 +139,7 @@ class AdditionalLabelResolver {
 				}
 
 				/* translators: %d: post ID. */
-				return sprintf( __( 'Untitled (%d)', 'wp-menu-control' ), $post->ID );
+				return sprintf( __( 'Untitled (%d)', 'menu-control' ), $post->ID );
 
 			case 'term':
 				$taxonomy = $params['taxonomy'] ?? '';

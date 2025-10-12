@@ -13,7 +13,7 @@ namespace WPMenuControl;
  * Repository for reading and writing menu settings stored in post meta.
  */
 final class SettingsRepository {
-	public const META = '_wp_menu_control_settings';
+	public const META = '_menu_control_settings';
 
 	/**
 	 * Retrieve settings for a menu item.

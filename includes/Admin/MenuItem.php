@@ -58,8 +58,8 @@ class MenuItem {
 	public function menu_item_fields( int $item_id, WP_Post $item ): void {
 		unset( $item );
 
-		$unique_id = 'wp-menu-control-' . (int) $item_id;
-		echo '<div id="' . esc_attr( $unique_id ) . '" class="wp-menu-control-item-button-wrap"></div>';
+		$unique_id = 'menu-control-' . (int) $item_id;
+		echo '<div id="' . esc_attr( $unique_id ) . '" class="menu-control-item-button-wrap"></div>';
 	}
 
 	/**
@@ -69,15 +69,15 @@ class MenuItem {
 	 */
 	public function save_menu_conditions(): void {
 		if ( ! current_user_can( 'edit_theme_options' ) ) {
-			wp_send_json_error( array( 'message' => __( 'Forbidden.', 'wp-menu-control' ) ), 403 );
+			wp_send_json_error( array( 'message' => __( 'Forbidden.', 'menu-control' ) ), 403 );
 		}
 
 		$nonce = isset( $_POST['nonce'] )
 			? sanitize_key( wp_unslash( (string) $_POST['nonce'] ) ) // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized,WordPress.Security.NonceVerification.Missing
 			: '';
 
-		if ( '' === $nonce || ! wp_verify_nonce( $nonce, 'wp_menu_control' ) ) {
-			wp_send_json_error( array( 'message' => __( 'Invalid nonce.', 'wp-menu-control' ) ), 400 );
+		if ( '' === $nonce || ! wp_verify_nonce( $nonce, 'menu_control' ) ) {
+			wp_send_json_error( array( 'message' => __( 'Invalid nonce.', 'menu-control' ) ), 400 );
 		}
 
 		$item_id = isset( $_POST['itemId'] )
@@ -94,7 +94,7 @@ class MenuItem {
 		}
 
 		if ( 0 === $item_id || ! is_array( $raw_conditions ) ) {
-			wp_send_json_error( array( 'message' => __( 'Invalid menu item.', 'wp-menu-control' ) ), 400 );
+			wp_send_json_error( array( 'message' => __( 'Invalid menu item.', 'menu-control' ) ), 400 );
 		}
 
 		$sanitized = array();
@@ -121,6 +121,6 @@ class MenuItem {
 
 		SettingsRepository::save_pages( $item_id, $sanitized );
 
-		wp_send_json_success( array( 'message' => __( 'Conditions saved.', 'wp-menu-control' ) ) );
+		wp_send_json_success( array( 'message' => __( 'Conditions saved.', 'menu-control' ) ) );
 	}
 }

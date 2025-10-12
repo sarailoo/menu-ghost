@@ -59,17 +59,17 @@ final class SettingsController {
 	 */
 	public function save_menu_settings(): void {
 		if ( ! current_user_can( 'edit_theme_options' ) ) {
-			wp_send_json_error( array( 'message' => __( 'Forbidden.', 'wp-menu-control' ) ), 403 );
+			wp_send_json_error( array( 'message' => __( 'Forbidden.', 'menu-control' ) ), 403 );
 		}
 
-		check_ajax_referer( 'wp_menu_control', 'nonce' );
+		check_ajax_referer( 'menu_control', 'nonce' );
 
 		$item_id = isset( $_POST['itemId'] )
 			? absint( wp_unslash( (string) $_POST['itemId'] ) ) // phpcs:ignore WordPress.Security.NonceVerification.Missing
 			: 0;
 
 		if ( 0 === $item_id ) {
-			wp_send_json_error( array( 'message' => __( 'Invalid menu item.', 'wp-menu-control' ) ), 400 );
+			wp_send_json_error( array( 'message' => __( 'Invalid menu item.', 'menu-control' ) ), 400 );
 		}
 
 		$pages_raw = array_key_exists( 'pages', $_POST )
@@ -133,6 +133,6 @@ final class SettingsController {
 		SettingsRepository::save_pages( $item_id, $pages_clean );
 		SettingsRepository::save_advanced( $item_id, $advanced_clean );
 
-		wp_send_json_success( array( 'message' => __( 'Settings saved.', 'wp-menu-control' ) ) );
+		wp_send_json_success( array( 'message' => __( 'Settings saved.', 'menu-control' ) ) );
 	}
 }

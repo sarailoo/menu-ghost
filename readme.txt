@@ -1,4 +1,4 @@
-=== WP Menu Control ===
+=== Menu Control ===
 Contributors: sarailoo
 Tags: menu visibility, conditional menus, user roles, navigation, personalization
 Requires at least: 6.6
@@ -12,7 +12,7 @@ Target menu items by role, device, schedule, and campaign rules using a fast, na
 
 == Description ==
 
-Design frictionless navigation experiences and boost conversions by only showing relevant menu items to each visitor. WP Menu Control integrates with the built-in WordPress menu editor and adds a modern conditions interface that's fast, intuitive, and keyboard friendly.
+Design frictionless navigation experiences and boost conversions by only showing relevant menu items to each visitor. Menu Control integrates with the built-in WordPress menu editor and adds a modern conditions interface that's fast, intuitive, and keyboard friendly.
 
 = Fine-grained menu targeting =
 
@@ -26,7 +26,7 @@ The interface is built with React and uses WordPress components so it feels nati
 
 == Installation ==
 
-1. Upload the `wp-menu-control` folder to the `/wp-content/plugins/` directory, or install the plugin through the WordPress Plugins screen.
+1. Upload the `menu-control` folder to the `/wp-content/plugins/` directory, or install the plugin through the WordPress Plugins screen.
 2. Activate the plugin through the “Plugins” screen in WordPress.
 3. Navigate to **Appearance → Menus**, select a menu item, and click **Display Conditions** to configure visibility rules.
 
@@ -36,10 +36,10 @@ The interface is built with React and uses WordPress components so it feels nati
 No. Visibility checks run only when menus are rendered and use cached WordPress APIs. There are no external requests or front-end assets.
 
 = Will it work with my theme or page builder? =
-Yes. WP Menu Control extends the default WordPress menus, so any theme or builder that uses `wp_nav_menu()` automatically benefits from the rules you configure.
+Yes. Menu Control extends the default WordPress menus, so any theme or builder that uses `wp_nav_menu()` automatically benefits from the rules you configure.
 
 = Where are the translations stored? =
-If you upload the plugin to WordPress.org, translations are managed by GlotPress. Any custom translations can be placed in `wp-content/languages/plugins/wp-menu-control-*.mo`.
+If you upload the plugin to WordPress.org, translations are managed by GlotPress. Any custom translations can be placed in `wp-content/languages/plugins/menu-control-*.mo`.
 
 == Screenshots ==
 

@@ -58,15 +58,15 @@ class AdvancedController {
 	 */
 	public static function save_menu_rules(): void {
 		if ( ! current_user_can( 'edit_theme_options' ) ) {
-			wp_send_json_error( array( 'message' => __( 'Forbidden.', 'wp-menu-control' ) ), 403 );
+			wp_send_json_error( array( 'message' => __( 'Forbidden.', 'menu-control' ) ), 403 );
 		}
 
 		$nonce = isset( $_POST['nonce'] )
 			? sanitize_key( wp_unslash( (string) $_POST['nonce'] ) ) // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized,WordPress.Security.NonceVerification.Missing
 			: '';
 
-		if ( '' === $nonce || ! wp_verify_nonce( $nonce, 'wp_menu_control' ) ) {
-			wp_send_json_error( array( 'message' => __( 'Invalid nonce.', 'wp-menu-control' ) ), 400 );
+		if ( '' === $nonce || ! wp_verify_nonce( $nonce, 'menu_control' ) ) {
+			wp_send_json_error( array( 'message' => __( 'Invalid nonce.', 'menu-control' ) ), 400 );
 		}
 
 		$item_id = isset( $_POST['itemId'] )
@@ -83,7 +83,7 @@ class AdvancedController {
 		}
 
 		if ( ! is_array( $raw_rules ) || 0 === $item_id ) {
-			wp_send_json_error( array( 'message' => __( 'Invalid request payload.', 'wp-menu-control' ) ), 400 );
+			wp_send_json_error( array( 'message' => __( 'Invalid request payload.', 'menu-control' ) ), 400 );
 		}
 
 		$clean_rules = array();
@@ -104,7 +104,7 @@ class AdvancedController {
 
 		SettingsRepository::save_advanced( $item_id, $clean_rules );
 
-		wp_send_json_success( array( 'message' => __( 'Rules saved.', 'wp-menu-control' ) ) );
+		wp_send_json_success( array( 'message' => __( 'Rules saved.', 'menu-control' ) ) );
 	}
 
 	/**

@@ -10,18 +10,18 @@ import AdditionalField from './fields/AdditionalField';
 const fallbackTypeOptions = [
 	{
 		value: 'include',
-		label: __( 'Include', 'wp-menu-control' ),
+		label: __( 'Include', 'menu-control' ),
 	},
 	{
 		value: 'exclude',
-		label: __( 'Exclude', 'wp-menu-control' ),
+		label: __( 'Exclude', 'menu-control' ),
 	},
 ];
 
 const fallbackScopeOptions = [
 	{
 		value: 'entire_site',
-		label: __( 'Entire Site', 'wp-menu-control' ),
+		label: __( 'Entire Site', 'menu-control' ),
 	},
 ];
 
@@ -102,7 +102,7 @@ const ConditionRow = ( {
 
 				<Button
 					icon="no-alt"
-					label={ __( 'Remove rule', 'wp-menu-control' ) }
+					label={ __( 'Remove rule', 'menu-control' ) }
 					onClick={ onRemove }
 					variant="tertiary"
 					className="wpmc-condition-row__remove"

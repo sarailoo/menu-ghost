@@ -71,7 +71,7 @@ const PagesTab = forwardRef(
 					onClick={ addRow }
 					className="wpmc-pages-tab__add"
 				>
-					{ __( 'Add Condition', 'wp-menu-control' ) }
+					{ __( 'Add Condition', 'menu-control' ) }
 				</Button>
 			</div>
 		);

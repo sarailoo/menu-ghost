@@ -26,7 +26,7 @@ const fetchPath = ( type, params = {} ) => {
 			query[ key ] = value;
 		}
 	} );
-	return addQueryArgs( '/wp-menu-control/v1/search', query );
+	return addQueryArgs( '/menu-control/v1/search', query );
 };
 
 const AsyncEntitySelect = ( {
@@ -54,7 +54,7 @@ const AsyncEntitySelect = ( {
 			list.unshift( resolvedOption );
 		}
 		return [
-			{ value: '', label: __( 'All', 'wp-menu-control' ) },
+			{ value: '', label: __( 'All', 'menu-control' ) },
 			...list,
 		];
 	}, [ options, resolvedOption ] );

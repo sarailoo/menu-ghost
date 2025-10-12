@@ -35,7 +35,7 @@ class SearchController {
 	 */
 	public static function register_routes(): void {
 		register_rest_route(
-			'wp-menu-control/v1',
+			'menu-control/v1',
 			'/search',
 			array(
 				'methods'             => WP_REST_Server::READABLE,
@@ -169,7 +169,7 @@ class SearchController {
 				$label = $post->post_title;
 				if ( '' === $label ) {
 					/* translators: %d: post ID. */
-					$label = sprintf( __( 'Untitled (%d)', 'wp-menu-control' ), $post->ID );
+					$label = sprintf( __( 'Untitled (%d)', 'menu-control' ), $post->ID );
 				}
 
 				return array(
@@ -262,7 +262,7 @@ class SearchController {
 
 				if ( '' === $label ) {
 					/* translators: %d: post ID. */
-					$label = sprintf( __( 'Untitled (%d)', 'wp-menu-control' ), $post->ID );
+					$label = sprintf( __( 'Untitled (%d)', 'menu-control' ), $post->ID );
 				}
 
 				return array(

@@ -8,7 +8,7 @@ const DisplayConditionsButton = ( { onClick } ) => (
 		variant="secondary"
 		onClick={ onClick }
 	>
-		{ __( 'Display Conditions', 'wp-menu-control' ) }
+		{ __( 'Display Conditions', 'menu-control' ) }
 	</Button>
 );
 

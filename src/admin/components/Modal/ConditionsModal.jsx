@@ -13,11 +13,11 @@ import './ConditionsModal.scss';
 const TAB_CONFIG = {
 	pages: {
 		name: 'pages',
-		title: __( 'Pages', 'wp-menu-control' ),
+		title: __( 'Pages', 'menu-control' ),
 	},
 	advanced: {
 		name: 'advanced',
-		title: __( 'Advanced Rules', 'wp-menu-control' ),
+		title: __( 'Advanced Rules', 'menu-control' ),
 	},
 };
 
@@ -40,12 +40,12 @@ const ConditionsModal = ( {
 		if ( menuTitle ) {
 			return sprintf(
 				/* translators: %s: menu item title. */
-				__( '%s - Display Conditions', 'wp-menu-control' ),
+				__( '%s - Display Conditions', 'menu-control' ),
 				menuTitle
 			);
 		}
 
-		return __( 'Display Conditions', 'wp-menu-control' );
+		return __( 'Display Conditions', 'menu-control' );
 	}, [ menuTitle ] );
 
 	const handleSave = useCallback( async () => {
@@ -68,7 +68,7 @@ const ConditionsModal = ( {
 			result.error?.message ||
 				__(
 					'Unable to save changes. Please try again.',
-					'wp-menu-control'
+					'menu-control'
 				)
 		);
 	}, [ advancedDraft, onSave, pagesDraft ] );

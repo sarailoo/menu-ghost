@@ -19,26 +19,26 @@ export const UTM_KEYS = [
 export const GROUPS = [
 	{
 		key: 'audience',
-		title: __( 'User', 'wp-menu-control' ),
+		title: __( 'User', 'menu-control' ),
 		description: __(
 			'Control menu visibility based on who is visiting.',
-			'wp-menu-control'
+			'menu-control'
 		),
 	},
 	{
 		key: 'schedule',
-		title: __( 'Date & Time', 'wp-menu-control' ),
+		title: __( 'Date & Time', 'menu-control' ),
 		description: __(
 			'Schedule when links should appear.',
-			'wp-menu-control'
+			'menu-control'
 		),
 	},
 	{
 		key: 'campaign',
-		title: __( 'URL & Campaign', 'wp-menu-control' ),
+		title: __( 'URL & Campaign', 'menu-control' ),
 		description: __(
 			'Leverage query strings and campaign parameters.',
-			'wp-menu-control'
+			'menu-control'
 		),
 	},
 ];
@@ -47,10 +47,10 @@ export const buildDefinitions = ( meta ) => [
 	{
 		key: 'user_role',
 		group: 'audience',
-		label: __( 'User Role', 'wp-menu-control' ),
+		label: __( 'User Role', 'menu-control' ),
 		description: __(
 			'Only show for selected WordPress roles.',
-			'wp-menu-control'
+			'menu-control'
 		),
 		icon: 'user_role',
 		defaults: { roles: [] },
@@ -68,10 +68,10 @@ export const buildDefinitions = ( meta ) => [
 	{
 		key: 'device',
 		group: 'audience',
-		label: __( 'User Device', 'wp-menu-control' ),
+		label: __( 'User Device', 'menu-control' ),
 		description: __(
 			'Restrict to visitors on mobile, tablet, or desktop.',
-			'wp-menu-control'
+			'menu-control'
 		),
 		icon: 'device',
 		defaults: { devices: [] },
@@ -89,10 +89,10 @@ export const buildDefinitions = ( meta ) => [
 	{
 		key: 'login_status',
 		group: 'audience',
-		label: __( 'Login Status', 'wp-menu-control' ),
+		label: __( 'Login Status', 'menu-control' ),
 		description: __(
 			'Target visitors who are logged in or logged out.',
-			'wp-menu-control'
+			'menu-control'
 		),
 		icon: 'login_status',
 		defaults: { state: 'any' },
@@ -100,14 +100,14 @@ export const buildDefinitions = ( meta ) => [
 			<SelectControl
 				value={ params.state || 'any' }
 				options={ [
-					{ value: 'any', label: __( 'Any', 'wp-menu-control' ) },
+					{ value: 'any', label: __( 'Any', 'menu-control' ) },
 					{
 						value: 'logged_in',
-						label: __( 'Logged in', 'wp-menu-control' ),
+						label: __( 'Logged in', 'menu-control' ),
 					},
 					{
 						value: 'logged_out',
-						label: __( 'Logged out', 'wp-menu-control' ),
+						label: __( 'Logged out', 'menu-control' ),
 					},
 				] }
 				onChange={ ( value ) => setParams( { state: value } ) }
@@ -118,10 +118,10 @@ export const buildDefinitions = ( meta ) => [
 	{
 		key: 'signup_date',
 		group: 'audience',
-		label: __( 'Signup Date', 'wp-menu-control' ),
+		label: __( 'Signup Date', 'menu-control' ),
 		description: __(
 			'Compare against the user registration date.',
-			'wp-menu-control'
+			'menu-control'
 		),
 		icon: 'signup_date',
 		defaults: { operator: 'after', date: '' },
@@ -132,11 +132,11 @@ export const buildDefinitions = ( meta ) => [
 					options={ [
 						{
 							value: 'after',
-							label: __( 'After', 'wp-menu-control' ),
+							label: __( 'After', 'menu-control' ),
 						},
 						{
 							value: 'before',
-							label: __( 'Before', 'wp-menu-control' ),
+							label: __( 'Before', 'menu-control' ),
 						},
 					] }
 					onChange={ ( value ) => setParams( { operator: value } ) }
@@ -154,10 +154,10 @@ export const buildDefinitions = ( meta ) => [
 	{
 		key: 'browser_language',
 		group: 'audience',
-		label: __( 'Browser Language', 'wp-menu-control' ),
+		label: __( 'Browser Language', 'menu-control' ),
 		description: __(
 			'Match the visitor language preference sent by the browser.',
-			'wp-menu-control'
+			'menu-control'
 		),
 		icon: 'browser_language',
 		defaults: { langs: [] },
@@ -181,10 +181,10 @@ export const buildDefinitions = ( meta ) => [
 	{
 		key: 'days_of_week',
 		group: 'schedule',
-		label: __( 'Days of the Week', 'wp-menu-control' ),
+		label: __( 'Days of the Week', 'menu-control' ),
 		description: __(
 			'Display only on the selected weekdays.',
-			'wp-menu-control'
+			'menu-control'
 		),
 		icon: 'days_of_week',
 		defaults: { days: [] },
@@ -202,10 +202,10 @@ export const buildDefinitions = ( meta ) => [
 	{
 		key: 'within_date_range',
 		group: 'schedule',
-		label: __( 'Within Date Range', 'wp-menu-control' ),
+		label: __( 'Within Date Range', 'menu-control' ),
 		description: __(
 			'Activate only between two calendar dates.',
-			'wp-menu-control'
+			'menu-control'
 		),
 		icon: 'within_date_range',
 		defaults: { start: '', end: '' },
@@ -213,14 +213,14 @@ export const buildDefinitions = ( meta ) => [
 			<div className="wpmc-advanced__input-row">
 				<DateField
 					id="within-date-start"
-					label={ __( 'Start date', 'wp-menu-control' ) }
+					label={ __( 'Start date', 'menu-control' ) }
 					value={ params.start || '' }
 					onChange={ ( value ) => setParams( { start: value } ) }
 					disabled={ disabled }
 				/>
 				<DateField
 					id="within-date-end"
-					label={ __( 'End date', 'wp-menu-control' ) }
+					label={ __( 'End date', 'menu-control' ) }
 					value={ params.end || '' }
 					onChange={ ( value ) => setParams( { end: value } ) }
 					disabled={ disabled }
@@ -231,10 +231,10 @@ export const buildDefinitions = ( meta ) => [
 	{
 		key: 'within_time',
 		group: 'schedule',
-		label: __( 'Within Time Window', 'wp-menu-control' ),
+		label: __( 'Within Time Window', 'menu-control' ),
 		description: __(
 			'Activate during the selected time of day.',
-			'wp-menu-control'
+			'menu-control'
 		),
 		icon: 'within_time',
 		defaults: { start: '', end: '' },
@@ -242,14 +242,14 @@ export const buildDefinitions = ( meta ) => [
 			<div className="wpmc-advanced__input-row">
 				<TimeField
 					id="within-time-start"
-					label={ __( 'Start time', 'wp-menu-control' ) }
+					label={ __( 'Start time', 'menu-control' ) }
 					value={ params.start || '' }
 					onChange={ ( value ) => setParams( { start: value } ) }
 					disabled={ disabled }
 				/>
 				<TimeField
 					id="within-time-end"
-					label={ __( 'End time', 'wp-menu-control' ) }
+					label={ __( 'End time', 'menu-control' ) }
 					value={ params.end || '' }
 					onChange={ ( value ) => setParams( { end: value } ) }
 					disabled={ disabled }
@@ -260,39 +260,39 @@ export const buildDefinitions = ( meta ) => [
 	{
 		key: 'url_query_key',
 		group: 'campaign',
-		label: __( 'URL Query Parameter', 'wp-menu-control' ),
+		label: __( 'URL Query Parameter', 'menu-control' ),
 		description: __(
 			'Check for a specific query-string key/value.',
-			'wp-menu-control'
+			'menu-control'
 		),
 		icon: 'url_query_key',
 		defaults: { mode: 'exists', key: '', value: '' },
 		editor: ( { params, setParams, disabled } ) => (
 			<div className="wpmc-advanced__input-row">
 				<SelectControl
-					label={ __( 'Mode', 'wp-menu-control' ) }
+					label={ __( 'Mode', 'menu-control' ) }
 					value={ params.mode || 'exists' }
 					options={ [
 						{
 							value: 'exists',
-							label: __( 'Exists', 'wp-menu-control' ),
+							label: __( 'Exists', 'menu-control' ),
 						},
 						{
 							value: 'equals',
-							label: __( 'Equals', 'wp-menu-control' ),
+							label: __( 'Equals', 'menu-control' ),
 						},
 					] }
 					onChange={ ( value ) => setParams( { mode: value } ) }
 					disabled={ disabled }
 				/>
 				<TextControl
-					label={ __( 'Key', 'wp-menu-control' ) }
+					label={ __( 'Key', 'menu-control' ) }
 					value={ params.key || '' }
 					onChange={ ( value ) => setParams( { key: value } ) }
 					disabled={ disabled }
 				/>
 				<TextControl
-					label={ __( 'Value', 'wp-menu-control' ) }
+					label={ __( 'Value', 'menu-control' ) }
 					value={ params.value || '' }
 					onChange={ ( value ) => setParams( { value } ) }
 					disabled={ disabled }
@@ -308,30 +308,30 @@ export const buildDefinitions = ( meta ) => [
 			.replace( /\b\w/g, ( char ) => char.toUpperCase() ),
 		description: __(
 			'Require a matching campaign parameter.',
-			'wp-menu-control'
+			'menu-control'
 		),
 		icon: key,
 		defaults: { mode: 'exists', value: '' },
 		editor: ( { params, setParams, disabled } ) => (
 			<div className="wpmc-advanced__input-row">
 				<SelectControl
-					label={ __( 'Mode', 'wp-menu-control' ) }
+					label={ __( 'Mode', 'menu-control' ) }
 					value={ params.mode || 'exists' }
 					options={ [
 						{
 							value: 'exists',
-							label: __( 'Exists', 'wp-menu-control' ),
+							label: __( 'Exists', 'menu-control' ),
 						},
 						{
 							value: 'equals',
-							label: __( 'Equals', 'wp-menu-control' ),
+							label: __( 'Equals', 'menu-control' ),
 						},
 					] }
 					onChange={ ( value ) => setParams( { mode: value } ) }
 					disabled={ disabled }
 				/>
 				<TextControl
-					label={ __( 'Value', 'wp-menu-control' ) }
+					label={ __( 'Value', 'menu-control' ) }
 					value={ params.value || '' }
 					onChange={ ( value ) => setParams( { value } ) }
 					disabled={ disabled }

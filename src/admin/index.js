@@ -2,7 +2,7 @@ import { createRoot, render } from '@wordpress/element';
 import App from './App';
 import './styles/admin.scss';
 
-const globalSettings = window.wp_menu_control || {};
+const globalSettings = window.menu_control || {};
 const {
 	menu_items: menuItems = [],
 	page_conditions: pageConditionsRaw,
@@ -15,7 +15,7 @@ const {
 const pageConditions = pageConditionsRaw || { conditionTypes: [], scopes: [] };
 
 menuItems.forEach( ( { id, title } ) => {
-	const containerId = `wp-menu-control-${ id }`;
+	const containerId = `menu-control-${ id }`;
 	const container = document.getElementById( containerId );
 	if ( ! container ) {
 		return;
