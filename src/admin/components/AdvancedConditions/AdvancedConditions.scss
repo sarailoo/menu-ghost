@@ -126,6 +126,7 @@
 			}
 
 			.components-combobox-control__suggestions-container {
+				border-color: vars.$color-border;
 
 				.components-combobox-control__input {
 					border: none !important;
@@ -134,9 +135,14 @@
 					min-height: auto !important;
 				}
 
-				&:focus {
+				&:focus,
+				&:focus-within {
 					box-shadow: vars.$shadow-none !important;
-					border-color: #cfd4e6;
+					border-color: vars.$color-border;
+				}
+
+				.components-button {
+					box-shadow: none !important;
 				}
 			}
 		}
@@ -223,29 +229,6 @@
 			svg {
 				width: 18px;
 				height: 18px;
-			}
-		}
-
-		&__info-popover {
-
-			&.components-popover {
-				max-width: 260px;
-				width: auto;
-			}
-
-			.components-popover__content {
-				padding: 4px 8px;
-				width: auto;
-				position: relative;
-				top: -18px;
-				left: 18px;
-			}
-
-			p {
-				margin: 0;
-				color: vars.$color-text;
-				font-size: 12px;
-				line-height: 1.5;
 			}
 		}
 

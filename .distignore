@@ -1,7 +1,6 @@
 .*
 !.htaccess
 node_modules
-vendor
 src
 tests
 package.json

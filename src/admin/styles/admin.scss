@@ -9,6 +9,31 @@
 	border: 1px solid vars.$color-primary;
 }
 
+.wpmc-advanced__info-popover {
+
+	&.components-popover {
+		max-width: 260px;
+		width: auto;
+	}
+
+	.components-popover__content {
+		padding: 4px 8px;
+		width: auto;
+		position: relative;
+		top: -18px;
+		left: 18px;
+		box-shadow: 0 0 0 1px #ccc, 0 2px 3px #0000000d, 0 4px 5px #0000000a, 0 4px 2px #00000008, 0 1px 1px #00000005;
+		border-radius: 3px;
+	}
+
+	p {
+		margin: 0;
+		color: vars.$color-text;
+		font-size: 12px;
+		line-height: 1.5;
+	}
+}
+
 .wpmc-conditions-modal {
 
 	.components-button:focus,

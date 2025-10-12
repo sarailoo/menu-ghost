@@ -188,12 +188,9 @@ const AdvancedConditions = forwardRef(
 			[ ruleMap ]
 		);
 
-		const updateRuleMap = useCallback(
-			( updater ) => {
-				setRuleMap( ( current ) => updater( current ) );
-			},
-			[]
-		);
+		const updateRuleMap = useCallback( ( updater ) => {
+			setRuleMap( ( current ) => updater( current ) );
+		}, [] );
 		useEffect( () => {
 			if ( hydratingRef.current ) {
 				hydratingRef.current = false;
