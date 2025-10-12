@@ -47,8 +47,6 @@ class WPMenuControl {
 	 * @return void
 	 */
 	public function init() {
-		$this->add_hooks();
-
 		AdminAssets::register();
 		SearchController::register();
 
@@ -61,23 +59,5 @@ class WPMenuControl {
 		MenuItem::instance();
 		AdvancedController::instance();
 		SettingsController::instance();
-	}
-
-	/**
-	 * Add hooks.
-	 *
-	 * @return void
-	 */
-	private function add_hooks() {
-		add_action( 'init', array( $this, 'load_text_domain' ) );
-	}
-
-	/**
-	 * Load text domain.
-	 *
-	 * @return void
-	 */
-	public function load_text_domain(): void {
-		load_plugin_textdomain( 'wp-menu-control', false, WP_MENU_CONTROL_DIR . 'languages' );
 	}
 }
