@@ -2,7 +2,7 @@
 Contributors: sarailoo
 Tags: menu visibility, conditional menus, user roles, navigation, personalization
 Requires at least: 6.6
-Tested up to: 6.8.3
+Tested up to: 6.8
 Stable tag: 1.0.0
 Requires PHP: 8.0
 License: GPLv2 or later
