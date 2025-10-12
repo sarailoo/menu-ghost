@@ -1,1 +1,1 @@
-import './views/main';
+import './admin/index';
