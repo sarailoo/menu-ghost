@@ -1,0 +1,19 @@
+@use "../../styles/variables" as vars;
+
+.wpmc-pages-tab {
+	display: flex;
+	flex-direction: column;
+	gap: vars.$spacing-xs;
+	max-height: 420px;
+}
+
+.wpmc-pages-tab__list {
+	display: flex;
+	flex-direction: column;
+	gap: vars.$spacing-xs;
+	padding-right: vars.$spacing-2xs;
+}
+
+.wpmc-pages-tab__add {
+	align-self: flex-start;
+}
