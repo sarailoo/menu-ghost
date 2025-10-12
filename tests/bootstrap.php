@@ -1,9 +1,14 @@
 <?php
+/**
+ * PHPUnit bootstrap file.
+ *
+ * @package WPMenuControl\Tests
+ */
 
 declare(strict_types=1);
 
-putenv( 'TESTS_PATH=' . __DIR__ );
-putenv( 'LIBRARY_PATH=' . dirname( __DIR__ ) );
+putenv( 'TESTS_PATH=' . __DIR__ ); // phpcs:ignore WordPress.PHP.DiscouragedPHPFunctions.runtime_configuration_putenv
+putenv( 'LIBRARY_PATH=' . dirname( __DIR__ ) ); // phpcs:ignore WordPress.PHP.DiscouragedPHPFunctions.runtime_configuration_putenv
 $vendor = dirname( dirname( __DIR__ ) ) . '/vendor/';
 if ( ! realpath( $vendor ) ) {
 	die( 'Please install via Composer before running tests.' );
