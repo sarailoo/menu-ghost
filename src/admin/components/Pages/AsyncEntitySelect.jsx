@@ -53,10 +53,7 @@ const AsyncEntitySelect = ( {
 		) {
 			list.unshift( resolvedOption );
 		}
-		return [
-			{ value: '', label: __( 'All', 'menu-control' ) },
-			...list,
-		];
+		return [ { value: '', label: __( 'All', 'menu-control' ) }, ...list ];
 	}, [ options, resolvedOption ] );
 
 	const queryItems = useCallback(

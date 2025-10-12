@@ -28,10 +28,7 @@ export const GROUPS = [
 	{
 		key: 'schedule',
 		title: __( 'Date & Time', 'menu-control' ),
-		description: __(
-			'Schedule when links should appear.',
-			'menu-control'
-		),
+		description: __( 'Schedule when links should appear.', 'menu-control' ),
 	},
 	{
 		key: 'campaign',
