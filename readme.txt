@@ -8,7 +8,7 @@ Requires PHP: 8.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Control exactly who sees each navigation menu item. WP Menu Control offers advanced display rules based on user attributes, pages, devices, schedule windows, and marketing campaigns.
+Target menu items by role, device, schedule, and campaign rules using a fast, native conditions interface inside the menu editor.
 
 == Description ==
 
