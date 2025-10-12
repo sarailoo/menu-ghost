@@ -1,0 +1,149 @@
+@use "../../styles/variables" as vars;
+@use "../../styles/mixins" as mixins;
+
+.components-modal__screen-overlay {
+	position: fixed;
+	inset: 0;
+}
+
+.wpmc-conditions-modal {
+	position: fixed;
+
+	&.components-modal__frame {
+		max-width: 920px;
+		width: min(920px, 94vw);
+		max-height: 90vh;
+		top: 50% !important;
+		left: 50% !important;
+		transform: translate(-50%, -50%) !important;
+	}
+
+	.components-modal__frame {
+		z-index: 100001;
+	}
+
+	.components-modal__screen-overlay {
+		background: rgba(8, 18, 43, 0.55);
+		z-index: 100000;
+	}
+
+	.components-modal__content {
+		padding: 0;
+		max-height: 90vh;
+		overflow: hidden;
+		margin-top: 65px;
+	}
+
+	.components-modal__header {
+		padding-top: vars.$spacing-lg;
+		padding-bottom: 0;
+		height: auto;
+
+		.components-modal__header-heading {
+			font-size: 14px;
+			font-weight: 700;
+			letter-spacing: 0.08em;
+			text-transform: uppercase;
+			color: vars.$color-text;
+		}
+
+		.components-button {
+			height: auto;
+			padding: 0;
+
+			svg {
+				width: 18px;
+				height: 18px;
+			}
+
+			&:focus {
+
+				@include mixins.focus-ring-reset;
+			}
+		}
+	}
+
+	&__tabs {
+
+		.components-tab-panel__tabs {
+			display: flex;
+			gap: vars.$spacing-lg;
+			padding: 0 vars.$spacing-xl;
+			border-bottom: 1px solid vars.$color-border-light;
+		}
+
+		.components-tab-panel__tab {
+			padding: 10px vars.$spacing-md;
+			border-radius: 24px;
+			font-weight: 600;
+			color: vars.$color-text;
+			background: vars.$color-accent-soft;
+			border: 1px solid transparent;
+			transition:
+				background 0.2s ease,
+				color 0.2s ease;
+
+			&.is-active {
+				background: vars.$color-border-strong;
+				border-color: vars.$color-border-strong;
+				color: vars.$color-surface;
+			}
+		}
+
+		.components-tab-panel__tabs-item {
+			padding: 0;
+			height: 36px !important;
+
+			&.components-button:focus {
+
+				@include mixins.focus-ring-reset;
+			}
+		}
+	}
+
+	&__inner {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__tab {
+		flex: 1;
+		padding: 14px vars.$spacing-xl 0;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__content {
+		flex: 1;
+		overflow-y: auto;
+		padding-bottom: vars.$spacing-lg;
+		min-height: 180px;
+	}
+
+	&__notice {
+		margin: 0 vars.$spacing-xl vars.$spacing-sm;
+	}
+
+	&__footer {
+		display: flex;
+		justify-content: flex-end;
+		gap: vars.$spacing-sm;
+		padding: vars.$spacing-md vars.$spacing-xl 24px;
+		border-top: 1px solid vars.$color-border-light;
+		background: vars.$color-accent-soft;
+		margin-top: vars.$spacing-xs;
+	}
+
+	&__save {
+
+		&.components-button {
+			background-color: vars.$color-border-strong;
+			border-color: vars.$color-border-strong;
+
+			&:hover {
+				background-color: vars.$color-primary-dark;
+				border-color: vars.$color-primary-dark;
+			}
+		}
+	}
+}
