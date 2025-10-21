@@ -3,7 +3,7 @@
 
 /* Core admin styles composed via component-specific SCSS imports. */
 
-.menu-control-item-button-wrap .components-button {
+.menu-ghost-item-button-wrap .components-button {
 	transition: color 0.2s ease, background 0.2s ease;
 	box-shadow: vars.$shadow-none !important;
 	border: 1px solid vars.$color-primary;

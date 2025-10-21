@@ -2,12 +2,12 @@
 /**
  * Shared setup/teardown utilities for unit tests.
  *
- * @package WPMenuControl\Tests
+ * @package MenuGhost\Tests
  */
 
 declare(strict_types=1);
 
-namespace WPMenuControl\Tests\Unit;
+namespace MenuGhost\Tests\Unit;
 
 use Brain\Monkey;
 use Mockery\Adapter\Phpunit\MockeryPHPUnitIntegration;

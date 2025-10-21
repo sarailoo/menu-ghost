@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <phpunit
-    bootstrap="tests/PHPUnit/bootstrap.php"
+    bootstrap="tests/bootstrap.php"
 
     backupGlobals="false"
 	colors="true"
@@ -12,8 +12,8 @@
 		<env name="PATCHWORK_CACHE_USE_SYSTEM_TEMP_DIR" value="true"/>
 	</php>
 	<testsuites>
-		<testsuite name="Menu Control php unit tests">
-			<directory suffix="Test.php">./tests/PHPUnit/Unit</directory>
+		<testsuite name="Menu Ghost php unit tests">
+			<directory suffix="Test.php">./tests/Unit</directory>
 		</testsuite>
 	</testsuites>
     <filter>

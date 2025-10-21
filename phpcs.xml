@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<ruleset name="Menu Control Coding Standards">
+<ruleset name="Menu Ghost Coding Standards">
 	<rule ref="WordPress">
 		<exclude name="WordPress.Files.FileName" />
 	</rule>

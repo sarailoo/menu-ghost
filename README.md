@@ -1,6 +1,6 @@
-## Menu Control
+## Menu Ghost
 
-This repository contains the development version of the Menu Control plugin.
+This repository contains the development version of the Menu Ghost plugin.
 
 If you're looking for the formatted WordPress.org documentation, please read [`readme.txt`](./readme.txt). It follows the official plugin directory guidelines and is bundled in release zips.
 

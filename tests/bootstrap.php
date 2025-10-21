@@ -2,7 +2,7 @@
 /**
  * PHPUnit bootstrap file.
  *
- * @package WPMenuControl\Tests
+ * @package MenuGhost\Tests
  */
 
 declare(strict_types=1);

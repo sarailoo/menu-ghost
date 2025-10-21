@@ -28,7 +28,7 @@ const App = ( {
 			}
 
 			const payload = new URLSearchParams();
-			payload.append( 'action', 'save_menu_settings' );
+			payload.append( 'action', 'mghost_save_menu_settings' );
 			if ( nonce ) {
 				payload.append( 'nonce', nonce );
 			}

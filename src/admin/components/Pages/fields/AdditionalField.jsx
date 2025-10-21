@@ -20,7 +20,7 @@ const AdditionalField = ( { value, initialLabel, config = {}, onChange } ) => {
 		}
 
 		return [
-			{ value: '', label: __( 'All', 'menu-control' ) },
+			{ value: '', label: __( 'All', 'menu-ghost' ) },
 			...formatStaticOptions( listItems ),
 		];
 	}, [ asyncConfig, config.list ] );

@@ -1,7 +1,7 @@
 {
-	"name": "menu-control",
+	"name": "menu-ghost",
 	"version": "1.0.0",
-	"description": "Menu Control lets you conditionally display each menu item based on factors like user role, device, date, pages, and more.",
+	"description": "Target menu items by role, device, schedule, and campaign rules from a native conditions panel.",
 	"author": "Reza Sarailoo",
 	"license": "GPL-2.0",
 	"scripts": {
@@ -10,8 +10,8 @@
 		"check-engines": "wp-scripts check-engines",
 		"check-licenses": "wp-scripts check-licenses",
 		"format": "wp-scripts format",
-		"lint:css": "wp-scripts lint-style",
-		"lint:js": "wp-scripts lint-js",
+		"lint:css": "wp-scripts lint-style --fix",
+		"lint:js": "wp-scripts lint-js --fix",
 		"lint:md:docs": "wp-scripts lint-md-docs",
 		"lint:pkg-json": "wp-scripts lint-pkg-json",
 		"packages-update": "wp-scripts packages-update",

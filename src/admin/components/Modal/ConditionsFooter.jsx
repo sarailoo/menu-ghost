@@ -4,7 +4,7 @@ import { __ } from '@wordpress/i18n';
 const ConditionsFooter = ( { onCancel, onSave, saving } ) => (
 	<footer className="wpmc-conditions-modal__footer">
 		<Button variant="secondary" onClick={ onCancel } disabled={ saving }>
-			{ __( 'Cancel', 'menu-control' ) }
+			{ __( 'Cancel', 'menu-ghost' ) }
 		</Button>
 		<Button
 			variant="primary"
@@ -13,8 +13,8 @@ const ConditionsFooter = ( { onCancel, onSave, saving } ) => (
 			disabled={ saving }
 		>
 			{ saving
-				? __( 'Saving…', 'menu-control' )
-				: __( 'Save & Close', 'menu-control' ) }
+				? __( 'Saving…', 'menu-ghost' )
+				: __( 'Save & Close', 'menu-ghost' ) }
 		</Button>
 	</footer>
 );

@@ -26,7 +26,7 @@ const fetchPath = ( type, params = {} ) => {
 			query[ key ] = value;
 		}
 	} );
-	return addQueryArgs( '/menu-control/v1/search', query );
+	return addQueryArgs( '/menu-ghost/v1/search', query );
 };
 
 const AsyncEntitySelect = ( {
@@ -53,7 +53,7 @@ const AsyncEntitySelect = ( {
 		) {
 			list.unshift( resolvedOption );
 		}
-		return [ { value: '', label: __( 'All', 'menu-control' ) }, ...list ];
+		return [ { value: '', label: __( 'All', 'menu-ghost' ) }, ...list ];
 	}, [ options, resolvedOption ] );
 
 	const queryItems = useCallback(

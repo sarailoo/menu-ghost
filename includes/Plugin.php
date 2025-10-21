@@ -2,37 +2,37 @@
 /**
  * Main plugin bootstrap.
  *
- * @package WPMenuControl
+ * @package MenuGhost
  */
 
 declare(strict_types=1);
 
-namespace WPMenuControl;
+namespace MenuGhost;
 
-use WPMenuControl\Admin\Assets\AdminAssets;
-use WPMenuControl\Admin\MenuItem;
-use WPMenuControl\Admin\AdvancedController;
-use WPMenuControl\Admin\SettingsController;
-use WPMenuControl\Admin\SearchController;
-use WPMenuControl\Frontend\MenuVisibility;
+use MenuGhost\Admin\Assets\AdminAssets;
+use MenuGhost\Admin\MenuItem;
+use MenuGhost\Admin\AdvancedController;
+use MenuGhost\Admin\SettingsController;
+use MenuGhost\Admin\SearchController;
+use MenuGhost\Frontend\MenuVisibility;
 
 /**
- * WPMenuControl class.
+ * Primary plugin bootstrap class.
  */
-class WPMenuControl {
+class Plugin {
 	/**
 	 * Shared instance of the plugin bootstrap.
 	 *
-	 * @var WPMenuControl|null
+	 * @var Plugin|null
 	 */
-	private static ?WPMenuControl $instance = null;
+	private static ?Plugin $instance = null;
 
 	/**
-	 * Return an instance of the WPMenuControl Class.
+	 * Return an instance of the plugin bootstrap.
 	 *
-	 * @return WPMenuControl class instance
+	 * @return Plugin class instance
 	 */
-	public static function instance(): WPMenuControl {
+	public static function instance(): Plugin {
 		if ( null === self::$instance ) {
 			self::$instance = new self();
 			self::$instance->init();
