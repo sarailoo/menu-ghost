@@ -47,7 +47,7 @@ final class SettingsController {
 	 * @return void
 	 */
 	private function init(): void {
-		add_action( 'wp_ajax_mghost_save_menu_settings', array( $this, 'save_menu_settings' ) );
+		add_action( 'wp_ajax_mngh_save_menu_settings', array( $this, 'save_menu_settings' ) );
 	}
 
 	/**
@@ -72,26 +72,18 @@ final class SettingsController {
 			wp_send_json_error( array( 'message' => __( 'Invalid menu item.', 'menu-ghost' ) ), 400 );
 		}
 
-		$pages_raw = array_key_exists( 'pages', $_POST )
-			? wp_unslash( $_POST['pages'] ) // phpcs:ignore WordPress.Security.NonceVerification.Missing,WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
-			: array();
-
-		if ( is_string( $pages_raw ) ) {
-			$decoded   = json_decode( $pages_raw, true );
-			$pages_raw = is_array( $decoded ) ? $decoded : array();
-		} elseif ( ! is_array( $pages_raw ) ) {
-			$pages_raw = array();
+		$pages_raw = array();
+		if ( isset( $_POST['pages'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Missing
+			$pages_input = sanitize_textarea_field( wp_unslash( (string) $_POST['pages'] ) );
+			$decoded     = json_decode( $pages_input, true );
+			$pages_raw   = is_array( $decoded ) ? $decoded : array();
 		}
 
-		$advanced_raw = array_key_exists( 'advanced', $_POST )
-			? wp_unslash( $_POST['advanced'] ) // phpcs:ignore WordPress.Security.NonceVerification.Missing,WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
-			: array();
-
-		if ( is_string( $advanced_raw ) ) {
-			$decoded      = json_decode( $advanced_raw, true );
-			$advanced_raw = is_array( $decoded ) ? $decoded : array();
-		} elseif ( ! is_array( $advanced_raw ) ) {
-			$advanced_raw = array();
+		$advanced_raw = array();
+		if ( isset( $_POST['advanced'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Missing
+			$advanced_input = sanitize_textarea_field( wp_unslash( (string) $_POST['advanced'] ) );
+			$decoded        = json_decode( $advanced_input, true );
+			$advanced_raw   = is_array( $decoded ) ? $decoded : array();
 		}
 
 		$pages_clean = array_values(

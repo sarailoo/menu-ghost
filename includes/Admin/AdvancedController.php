@@ -46,7 +46,7 @@ class AdvancedController {
 	 * @return void
 	 */
 	public static function init(): void {
-		add_action( 'wp_ajax_mghost_save_menu_rules', array( __CLASS__, 'save_menu_rules' ) );
+		add_action( 'wp_ajax_mngh_save_menu_rules', array( __CLASS__, 'save_menu_rules' ) );
 	}
 
 	/**
@@ -70,15 +70,14 @@ class AdvancedController {
 		}
 
 		$item_id = isset( $_POST['itemId'] )
-			? (int) wp_unslash( (string) $_POST['itemId'] ) // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized,WordPress.Security.NonceVerification.Missing
+			? absint( wp_unslash( $_POST['itemId'] ) ) // phpcs:ignore WordPress.Security.NonceVerification.Missing
 			: 0;
 
-		$raw_rules = isset( $_POST['rules'] )
-			? wp_unslash( $_POST['rules'] ) // phpcs:ignore WordPress.Security.NonceVerification.Missing,WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
-			: array();
+		$raw_rules = array();
 
-		if ( is_string( $raw_rules ) ) {
-			$decoded   = json_decode( $raw_rules, true );
+		if ( isset( $_POST['rules'] ) ) {
+			$raw_input = sanitize_textarea_field( wp_unslash( (string) $_POST['rules'] ) ); // phpcs:ignore WordPress.Security.NonceVerification.Missing
+			$decoded   = json_decode( $raw_input, true );
 			$raw_rules = is_array( $decoded ) ? $decoded : array();
 		}
 

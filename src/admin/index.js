@@ -2,7 +2,7 @@ import { createRoot, render } from '@wordpress/element';
 import App from './App';
 import './styles/admin.scss';
 
-const globalSettings = window.menu_ghost || {};
+const globalSettings = window.mnghMenuGhost || {};
 const {
 	menu_items: menuItems = [],
 	page_conditions: pageConditionsRaw,

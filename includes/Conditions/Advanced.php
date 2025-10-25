@@ -80,10 +80,7 @@ class Advanced {
 			return true;
 		}
 
-		$raw_accept = isset( $_SERVER['HTTP_ACCEPT_LANGUAGE'] )
-			? wp_unslash( (string) $_SERVER['HTTP_ACCEPT_LANGUAGE'] ) // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
-			: '';
-		$accept     = strtolower( sanitize_text_field( $raw_accept ) );
+		$accept = strtolower( self::get_server_value( 'HTTP_ACCEPT_LANGUAGE' ) );
 
 		foreach ( $languages as $language_code ) {
 			$pattern = sprintf( '~\b%s(?:-|;|,|\s|$)~', preg_quote( $language_code, '~' ) );
@@ -189,17 +186,17 @@ class Advanced {
 		}
 
 		if ( 'equals' === $mode ) {
-			if ( ! isset( $_GET[ $key ] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+			if ( '' === self::get_query_value( $key ) ) {
 				return false;
 			}
 
-			$value   = sanitize_text_field( wp_unslash( (string) $_GET[ $key ] ) ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+			$value   = self::get_query_value( $key );
 			$desired = (string) ( $params['value'] ?? '' );
 
 			return $value === $desired;
 		}
 
-		return isset( $_GET[ $key ] ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		return '' !== self::get_query_value( $key );
 	}
 
 	/**
@@ -260,17 +257,17 @@ class Advanced {
 		$mode = (string) ( $params['mode'] ?? 'exists' );
 
 		if ( 'equals' === $mode ) {
-			if ( ! isset( $_GET[ $key ] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+			if ( '' === self::get_query_value( $key ) ) {
 				return false;
 			}
 
-			$value   = sanitize_text_field( wp_unslash( (string) $_GET[ $key ] ) ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+			$value   = self::get_query_value( $key );
 			$desired = (string) ( $params['value'] ?? '' );
 
 			return $value === $desired;
 		}
 
-		return isset( $_GET[ $key ] ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		return '' !== self::get_query_value( $key );
 	}
 
 	/**
@@ -379,10 +376,7 @@ class Advanced {
 	 * @return string One of mobile, tablet, or desktop.
 	 */
 	private static function detect_device(): string {
-		$raw_user_agent = isset( $_SERVER['HTTP_USER_AGENT'] )
-			? wp_unslash( (string) $_SERVER['HTTP_USER_AGENT'] ) // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
-			: '';
-		$user_agent     = strtolower( sanitize_text_field( $raw_user_agent ) );
+		$user_agent = strtolower( self::get_server_value( 'HTTP_USER_AGENT' ) );
 
 		if ( '' === $user_agent ) {
 			return 'desktop';
@@ -397,5 +391,31 @@ class Advanced {
 		}
 
 		return 'desktop';
+	}
+
+	/**
+	 * Safely read a $_SERVER variable.
+	 *
+	 * @param string $key Server key.
+	 *
+	 * @return string
+	 */
+	private static function get_server_value( string $key ): string {
+		return isset( $_SERVER[ $key ] )
+			? sanitize_text_field( wp_unslash( (string) $_SERVER[ $key ] ) )
+			: '';
+	}
+
+	/**
+	 * Safely read a $_GET variable.
+	 *
+	 * @param string $key Query-string key.
+	 *
+	 * @return string
+	 */
+	private static function get_query_value( string $key ): string {
+		return isset( $_GET[ $key ] ) // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+			? sanitize_text_field( wp_unslash( (string) $_GET[ $key ] ) ) // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+			: '';
 	}
 }

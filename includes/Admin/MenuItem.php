@@ -44,7 +44,7 @@ class MenuItem {
 	 */
 	public function init(): void {
 		add_action( 'wp_nav_menu_item_custom_fields', array( $this, 'menu_item_fields' ), 10, 2 );
-		add_action( 'wp_ajax_mghost_save_menu_conditions', array( $this, 'save_menu_conditions' ) );
+		add_action( 'wp_ajax_mngh_save_menu_conditions', array( $this, 'save_menu_conditions' ) );
 	}
 
 	/**
@@ -59,7 +59,7 @@ class MenuItem {
 		unset( $item );
 
 		$unique_id = 'menu-ghost-' . (int) $item_id;
-		echo '<div id="' . esc_attr( $unique_id ) . '" class="menu-ghost-item-button-wrap"></div>';
+		echo '<div id="' . esc_attr( $unique_id ) . '" class="mngh-menu-item-button-wrap"></div>';
 	}
 
 	/**
@@ -81,15 +81,13 @@ class MenuItem {
 		}
 
 		$item_id = isset( $_POST['itemId'] )
-			? (int) wp_unslash( (string) $_POST['itemId'] ) // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized,WordPress.Security.NonceVerification.Missing
+			? absint( wp_unslash( $_POST['itemId'] ) ) // phpcs:ignore WordPress.Security.NonceVerification.Missing
 			: 0;
 
-		$raw_conditions = isset( $_POST['conditions'] )
-			? wp_unslash( $_POST['conditions'] ) // phpcs:ignore WordPress.Security.NonceVerification.Missing,WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
-			: array();
-
-		if ( is_string( $raw_conditions ) ) {
-			$decoded        = json_decode( $raw_conditions, true );
+		$raw_conditions = array();
+		if ( isset( $_POST['conditions'] ) ) {
+			$raw_input      = sanitize_textarea_field( wp_unslash( (string) $_POST['conditions'] ) ); // phpcs:ignore WordPress.Security.NonceVerification.Missing
+			$decoded        = json_decode( $raw_input, true );
 			$raw_conditions = is_array( $decoded ) ? $decoded : array();
 		}
 

@@ -23,12 +23,10 @@ declare(strict_types=1);
 namespace MenuGhost;
 
 if ( ! class_exists( Plugin::class ) ) {
-	$composer_autoload = __DIR__ . '/vendor/autoload.php';
+	$mngh_autoloader = __DIR__ . '/vendor/autoload.php';
 
-	if ( is_readable( $composer_autoload ) ) {
-		require_once $composer_autoload;
-	} else {
-		require_once __DIR__ . '/includes/autoload.php';
+	if ( is_readable( $mngh_autoloader ) ) {
+		require_once $mngh_autoloader;
 	}
 }
 

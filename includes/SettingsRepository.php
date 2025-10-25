@@ -13,7 +13,7 @@ namespace MenuGhost;
  * Repository for reading and writing menu settings stored in post meta.
  */
 final class SettingsRepository {
-	public const META = '_menu_ghost_settings';
+	public const META = '_mngh_menu_settings';
 
 	/**
 	 * Retrieve settings for a menu item.

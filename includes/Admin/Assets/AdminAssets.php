@@ -73,7 +73,7 @@ class AdminAssets {
 	 */
 	private function enqueue_scripts( array $asset_file ): void {
 		wp_enqueue_script(
-			'menu-ghost-script',
+			'mngh-admin-script',
 			MNGH_BUILD_URL . 'index.js',
 			(array) ( $asset_file['dependencies'] ?? array() ),
 			(string) ( $asset_file['version'] ?? MNGH_VERSION ),
@@ -93,7 +93,7 @@ class AdminAssets {
 	private function enqueue_styles( array $asset_file ): void {
 		if ( ! is_rtl() ) {
 			wp_enqueue_style(
-				'menu-ghost-style',
+				'mngh-admin-style',
 				MNGH_BUILD_URL . 'index.css',
 				array(),
 				(string) ( $asset_file['version'] ?? MNGH_VERSION )
@@ -103,7 +103,7 @@ class AdminAssets {
 		}
 
 		wp_enqueue_style(
-			'menu-ghost-style-rtl',
+			'mngh-admin-style-rtl',
 			MNGH_BUILD_URL . 'style-index-rtl.css',
 			array(),
 			(string) ( $asset_file['version'] ?? MNGH_VERSION )
@@ -140,8 +140,8 @@ class AdminAssets {
 		}
 
 		wp_localize_script(
-			'menu-ghost-script',
-			'menu_ghost',
+			'mngh-admin-script',
+			'mnghMenuGhost',
 			array(
 				'menu_items'      => $menu_items,
 				'page_conditions' => $page_conditions,

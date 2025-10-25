@@ -41,6 +41,17 @@ Yes. Menu Ghost extends the default WordPress menus, so any theme or builder tha
 = Where are the translations stored? =
 If you upload the plugin to WordPress.org, translations are managed by GlotPress. Any custom translations can be placed in `wp-content/languages/plugins/menu-ghost-*.mo`.
 
+== Development ==
+
+The source code for Menu Ghost lives in the public repository at https://github.com/sarailoo/menu-ghost.
+
+1. `composer install && npm install`
+2. `npm run build` during development
+3. `npm run plugin-zip` to export a distributable zip (includes compiled assets)
+4. `composer language` regenerates `languages/menu-ghost.pot`
+
+Please consult the repository README for additional build details or to open issues/PRs.
+
 == Screenshots ==
 
 1. Modal with page-based visibility rules.
