@@ -1,0 +1,317 @@
+@use "../../styles/variables" as vars;
+@use "../../styles/mixins" as mixins;
+
+.wpmc-conditions-modal {
+
+	.wpmc-advanced {
+		display: flex;
+		flex-direction: column;
+
+		&__accordions {
+			display: flex;
+			flex-direction: column;
+			gap: vars.$spacing-sm;
+			max-height: 500px;
+			overflow-y: auto;
+			padding-right: vars.$spacing-xs;
+		}
+
+		&__accordion {
+			border: 1px solid vars.$color-border-light;
+			background: vars.$color-surface;
+			overflow: hidden;
+
+			&-toggle {
+				width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				gap: vars.$spacing-md;
+				padding: vars.$spacing-xs vars.$spacing-lg;
+				background: none;
+				border: 0;
+				color: vars.$color-text;
+				font-size: 16px;
+				font-weight: 600;
+				text-align: left;
+				cursor: pointer;
+
+				&:focus-visible {
+
+					@include mixins.focus-ring-reset;
+					box-shadow: inset 0 0 0 2px rgba(12, 51, 169, 0.4);
+				}
+			}
+
+			&-label {
+				display: inline-flex;
+				align-items: center;
+			}
+
+			&-title {
+				font-size: 13px;
+				font-weight: 600;
+				color: vars.$color-text;
+			}
+
+			&-icon {
+				flex: none;
+				width: 24px;
+				height: 18px;
+				background: vars.$color-accent-soft;
+				color: vars.$color-border-strong;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				transition:
+					transform 0.25s linear,
+					background 0.25s linear,
+					color 0.25s linear;
+
+				&::before {
+					content: "\2304";
+					font-size: 16px;
+					margin-bottom: 8px;
+				}
+
+				&:hover {
+					color: vars.$color-accent-soft;
+					background: vars.$color-border-strong;
+				}
+			}
+
+			&-panel {
+				max-height: 0;
+				opacity: 0;
+				overflow: hidden;
+				transition: max-height 0.35s linear, opacity 0.3s linear;
+			}
+
+			&.is-open {
+
+				.wpmc-advanced__accordion-icon {
+					transform: rotate(180deg);
+				}
+
+				.wpmc-advanced__accordion-panel {
+					max-height: 1600px;
+					opacity: 1;
+				}
+			}
+		}
+
+		&__panel-inner {
+			display: flex;
+			flex-direction: column;
+			gap: vars.$spacing-sm;
+			padding: 0 vars.$spacing-lg 18px;
+			max-height: clamp(220px, 48vh, 360px);
+			overflow-y: auto;
+			overflow-x: hidden;
+			scrollbar-width: thin;
+			scrollbar-color: vars.$color-scroll-thumb vars.$color-scroll-track;
+
+			&::-webkit-scrollbar {
+				width: 8px;
+			}
+
+			&::-webkit-scrollbar-track {
+				background: vars.$color-scroll-track;
+				border-radius: 999px;
+			}
+
+			&::-webkit-scrollbar-thumb {
+				background: vars.$color-scroll-thumb;
+				border-radius: 999px;
+			}
+
+			.components-combobox-control__suggestions-container {
+				border-color: vars.$color-border;
+
+				.components-combobox-control__input {
+					border: none !important;
+					padding-top: 0 !important;
+					background: transparent !important;
+					min-height: auto !important;
+				}
+
+				&:focus,
+				&:focus-within {
+					box-shadow: vars.$shadow-none !important;
+					border-color: vars.$color-border;
+				}
+
+				.components-button {
+					box-shadow: none !important;
+				}
+			}
+		}
+
+		&__info-button {
+
+			&.components-button {
+				padding: 0;
+				height: 14px;
+				border-radius: 50%;
+				color: vars.$color-info;
+				min-width: auto;
+				margin-left: -2px;
+				width: 10px;
+
+				&:hover,
+				&:focus {
+
+					@include mixins.focus-ring-reset;
+					color: vars.$color-info;
+				}
+
+				.dashicon {
+					font-size: 15px;
+					height: auto;
+					width: auto;
+					padding: 0;
+					margin: 0;
+				}
+			}
+		}
+
+		&__card {
+			border-radius: vars.$radius-none !important;
+			transition: border-color 0.2s linear;
+			background: vars.$color-surface;
+			box-shadow: vars.$shadow-none !important;
+
+			&:not(:last-child) {
+				border-bottom: 1px solid vars.$color-border-light;
+			}
+
+			h3 {
+				margin: 0;
+				font-size: 13px;
+				font-weight: 500;
+				color: vars.$color-text;
+			}
+
+			&-header {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				gap: vars.$spacing-sm;
+				padding: vars.$spacing-xs 0 !important;
+				border-radius: 0 !important;
+				border-bottom: 0 !important;
+			}
+		}
+
+		&__title {
+			display: inline-flex;
+			align-items: center;
+			gap: vars.$spacing-xs;
+			position: relative;
+			color: vars.$color-text;
+
+			h3 {
+				margin: 0;
+			}
+		}
+
+		&__rule-icon {
+			flex: none;
+			width: 24px;
+			height: 24px;
+			border-radius: 50%;
+			background: vars.$color-accent-soft;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			color: vars.$color-border-strong;
+
+			svg {
+				width: 18px;
+				height: 18px;
+			}
+		}
+
+		&__toggle {
+			margin: 0 !important;
+
+			.components-base-control__field {
+				margin: 0;
+			}
+
+			.components-form-toggle__track {
+				transition: background 0.2s linear, border 0.2s linear;
+				box-shadow: vars.$shadow-none !important;
+			}
+
+			.components-form-toggle.is-checked .components-form-toggle__track {
+				background-color: vars.$color-border-strong;
+				border-color: vars.$color-border-strong;
+			}
+
+			.components-form-toggle__thumb {
+				transition: transform 0.2s linear;
+			}
+		}
+
+		&__card-body {
+			overflow: hidden;
+			transition: max-height 0.2s linear, opacity 0.2s linear, padding 0.2s linear;
+			max-height: 600px;
+			padding: vars.$spacing-xs 0 !important;
+
+			&.is-collapsed {
+				max-height: 0;
+				opacity: 0;
+				padding-top: 0 !important;
+				padding-bottom: 0 !important;
+				pointer-events: none;
+			}
+
+			&.is-open {
+				opacity: 1;
+			}
+		}
+
+		&__checkbox-group {
+			display: flex;
+			flex-direction: column;
+			gap: vars.$spacing-sm;
+		}
+
+		&__checkbox-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(114px, 1fr));
+			gap: vars.$spacing-xs vars.$spacing-md;
+
+			.components-checkbox-control__input {
+				min-height: 16px !important;
+				border-radius: vars.$radius-none !important;
+			}
+		}
+
+		&__input-row {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+			gap: vars.$spacing-sm;
+		}
+
+		&__accordion-info {
+
+			&.components-button {
+				padding: 0;
+				min-width: 26px;
+				height: 26px;
+				border-radius: 999px;
+				color: vars.$color-accent-soft;
+
+				&:hover,
+				&:focus {
+
+					@include mixins.focus-ring-reset;
+					color: vars.$color-accent-soft;
+				}
+			}
+		}
+	}
+}

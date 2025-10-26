@@ -1,0 +1,95 @@
+@use "../../styles/variables" as vars;
+@use "../../styles/mixins" as mixins;
+
+.wpmc-conditions-modal {
+
+	.wpmc-condition-row {
+		padding: 0 40px 0 0;
+		box-shadow: vars.$shadow-none !important;
+	}
+
+	.wpmc-condition-row__controls {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+		gap: vars.$spacing-sm vars.$spacing-md;
+		align-items: flex-start;
+		grid-auto-flow: row dense;
+	}
+
+	.wpmc-condition-row__field {
+		min-width: 0;
+
+		.components-combobox-control__input {
+			padding: 0 !important;
+			border: none !important;
+			background: initial !important;
+			min-height: auto !important;
+			padding-left: vars.$spacing-xs !important;
+		}
+
+		.components-combobox-control__suggestions-container {
+			border-radius: vars.$radius-none;
+			border-color: vars.$color-border;
+			height: 36px;
+			position: relative;
+
+			&:focus {
+				box-shadow: vars.$shadow-none !important;
+			}
+
+			&:focus-within {
+
+				@include mixins.focus-ring-reset;
+			}
+
+			.components-form-token-field__suggestions-list {
+				z-index: 1;
+				border: 1px solid vars.$color-border;
+				background: vars.$color-surface;
+			}
+
+			.components-flex {
+				height: 100%;
+			}
+		}
+
+		.components-button {
+
+			&:focus {
+
+				@include mixins.focus-ring-reset;
+			}
+		}
+	}
+
+	.wpmc-condition-row .components-base-control,
+	.wpmc-condition-row .components-base-control__field {
+		min-width: 0;
+		width: 100%;
+	}
+
+	.wpmc-condition-row .components-select-control__input,
+	.wpmc-condition-row .components-text-control__input,
+	.wpmc-condition-row select,
+	.wpmc-condition-row input {
+		width: 100%;
+	}
+
+	.wpmc-condition-row__remove.components-button {
+		justify-self: flex-end;
+		color: vars.$color-danger;
+		align-self: center;
+		position: absolute;
+		right: 5px;
+		width: auto;
+		min-width: auto;
+		padding: 0;
+		height: auto;
+		top: 5px;
+
+		&:focus {
+
+			@include mixins.focus-ring-reset;
+		}
+	}
+}
