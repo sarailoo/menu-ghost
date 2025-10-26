@@ -1,0 +1,103 @@
+@use "./variables" as vars;
+@use "./mixins" as mixins;
+
+/* Core admin styles composed via component-specific SCSS imports. */
+
+.mngh-menu-item-button-wrap .components-button {
+	transition: color 0.2s ease, background 0.2s ease;
+	box-shadow: vars.$shadow-none !important;
+	border: 1px solid vars.$color-primary;
+}
+
+.wpmc-advanced__info-popover {
+
+	&.components-popover {
+		max-width: 260px;
+		width: auto;
+	}
+
+	.components-popover__content {
+		padding: 4px 8px;
+		width: auto;
+		position: relative;
+		top: -18px;
+		left: 18px;
+		box-shadow: 0 0 0 1px #ccc, 0 2px 3px #0000000d, 0 4px 5px #0000000a, 0 4px 2px #00000008, 0 1px 1px #00000005;
+		border-radius: 3px;
+	}
+
+	p {
+		margin: 0;
+		color: vars.$color-text;
+		font-size: 12px;
+		line-height: 1.5;
+	}
+}
+
+.wpmc-conditions-modal {
+
+	.components-button:focus,
+	input:focus,
+	select:focus {
+
+		@include mixins.focus-ring-reset;
+		border-color: vars.$color-border !important;
+	}
+
+	.components-button:focus {
+		box-shadow:
+			inset 0 0 0 1px
+			var(--wp-components-color-accent, var(--wp-admin-theme-color, vars.$color-primary)),
+			0 0 0 currentcolor !important;
+	}
+
+	.components-base-control__field {
+
+		input,
+		select,
+		textarea,
+		.components-select-control__input,
+		.components-text-control__input {
+
+			@include mixins.input-base;
+			align-items: center;
+			padding-top: 0 !important;
+			padding-bottom: 0 !important;
+		}
+	}
+
+	input[type="checkbox"] {
+		min-height: inherit !important;
+		padding: 0 !important;
+	}
+
+	.components-input-control__backdrop {
+		display: none;
+	}
+
+	.components-base-control__field input:focus,
+	.components-base-control__field select:focus,
+	.components-base-control__field textarea:focus,
+	.components-select-control__input:focus,
+	.components-text-control__input:focus,
+	.components-combobox-control__input:focus {
+		border-color: vars.$color-border-strong;
+		box-shadow: 0 0 0 2px rgba(12, 51, 169, 0.15);
+	}
+
+	input[type="date"],
+	input[type="time"] {
+		user-select: none;
+
+		&::selection {
+			background: transparent;
+			color: inherit;
+			user-select: none;
+		}
+	}
+
+	.components-base-control__label {
+		font-weight: 400;
+		color: vars.$color-text;
+	}
+}
