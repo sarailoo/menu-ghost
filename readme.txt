@@ -47,6 +47,38 @@ Menu Ghost gives you total control over which navigation links appear and when. 
 
 The interface is built with React and uses WordPress components so it remains responsive, accessible, and familiar. All rule data is stored in post meta to keep compatibility with exports, migrations, and backups.
 
+== Rule reference ==
+
+
+= Pages tab =
+
+* **Include / Exclude** – Decide whether a matching condition should show or hide the menu item.
+* **Entire Site** – Create a catch-all rule that always fires. Place it below granular rules when you need fallback behavior.
+* **Archive scopes** – Target date archives, author archives, taxonomy listings, WooCommerce product archives, search results, or even the 404 template.
+* **Singular scopes** – Limit links to specific posts, pages, custom post types, parent/child relationships, or taxonomy terms.
+* **Add Condition** – Stack unlimited rules. Menu Ghost evaluates them from top to bottom, so keep broad rules toward the bottom of the list.
+
+= Advanced tab =
+
+* **User Role** – Match any WordPress role, including custom roles added by eCommerce or membership plugins.
+* **User Device** – Detect desktop, tablet, or mobile visitors to tailor calls to action per device.
+* **Login Status** – Serve different menu links to logged-in versus logged-out visitors.
+* **Signup Date** – Target members who registered before or after a specific date—ideal for onboarding flows.
+* **Browser Language** – Show localized links when the visitor’s browser shares a preferred language.
+* **Days of the Week** – Toggle links on specific weekdays (e.g., "Weekend brunch menu").
+* **Within Date Range** – Schedule seasonal links to appear between two calendar dates without manual edits.
+* **Within Time Window** – Display links only during a daily time slice, such as support hours or flash sales.
+* **URL Query Parameter** – Require a query-string key/value (like `ref=partner`) before the menu item appears.
+* **UTM Campaign / Content / Medium / Source / Term** – React to marketing URLs so visitors see campaign-specific navigation when arriving from ads or emails.
+
+
+== Installation ==
+
+1. Upload the `menu-ghost` folder to `/wp-content/plugins/` or install via the Plugins screen.
+2. Activate Menu Ghost through **Plugins → Installed Plugins**.
+3. Go to **Appearance → Menus**, open a menu item, and click **Display Conditions** to start adding rules.
+
+
 == Frequently Asked Questions ==
 
 = Does this plugin slow down my site? =
