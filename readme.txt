@@ -80,8 +80,15 @@ The source code for Menu Ghost lives in the public repository at https://github.
 
 == Screenshots ==
 
-1. Modal with page-based visibility rules.
-2. Advanced tab showcasing audience and campaign conditions.
+1. Menu item meta box with the Display Conditions button inside Appearance ▸ Menus.
+2. Pages tab focused on a single "Exclude date archive" rule for quick toggles.
+3. Pages tab showing layered include/exclude rules for archives, authors, and WooCommerce products.
+4. Advanced Rules User section overview: User Role, User Device, Login Status, Signup Date and Browser Language.
+5. Advanced Rules Date & Time section overview: Days of the Week, Within Date Range and Within Time Window.
+6. URL & Campaign summary list highlighting query string and UTM parameter switches.
+7. Expanded User panel with role/device/login toggles enabled for desktop, tablet, and mobile.
+8. Date & Time editor displaying weekday picker, date range, and time window controls.
+9. URL & Campaign detail editor configuring a query parameter and UTM campaign value.
 
 == Changelog ==
 
