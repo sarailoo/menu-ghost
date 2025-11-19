@@ -13,8 +13,6 @@ use MenuGhost\Admin\Data\Advanced\AdvancedMetaBuilder;
 use MenuGhost\Admin\Data\Page\AdditionalLabelResolver;
 use MenuGhost\Admin\Data\Page\AdditionalLookupBuilder;
 use MenuGhost\Admin\Data\Page\PageConditionsBuilder;
-use function wp_get_nav_menu_items;
-use function wp_get_nav_menus;
 
 /**
  * Exposes data sets consumed by the JavaScript application.

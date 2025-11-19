@@ -197,7 +197,7 @@ if ( ! class_exists( 'WP_REST_Server' ) ) {
 
 putenv( 'TESTS_PATH=' . __DIR__ ); // phpcs:ignore WordPress.PHP.DiscouragedPHPFunctions.runtime_configuration_putenv
 putenv( 'LIBRARY_PATH=' . dirname( __DIR__ ) ); // phpcs:ignore WordPress.PHP.DiscouragedPHPFunctions.runtime_configuration_putenv
-$vendor = dirname( dirname( __DIR__ ) ) . '/vendor/';
+$vendor = dirname( __DIR__ ) . '/vendor/';
 if ( ! realpath( $vendor ) ) {
 	die( 'Please install via Composer before running tests.' );
 }

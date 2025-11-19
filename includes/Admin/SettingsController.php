@@ -10,7 +10,6 @@ declare(strict_types=1);
 namespace MenuGhost\Admin;
 
 use MenuGhost\SettingsRepository;
-use function absint;
 
 /**
  * Handles persisting menu-level visibility options from the admin UI.

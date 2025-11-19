@@ -10,7 +10,6 @@ declare(strict_types=1);
 namespace MenuGhost\Admin\Data\Advanced;
 
 use MenuGhost\Admin\Data\Advanced\Languages\LanguageOptions;
-use function wp_roles;
 
 /**
  * Builds advanced condition metadata consumed by the admin UI.

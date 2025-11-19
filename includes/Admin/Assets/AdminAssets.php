@@ -11,13 +11,6 @@ namespace MenuGhost\Admin\Assets;
 
 use MenuGhost\Admin\DataProvider;
 use MenuGhost\SettingsRepository;
-use function admin_url;
-use function add_action;
-use function is_rtl;
-use function wp_create_nonce;
-use function wp_enqueue_script;
-use function wp_enqueue_style;
-use function wp_localize_script;
 
 /**
  * Handles registering and enqueueing admin assets.
@@ -79,6 +72,12 @@ class AdminAssets {
 			(string) ( $asset_file['version'] ?? MNGH_VERSION ),
 			true
 		);
+
+		wp_set_script_translations(
+			'mngh-admin-script',
+			'menu-ghost',
+			MNGH_DIR . 'languages'
+		);
 	}
 
 	/**
@@ -91,23 +90,14 @@ class AdminAssets {
 	 * @return void
 	 */
 	private function enqueue_styles( array $asset_file ): void {
-		if ( ! is_rtl() ) {
-			wp_enqueue_style(
-				'mngh-admin-style',
-				MNGH_BUILD_URL . 'index.css',
-				array(),
-				(string) ( $asset_file['version'] ?? MNGH_VERSION )
-			);
-
-			return;
-		}
-
 		wp_enqueue_style(
-			'mngh-admin-style-rtl',
-			MNGH_BUILD_URL . 'style-index-rtl.css',
+			'mngh-admin-style',
+			MNGH_BUILD_URL . 'index.css',
 			array(),
 			(string) ( $asset_file['version'] ?? MNGH_VERSION )
 		);
+
+		wp_style_add_data( 'mngh-admin-style', 'rtl', 'replace' );
 	}
 
 	/**

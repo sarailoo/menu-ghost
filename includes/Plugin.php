@@ -15,6 +15,10 @@ use MenuGhost\Admin\AdvancedController;
 use MenuGhost\Admin\SettingsController;
 use MenuGhost\Admin\SearchController;
 use MenuGhost\Frontend\MenuVisibility;
+use function add_action;
+use function load_plugin_textdomain;
+use function plugin_basename;
+use function dirname;
 
 /**
  * Primary plugin bootstrap class.
@@ -47,6 +51,8 @@ class Plugin {
 	 * @return void
 	 */
 	public function init() {
+		add_action( 'init', array( $this, 'load_textdomain' ) );
+
 		AdminAssets::register();
 		SearchController::register();
 
@@ -59,5 +65,14 @@ class Plugin {
 		MenuItem::instance();
 		AdvancedController::instance();
 		SettingsController::instance();
+	}
+
+	/**
+	 * Load the plugin textdomain so bundled translations are available immediately.
+	 *
+	 * @return void
+	 */
+	public function load_textdomain(): void {
+		load_plugin_textdomain( 'menu-ghost', false, dirname( plugin_basename( MNGH_PLUGIN_FILE ) ) . '/languages' );
 	}
 }
