@@ -1,5 +1,4 @@
 /vendor/
-/languages/
 /node_modules/
 /build/
 .phpunit.result.cache

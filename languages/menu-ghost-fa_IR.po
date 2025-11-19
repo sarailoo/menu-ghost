@@ -1,0 +1,294 @@
+# Copyright (C) 2025 Reza Sarailoo
+# This file is distributed under the GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Menu Ghost 1.0.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/menu-ghost\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-11-19T21:19:42+00:00\n"
+"PO-Revision-Date: 2025-11-19T21:19:42+00:00\n"
+"X-Generator: WP-CLI 2.10.0\n"
+"X-Domain: menu-ghost\n"
+"Language: fa\n"
+
+#. Plugin Name of the plugin
+#: menu-ghost.php
+msgid "Menu Ghost"
+msgstr "منو گوست"
+
+#. Plugin URI of the plugin
+#: menu-ghost.php
+msgid "https://github.com/sarailoo/menu-ghost"
+msgstr "https://github.com/sarailoo/menu-ghost"
+
+#. Description of the plugin
+#: menu-ghost.php
+msgid ""
+"Target menu items by role, device, schedule, and campaign rules using a "
+"fast, native conditions interface inside the menu editor."
+msgstr "آیتم‌های منو را بر اساس نقش، دستگاه، زمان‌بندی و قوانین کمپین با استفاده از یک رابط بومی و سریع برای تعریف شرایط در داخل ویرایشگر منو هدف‌گیری کنید."
+
+#. Author of the plugin
+#: menu-ghost.php
+msgid "Reza Sarailoo"
+msgstr "رضا سرائیلو"
+
+#: includes/Admin/AdvancedController.php:61 includes/Admin/MenuItem.php:72
+#: includes/Admin/SettingsController.php:63
+msgid "Forbidden."
+msgstr "دسترسی غیرمجاز است."
+
+#: includes/Admin/AdvancedController.php:69 includes/Admin/MenuItem.php:80
+msgid "Invalid nonce."
+msgstr "نانس نامعتبر است."
+
+#: includes/Admin/AdvancedController.php:85
+msgid "Invalid request payload."
+msgstr "مقادیر ارسال‌شده در درخواست نامعتبر است."
+
+#: includes/Admin/AdvancedController.php:106
+msgid "Rules saved."
+msgstr "قوانین ذخیره شد."
+
+#. translators: %d: post ID.
+#: includes/Admin/Data/Page/AdditionalLabelResolver.php:143
+#: includes/Admin/SearchController.php:173
+#: includes/Admin/SearchController.php:266
+msgid "Untitled (%d)"
+msgstr "بدون عنوان (%d)"
+
+#: includes/Admin/MenuItem.php:95 includes/Admin/SettingsController.php:73
+msgid "Invalid menu item."
+msgstr "آیتم منو نامعتبر است."
+
+#: includes/Admin/MenuItem.php:122
+msgid "Conditions saved."
+msgstr "شرایط ذخیره شد."
+
+#: includes/Admin/SettingsController.php:129
+msgid "Settings saved."
+msgstr "تنظیمات ذخیره شد."
+
+#: build/index.js:1 build/index.js:2
+#: src/admin/components/common/DisplayConditionsButton.jsx:11
+#: src/admin/components/Modal/ConditionsModal.jsx:48
+msgid "Display Conditions"
+msgstr "شرایط نمایش"
+
+#: build/index.js:1 src/admin/components/Pages/AsyncEntitySelect.jsx:56
+#: src/admin/components/Pages/fields/AdditionalField.jsx:23
+msgid "All"
+msgstr "همه"
+
+#: build/index.js:1 src/admin/components/Pages/ConditionRow.jsx:13
+msgid "Include"
+msgstr "شامل شود"
+
+#: build/index.js:1 src/admin/components/Pages/ConditionRow.jsx:17
+msgid "Exclude"
+msgstr "شامل نشود"
+
+#: build/index.js:1 src/admin/components/Pages/ConditionRow.jsx:24
+msgid "Entire Site"
+msgstr "کل سایت"
+
+#: build/index.js:1 src/admin/components/Pages/ConditionRow.jsx:105
+msgid "Remove rule"
+msgstr "حذف قانون"
+
+#: build/index.js:1 src/admin/components/Pages/PagesTab.jsx:74
+msgid "Add Condition"
+msgstr "افزودن شرط"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:22
+msgid "User"
+msgstr "کاربر"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:23
+msgid "Control menu visibility based on who is visiting."
+msgstr "نمایش منو را بر اساس هویت بازدیدکننده کنترل کنید."
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:30
+msgid "Date & Time"
+msgstr "تاریخ و زمان"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:31
+msgid "Schedule when links should appear."
+msgstr "زمان نمایش لینک‌ها را زمان‌بندی کنید."
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:35
+msgid "URL & Campaign"
+msgstr "آدرس URL و کمپین"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:36
+msgid "Leverage query strings and campaign parameters."
+msgstr "از query string‌ها و پارامترهای کمپین بهره ببرید."
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:47
+msgid "User Role"
+msgstr "نقش کاربر"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:48
+msgid "Only show for selected WordPress roles."
+msgstr "فقط برای نقش‌های انتخاب‌شدهٔ وردپرس نمایش داده شود."
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:68
+msgid "User Device"
+msgstr "دستگاه کاربر"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:69
+msgid "Restrict to visitors on mobile, tablet, or desktop."
+msgstr "فقط برای بازدیدکنندگان روی موبایل، تبلت یا دسکتاپ محدود کنید."
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:89
+msgid "Login Status"
+msgstr "وضعیت ورود"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:90
+msgid "Target visitors who are logged in or logged out."
+msgstr "بازدیدکنندگانِ وارد شده یا خارج شده را هدف بگیرید."
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:100
+msgid "Any"
+msgstr "هر وضعیتی"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:103
+msgid "Logged in"
+msgstr "وارد شده"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:107
+msgid "Logged out"
+msgstr "خارج شده"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:118
+msgid "Signup Date"
+msgstr "تاریخ ثبت‌نام"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:119
+msgid "Compare against the user registration date."
+msgstr "با تاریخ ثبت‌نام کاربر مقایسه کنید."
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:132
+msgid "After"
+msgstr "بعد از"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:136
+msgid "Before"
+msgstr "قبل از"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:154
+msgid "Browser Language"
+msgstr "زبان مرورگر"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:155
+msgid "Match the visitor language preference sent by the browser."
+msgstr "با تنظیمات زبان ارسال‌شده توسط مرورگرِ بازدیدکننده تطبیق دهید."
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:181
+msgid "Days of the Week"
+msgstr "روزهای هفته"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:182
+msgid "Display only on the selected weekdays."
+msgstr "فقط در روزهای انتخاب‌شدهٔ هفته نمایش دهید."
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:202
+msgid "Within Date Range"
+msgstr "داخل بازهٔ تاریخ"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:203
+msgid "Activate only between two calendar dates."
+msgstr "فقط بین دو تاریخ تقویمی فعال شود."
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:213
+msgid "Start date"
+msgstr "تاریخ شروع"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:220
+msgid "End date"
+msgstr "تاریخ پایان"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:231
+msgid "Within Time Window"
+msgstr "داخل بازهٔ زمانی"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:232
+msgid "Activate during the selected time of day."
+msgstr "در بازهٔ زمانی انتخاب‌شدهٔ روز فعال شود."
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:242
+msgid "Start time"
+msgstr "زمان شروع"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:249
+msgid "End time"
+msgstr "زمان پایان"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:260
+msgid "URL Query Parameter"
+msgstr "پارامتر کوئری URL"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:261
+msgid "Check for a specific query-string key/value."
+msgstr "وجود یک کلید/مقدار خاص در query string را بررسی کنید."
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:270
+#: src/admin/components/AdvancedConditions/definitions.js:315
+msgid "Mode"
+msgstr "حالت"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:275
+#: src/admin/components/AdvancedConditions/definitions.js:320
+msgid "Exists"
+msgstr "وجود دارد"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:279
+#: src/admin/components/AdvancedConditions/definitions.js:324
+msgid "Equals"
+msgstr "برابر است با"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:286
+msgid "Key"
+msgstr "کلید"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:292
+#: src/admin/components/AdvancedConditions/definitions.js:331
+msgid "Value"
+msgstr "مقدار"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:306
+msgid "Require a matching campaign parameter."
+msgstr "نیاز به یک پارامتر کمپینِ مطابق دارد."
+
+#: build/index.js:1 src/admin/components/Modal/ConditionsFooter.jsx:7
+msgid "Cancel"
+msgstr "لغو"
+
+#: build/index.js:1 src/admin/components/Modal/ConditionsFooter.jsx:16
+msgid "Saving…"
+msgstr "در حال ذخیره…"
+
+#: build/index.js:1 src/admin/components/Modal/ConditionsFooter.jsx:17
+msgid "Save & Close"
+msgstr "ذخیره و بستن"
+
+#: build/index.js:1 src/admin/components/Modal/ConditionsModal.jsx:16
+msgid "Pages"
+msgstr "صفحات"
+
+#: build/index.js:1 src/admin/components/Modal/ConditionsModal.jsx:20
+msgid "Advanced Rules"
+msgstr "قوانین پیشرفته"
+
+#. translators: %s: menu item title.
+#: build/index.js:2 src/admin/components/Modal/ConditionsModal.jsx:43
+msgid "%s - Display Conditions"
+msgstr "%s - شرایط نمایش"
+
+#: build/index.js:2 src/admin/components/Modal/ConditionsModal.jsx:69
+msgid "Unable to save changes. Please try again."
+msgstr "امکان ذخیرهٔ تغییرات وجود ندارد. لطفاً دوباره تلاش کنید."
