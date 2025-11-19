@@ -9,6 +9,8 @@ declare(strict_types=1);
 
 namespace MenuGhost\Admin\Data\Advanced;
 
+use function wp_roles;
+
 use MenuGhost\Admin\Data\Advanced\Languages\LanguageOptions;
 
 /**

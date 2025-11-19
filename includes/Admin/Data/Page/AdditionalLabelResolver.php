@@ -9,6 +9,8 @@ declare(strict_types=1);
 
 namespace MenuGhost\Admin\Data\Page;
 
+use function __;
+
 
 /**
  * Resolves and assigns additional labels for saved conditions.

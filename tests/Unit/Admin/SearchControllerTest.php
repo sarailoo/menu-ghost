@@ -25,7 +25,7 @@ final class SearchControllerTest extends AbstractUnitTestcase {
 			)
 		);
 
-		Functions::expect( 'get_post' )
+		Functions\expect( 'get_post' )
 			->once()
 			->with( 45 )
 			->andReturn( $post );
@@ -62,7 +62,7 @@ final class SearchControllerTest extends AbstractUnitTestcase {
 			)
 		);
 
-		Functions::expect( 'get_term' )
+		Functions\expect( 'get_term' )
 			->once()
 			->with( 12, 'category' )
 			->andReturn( $term );

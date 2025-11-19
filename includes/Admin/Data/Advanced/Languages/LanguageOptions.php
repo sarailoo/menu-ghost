@@ -9,6 +9,9 @@ declare(strict_types=1);
 
 namespace MenuGhost\Admin\Data\Advanced\Languages;
 
+use function locale_get_display_language;
+use function locale_get_display_name;
+
 
 /**
  * Generates a list of language options suitable for select controls.

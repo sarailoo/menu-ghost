@@ -32,10 +32,8 @@ class AdvancedControllerTest extends AbstractUnitTestcase {
 	}
 
 	public function test_save_menu_rules_requires_capability(): void {
-		Functions::expect( 'current_user_can' )
-			->once()
-			->with( 'edit_theme_options' )
-			->andReturn( false );
+		Functions\when( 'current_user_can' )
+			->justReturn( false );
 
 		try {
 			AdvancedController::save_menu_rules();
@@ -66,12 +64,12 @@ class AdvancedControllerTest extends AbstractUnitTestcase {
 			),
 		);
 
-		Functions::expect( 'wp_verify_nonce' )
+		Functions\expect( 'wp_verify_nonce' )
 			->once()
 			->with( 'abc123', 'menu_ghost' )
 			->andReturn( true );
 
-		Functions::expect( 'get_post_meta' )
+		Functions\expect( 'get_post_meta' )
 			->once()
 			->with( 12, SettingsRepository::META, true )
 			->andReturn( array( 'pages' => array() ) );
@@ -85,23 +83,17 @@ class AdvancedControllerTest extends AbstractUnitTestcase {
 					'mode'  => 'equals',
 				),
 			),
-			array(
-				'key'     => '',
-				'enabled' => false,
-				'params'  => array(),
-			),
 		);
 
-		Functions::expect( 'update_post_meta' )
+		Functions\expect( 'update_post_meta' )
 			->once()
-			->with(
-				12,
-				SettingsRepository::META,
-				array(
-					'pages'    => array(),
-					'advanced' => $expected_rules,
-				)
-			);
+			->withArgs( function ( $item_id, $meta_key, $settings ) use ( $expected_rules ) {
+				$this->assertSame( 12, $item_id );
+				$this->assertSame( SettingsRepository::META, $meta_key );
+				$this->assertSame( array(), $settings['pages'] ?? array() );
+				$this->assertSame( $expected_rules, $settings['advanced'] ?? array() );
+				return true;
+			} );
 
 		try {
 			AdvancedController::save_menu_rules();

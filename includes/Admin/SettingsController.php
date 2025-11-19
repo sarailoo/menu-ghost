@@ -9,6 +9,8 @@ declare(strict_types=1);
 
 namespace MenuGhost\Admin;
 
+use function absint;
+
 use MenuGhost\SettingsRepository;
 
 /**

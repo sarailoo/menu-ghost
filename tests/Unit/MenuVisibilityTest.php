@@ -39,7 +39,7 @@ class MenuVisibilityTest extends AbstractUnitTestcase {
 			),
 		);
 
-		Functions::expect( 'get_post_meta' )
+		Functions\expect( 'get_post_meta' )
 			->twice()
 			->andReturnUsing(
 				static function ( $item_id, $key, $single ) use ( $settings ) {
@@ -57,7 +57,7 @@ class MenuVisibilityTest extends AbstractUnitTestcase {
 	public function test_filter_menu_items_applies_advanced_rules_after_pages(): void {
 		$items = array( (object) array( 'ID' => 50 ) );
 
-		Functions::expect( 'get_post_meta' )
+		Functions\expect( 'get_post_meta' )
 			->once()
 			->with( 50, SettingsRepository::META, true )
 			->andReturn(

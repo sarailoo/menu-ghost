@@ -87,10 +87,10 @@ abstract class AbstractUnitTestcase extends TestCase {
 			->alias( static fn( $text ) => is_scalar( $text ) ? (string) $text : '' );
 
 		Functions\when( 'sanitize_text_field' )
-			->alias( static fn( $value ) => is_scalar( $value ) ? (string) $value : '' );
+			->alias( static fn( $value ) => is_scalar( $value ) ? trim( strip_tags( (string) $value ) ) : '' );
 
 		Functions\when( 'sanitize_textarea_field' )
-			->alias( static fn( $value ) => is_scalar( $value ) ? (string) $value : '' );
+			->alias( static fn( $value ) => is_scalar( $value ) ? trim( strip_tags( (string) $value ) ) : '' );
 
 		Functions\when( 'sanitize_key' )
 			->alias( static function( $value ) {
@@ -110,31 +110,19 @@ abstract class AbstractUnitTestcase extends TestCase {
 		Functions\when( 'wp_is_mobile' )
 			->justReturn( false );
 
+		Functions\when( 'is_admin' )
+			->justReturn( false );
+
 		Functions\when( 'is_user_logged_in' )
 			->justReturn( false );
 
 		Functions\when( 'wp_get_current_user' )
 			->alias( static fn() => new \WP_User() );
 
-		Functions\when( 'get_date_from_gmt' )
-			->alias( static function( $string, $format = 'Y-m-d' ) {
-				$timestamp = strtotime( (string) $string );
-				if ( false === $timestamp ) {
-					return '';
-				}
-				return gmdate( $format, $timestamp );
-			} );
-
 		Functions\when( 'is_wp_error' )
 			->justReturn( false );
 
 		Functions\when( 'current_user_can' )
-			->justReturn( true );
-
-		Functions\when( 'wp_verify_nonce' )
-			->justReturn( true );
-
-		Functions\when( 'check_ajax_referer' )
 			->justReturn( true );
 
 		Functions\when( 'wp_send_json_success' )

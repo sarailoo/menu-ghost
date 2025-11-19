@@ -34,7 +34,7 @@ final class SettingsControllerTest extends AbstractUnitTestcase {
 	public function test_save_menu_settings_requires_valid_item(): void {
 		$_POST = array( 'itemId' => '0' );
 
-		Functions::expect( 'check_ajax_referer' )
+		Functions\expect( 'check_ajax_referer' )
 			->once()
 			->with( 'menu_ghost', 'nonce' )
 			->andReturn( true );
@@ -95,17 +95,17 @@ final class SettingsControllerTest extends AbstractUnitTestcase {
 			array(),
 		);
 
-		Functions::expect( 'check_ajax_referer' )
+		Functions\expect( 'check_ajax_referer' )
 			->once()
 			->with( 'menu_ghost', 'nonce' )
 			->andReturn( true );
 
-		Functions::expect( 'get_post_meta' )
+		Functions\expect( 'get_post_meta' )
 			->once()
 			->with( 99, SettingsRepository::META, true )
 			->andReturn( array( 'advanced' => array( array( 'existing' => 'rule' ) ) ) );
 
-		Functions::expect( 'update_post_meta' )
+		Functions\expect( 'update_post_meta' )
 			->once()
 			->ordered()
 			->with(
@@ -117,13 +117,13 @@ final class SettingsControllerTest extends AbstractUnitTestcase {
 				)
 			);
 
-		Functions::expect( 'get_post_meta' )
+		Functions\expect( 'get_post_meta' )
 			->once()
 			->ordered()
 			->with( 99, SettingsRepository::META, true )
 			->andReturn( array( 'pages' => $expected_pages ) );
 
-		Functions::expect( 'update_post_meta' )
+		Functions\expect( 'update_post_meta' )
 			->once()
 			->ordered()
 			->with(

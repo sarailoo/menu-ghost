@@ -11,6 +11,14 @@ namespace MenuGhost\Admin\Assets;
 
 use MenuGhost\Admin\DataProvider;
 use MenuGhost\SettingsRepository;
+use function add_action;
+use function admin_url;
+use function wp_create_nonce;
+use function wp_enqueue_script;
+use function wp_enqueue_style;
+use function wp_localize_script;
+use function wp_style_add_data;
+use function wp_set_script_translations;
 
 /**
  * Handles registering and enqueueing admin assets.

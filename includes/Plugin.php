@@ -19,6 +19,7 @@ use function add_action;
 use function load_plugin_textdomain;
 use function plugin_basename;
 use function dirname;
+use function is_admin;
 
 /**
  * Primary plugin bootstrap class.
