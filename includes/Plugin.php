@@ -16,10 +16,13 @@ use MenuGhost\Admin\SettingsController;
 use MenuGhost\Admin\SearchController;
 use MenuGhost\Frontend\MenuVisibility;
 use function add_action;
+use function add_filter;
+use function determine_locale;
 use function load_plugin_textdomain;
 use function plugin_basename;
 use function dirname;
 use function is_admin;
+use function md5;
 
 /**
  * Primary plugin bootstrap class.
@@ -53,6 +56,7 @@ class Plugin {
 	 */
 	public function init() {
 		add_action( 'init', array( $this, 'load_textdomain' ) );
+		add_filter( 'load_script_translation_file', array( $this, 'ensure_script_translations' ), 10, 3 );
 
 		AdminAssets::register();
 		SearchController::register();
@@ -75,5 +79,35 @@ class Plugin {
 	 */
 	public function load_textdomain(): void {
 		load_plugin_textdomain( 'menu-ghost', false, dirname( plugin_basename( MNGH_PLUGIN_FILE ) ) . '/languages' );
+	}
+
+	/**
+	 * Ensure script translations are loaded when WordPress cannot locate the JSON file.
+	 *
+	 * This is primarily needed for bundled translations such as fa_IR that live inside
+	 * the plugin instead of the global languages directory.
+	 *
+	 * @since 1.0.2
+	 *
+	 * @param string $file   Path to the translation file WordPress located.
+	 * @param string $handle Script handle requesting translations.
+	 * @param string $domain Translation text domain.
+	 *
+	 * @return string
+	 */
+	public function ensure_script_translations( string $file, string $handle, string $domain ): string {
+		if ( $file || 'mngh-admin-script' !== $handle || 'menu-ghost' !== $domain ) {
+			return $file;
+		}
+
+		$locale    = determine_locale();
+		$json_file = sprintf(
+			'%1$slanguages/menu-ghost-%2$s-%3$s.json',
+			MNGH_DIR,
+			$locale,
+			md5( 'build/index.js' )
+		);
+
+		return is_readable( $json_file ) ? $json_file : $file;
 	}
 }

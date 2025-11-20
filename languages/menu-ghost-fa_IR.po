@@ -292,3 +292,132 @@ msgstr "%s - شرایط نمایش"
 #: build/index.js:2 src/admin/components/Modal/ConditionsModal.jsx:69
 msgid "Unable to save changes. Please try again."
 msgstr "امکان ذخیرهٔ تغییرات وجود ندارد. لطفاً دوباره تلاش کنید."
+
+#: includes/Admin/Data/Page/Scope/ArchiveScopeBuilder.php:36
+msgid "Archive"
+msgstr "بایگانی"
+
+#: includes/Admin/Data/Page/Scope/ArchiveScopeBuilder.php:56
+msgid "All Archives"
+msgstr "همهٔ بایگانی‌ها"
+
+#: includes/Admin/Data/Page/Scope/ArchiveScopeBuilder.php:60
+msgid "Author Archive"
+msgstr "بایگانی نویسنده"
+
+#: includes/Admin/Data/Page/Scope/ArchiveScopeBuilder.php:64
+msgid "Date Archive"
+msgstr "بایگانی تاریخ"
+
+#: includes/Admin/Data/Page/Scope/ArchiveScopeBuilder.php:68
+#: includes/Admin/Data/Page/Scope/ArchiveScopeBuilder.php:93
+msgid "Search Results"
+msgstr "نتایج جستجو"
+
+#. translators: %s: Post type label.
+#: includes/Admin/Data/Page/Scope/ArchiveScopeBuilder.php:90
+msgid "%s: Archive"
+msgstr "%s: بایگانی"
+
+#. translators: 1: Post type label, 2: Taxonomy label.
+#: includes/Admin/Data/Page/Scope/ArchiveScopeBuilder.php:101
+msgid "%1$s: %2$s"
+msgstr "%1$s: %2$s"
+
+#. translators: 1: Post type label, 2: Taxonomy label.
+#: includes/Admin/Data/Page/Scope/ArchiveScopeBuilder.php:116
+msgid "%1$s: Direct Child %2$s Of"
+msgstr "%1$s: فرزند مستقیمِ %2$s"
+
+#. translators: 1: Post type label, 2: Taxonomy label.
+#: includes/Admin/Data/Page/Scope/ArchiveScopeBuilder.php:122
+msgid "%1$s: Any Child %2$s Of"
+msgstr "%1$s: هر فرزندِ %2$s"
+
+#: includes/Admin/Data/Page/Scope/SingularScopeBuilder.php:36
+msgid "Singular"
+msgstr "تک صفحه"
+
+#: includes/Admin/Data/Page/Scope/SingularScopeBuilder.php:56
+msgid "All Singular"
+msgstr "همهٔ صفحات تک"
+
+#: includes/Admin/Data/Page/Scope/SingularScopeBuilder.php:60
+msgid "Front Page"
+msgstr "صفحهٔ اصلی"
+
+#. translators: %s: Post type label.
+#: includes/Admin/Data/Page/Scope/SingularScopeBuilder.php:87
+msgid "%s: Single"
+msgstr "%s: تک"
+
+#. translators: 1: Post type label, 2: Taxonomy label.
+#: includes/Admin/Data/Page/Scope/SingularScopeBuilder.php:95
+msgid "%1$s: In %2$s"
+msgstr "%1$s: در %2$s"
+
+#. translators: 1: Post type label, 2: Taxonomy label.
+#: includes/Admin/Data/Page/Scope/SingularScopeBuilder.php:110
+msgid "%1$s: In Child %2$s"
+msgstr "%1$s: در فرزند %2$s"
+
+#. translators: %s: Post type label.
+#: includes/Admin/Data/Page/Scope/SingularScopeBuilder.php:128
+msgid "%s: By Author"
+msgstr "%s: بر اساس نویسنده"
+
+#: includes/Admin/Data/Page/Scope/SingularScopeBuilder.php:146
+msgid "Direct Child Of"
+msgstr "فرزند مستقیمِ"
+
+#: includes/Admin/Data/Page/Scope/SingularScopeBuilder.php:150
+msgid "Any Child Of"
+msgstr "هر فرزندِ"
+
+#: includes/Admin/Data/Page/Scope/SingularScopeBuilder.php:154
+msgid "By Author"
+msgstr "بر اساس نویسنده"
+
+#: includes/Admin/Data/Page/Scope/SingularScopeBuilder.php:158
+msgid "404 Page"
+msgstr "صفحهٔ ۴۰۴"
+
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:35
+msgid "Sunday"
+msgstr "یکشنبه"
+
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:39
+msgid "Monday"
+msgstr "دوشنبه"
+
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:43
+msgid "Tuesday"
+msgstr "سه‌شنبه"
+
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:47
+msgid "Wednesday"
+msgstr "چهارشنبه"
+
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:51
+msgid "Thursday"
+msgstr "پنج‌شنبه"
+
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:55
+msgid "Friday"
+msgstr "جمعه"
+
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:59
+msgid "Saturday"
+msgstr "شنبه"
+
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:79
+msgid "Mobile"
+msgstr "موبایل"
+
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:83
+msgid "Tablet"
+msgstr "تبلت"
+
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:87
+msgid "Desktop"
+msgstr "دسکتاپ"

@@ -93,6 +93,20 @@ if ( ! class_exists( 'WP_Term' ) ) {
 		public $term_id = 0;
 
 		/**
+		 * Term name.
+		 *
+		 * @var string
+		 */
+		public $name = '';
+
+		/**
+		 * Term slug.
+		 *
+		 * @var string
+		 */
+		public $slug = '';
+
+		/**
 		 * Taxonomy slug.
 		 *
 		 * @var string
@@ -113,7 +127,9 @@ if ( ! class_exists( 'WP_Term' ) ) {
 		 */
 		public function __construct( array $props = array() ) {
 			foreach ( $props as $key => $value ) {
-				$this->$key = $value;
+				if ( property_exists( $this, $key ) ) {
+					$this->$key = $value;
+				}
 			}
 		}
 	}
