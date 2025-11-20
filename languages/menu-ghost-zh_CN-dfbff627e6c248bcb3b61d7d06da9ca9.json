@@ -1,0 +1,174 @@
+{
+    "translation-revision-date": "YEAR-MO-DA HO:MI+ZONE",
+    "generator": "WP-CLI\/2.12.0",
+    "source": "build\/index.js",
+    "domain": "messages",
+    "locale_data": {
+        "messages": {
+            "": {
+                "domain": "messages",
+                "lang": "zh_CN",
+                "plural-forms": "nplurals=1; plural=0;"
+            },
+            "Include": [
+                "\u5305\u542b"
+            ],
+            "Exclude": [
+                "\u6392\u9664"
+            ],
+            "Entire Site": [
+                "\u6574\u4e2a\u7f51\u7ad9"
+            ],
+            "Display Conditions": [
+                "\u663e\u793a\u6761\u4ef6"
+            ],
+            "All": [
+                "\u5168\u90e8"
+            ],
+            "Remove rule": [
+                "\u5220\u9664\u89c4\u5219"
+            ],
+            "Add Condition": [
+                "\u6dfb\u52a0\u6761\u4ef6"
+            ],
+            "User": [
+                "\u7528\u6237"
+            ],
+            "Control menu visibility based on who is visiting.": [
+                "\u6839\u636e\u8bbf\u95ee\u8005\u63a7\u5236\u83dc\u5355\u53ef\u89c1\u6027\u3002"
+            ],
+            "Date & Time": [
+                "\u65f6\u95f4"
+            ],
+            "Schedule when links should appear.": [
+                "\u5b89\u6392\u5e94\u663e\u793a\u94fe\u63a5\u7684\u65f6\u95f4\u3002"
+            ],
+            "URL & Campaign": [
+                "\u7f51\u5740\u548c\u8425\u9500\u6d3b\u52a8"
+            ],
+            "Leverage query strings and campaign parameters.": [
+                "\u5229\u7528\u67e5\u8be2\u5b57\u7b26\u4e32\u548c\u6d3b\u52a8\u53c2\u6570\u3002"
+            ],
+            "User Role": [
+                "\u7528\u6237\u6743\u9650"
+            ],
+            "Only show for selected WordPress roles.": [
+                "\u4ec5\u663e\u793a\u6240\u9009WordPress\u89d2\u8272\u3002"
+            ],
+            "User Device": [
+                "\u7528\u6237\u8bbe\u5907"
+            ],
+            "Restrict to visitors on mobile, tablet, or desktop.": [
+                "\u4ec5\u9650\u4f7f\u7528\u624b\u673a\u3001\u5e73\u677f\u7535\u8111\u6216\u7535\u8111\u7684\u8bbf\u5ba2\u3002"
+            ],
+            "Login Status": [
+                "\u767b\u5f55\u72b6\u6001"
+            ],
+            "Target visitors who are logged in or logged out.": [
+                "\u9501\u5b9a\u5df2\u767b\u5f55\u6216\u6ce8\u9500\u7684\u8bbf\u5ba2\u3002"
+            ],
+            "Any": [
+                "\u4e0d\u7b5b\u9009"
+            ],
+            "Logged in": [
+                "\u5df2\u767b\u5f55"
+            ],
+            "Logged out": [
+                "\u5df2\u9000\u51fa"
+            ],
+            "Signup Date": [
+                "\u6ce8\u518c\u65e5\u671f"
+            ],
+            "Compare against the user registration date.": [
+                "\u4e0e\u7528\u6237\u6ce8\u518c\u65e5\u671f\u8fdb\u884c\u6bd4\u8f83\u3002"
+            ],
+            "After": [
+                "\u4e4b\u540e"
+            ],
+            "Before": [
+                "\u4e4b\u524d"
+            ],
+            "Browser Language": [
+                "\u5148\u6309 IP \u5730\u5740\uff0c\u7136\u540e\u6309\u6d4f\u89c8\u5668\u8bed\u8a00"
+            ],
+            "Match the visitor language preference sent by the browser.": [
+                "\u5339\u914d\u6d4f\u89c8\u5668\u53d1\u9001\u7684\u8bbf\u95ee\u8005\u8bed\u8a00\u9996\u9009\u9879\u3002"
+            ],
+            "Days of the Week": [
+                "\u661f\u671f"
+            ],
+            "Display only on the selected weekdays.": [
+                "\u4ec5\u5728\u9009\u5b9a\u7684\u5de5\u4f5c\u65e5\u663e\u793a\u3002"
+            ],
+            "Within Date Range": [
+                "\u5728\u65e5\u671f\u5340\u9593\u4e2d"
+            ],
+            "Activate only between two calendar dates.": [
+                "\u4ec5\u5728\u4e24\u4e2a\u65e5\u5386\u65e5\u671f\u4e4b\u95f4\u6fc0\u6d3b\u3002"
+            ],
+            "Start date": [
+                "\u8d77\u59cb\u65e5\u671f"
+            ],
+            "End date": [
+                "\u7ed3\u675f\u65e5\u671f"
+            ],
+            "Within Time Window": [
+                "\u5728\u65f6\u95f4\u7a97\u53e3\u5185"
+            ],
+            "Activate during the selected time of day.": [
+                "\u5728\u4e00\u5929\u4e2d\u9009\u5b9a\u7684\u65f6\u95f4\u6fc0\u6d3b\u3002"
+            ],
+            "Start time": [
+                "\u5f00\u59cb\u65f6\u95f4"
+            ],
+            "End time": [
+                "\u7ed3\u675f\u65f6\u95f4"
+            ],
+            "URL Query Parameter": [
+                "URL\u67e5\u8be2\u5173\u952e\u53c2\u6570"
+            ],
+            "Check for a specific query-string key\/value.": [
+                "\u68c0\u67e5\u7279\u5b9a\u7684\u67e5\u8be2\u5b57\u7b26\u4e32\u952e\/\u503c\u3002"
+            ],
+            "Mode": [
+                "\u6a21\u5f0f"
+            ],
+            "Exists": [
+                "\u5b58\u5728"
+            ],
+            "Equals": [
+                "\u7b49\u4e8e"
+            ],
+            "Key": [
+                "\u9879\u76ee\u540d"
+            ],
+            "Value": [
+                "\u5185\u5bb9"
+            ],
+            "Require a matching campaign parameter.": [
+                "\u9700\u8981\u5339\u914d\u7684\u6d3b\u52a8\u53c2\u6570\u3002"
+            ],
+            "Cancel": [
+                "\u53d6\u6d88"
+            ],
+            "Saving\u2026": [
+                "\u6b63\u5728\u4fdd\u5b58\u2026"
+            ],
+            "Save & Close": [
+                "\u4fdd\u5b58&\u5173\u95ed"
+            ],
+            "Pages": [
+                "\u9875\u9762"
+            ],
+            "Advanced Rules": [
+                "\u5148\u8fdb\u7684\u89c4\u5219"
+            ],
+            "%s - Display Conditions": [
+                "%s -\u663e\u793a\u6761\u4ef6"
+            ],
+            "Unable to save changes. Please try again.": [
+                "\u65e0\u6cd5\u4fdd\u5b58\u66f4\u6539\u3002\u8bf7\u91cd\u8bd5\u3002"
+            ]
+        }
+    }
+}

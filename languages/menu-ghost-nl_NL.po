@@ -1,0 +1,441 @@
+# Copyright (C) 2025 Reza Sarailoo
+# This file is distributed under the GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Menu Ghost 1.0.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/menu-ghost\n"
+"POT-Creation-Date: 2025-11-20T00:58:16+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: nl_NL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Domain: menu-ghost\n"
+"X-Generator: WP-CLI 2.12.0\n"
+
+#. Plugin Name of the plugin
+#: menu-ghost.php
+msgid "Menu Ghost"
+msgstr "Menu Ghost"
+
+#. Plugin URI of the plugin
+#: menu-ghost.php
+msgid "https://github.com/sarailoo/menu-ghost"
+msgstr "https://github.com/sarailoo/menu-ghost"
+
+#. Description of the plugin
+#: menu-ghost.php
+msgid ""
+"Target menu items by role, device, schedule, and campaign rules using a "
+"fast, native conditions interface inside the menu editor."
+msgstr ""
+"Doelmenu-items op rol, apparaat, planning en campagneregels met behulp van "
+"een snelle, native voorwaardeninterface in de menu-editor."
+
+#. Author of the plugin
+#: menu-ghost.php
+msgid "Reza Sarailoo"
+msgstr "Reza Sarailoo"
+
+#: includes/Admin/AdvancedController.php:61 includes/Admin/MenuItem.php:72
+#: includes/Admin/SettingsController.php:63
+msgid "Forbidden."
+msgstr "Verboden"
+
+#: includes/Admin/AdvancedController.php:69 includes/Admin/MenuItem.php:80
+msgid "Invalid nonce."
+msgstr "Ongeldige none"
+
+#: includes/Admin/AdvancedController.php:85
+msgid "Invalid request payload."
+msgstr "Ongeldig aanvraag-payload."
+
+#: includes/Admin/AdvancedController.php:106
+msgid "Rules saved."
+msgstr "Regels opgeslagen."
+
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:51
+msgid "Sunday"
+msgstr "Zondag"
+
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:55
+msgid "Monday"
+msgstr "Maandag"
+
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:59
+msgid "Tuesday"
+msgstr "Dinsdag"
+
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:63
+msgid "Wednesday"
+msgstr "Woensdag"
+
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:67
+msgid "Thursday"
+msgstr "Donderdag"
+
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:71
+msgid "Friday"
+msgstr "Vrijdag"
+
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:75
+msgid "Saturday"
+msgstr "Zaterdag"
+
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:91
+msgid "Mobile"
+msgstr "Mobiel"
+
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:95
+msgid "Tablet"
+msgstr "Tablet"
+
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:99
+msgid "Desktop"
+msgstr "Computer"
+
+#. translators: %d: post ID.
+#: includes/Admin/Data/Page/AdditionalLabelResolver.php:143
+#: includes/Admin/SearchController.php:173
+#: includes/Admin/SearchController.php:266
+#, php-format
+msgid "Untitled (%d)"
+msgstr "Naamloos #%d"
+
+#: includes/Admin/Data/Page/ConditionTypes.php:31 build/index.js:1
+#: src/admin/components/Pages/ConditionRow.jsx:13
+msgid "Include"
+msgstr "Erbij betrekken"
+
+#: includes/Admin/Data/Page/ConditionTypes.php:35 build/index.js:1
+#: src/admin/components/Pages/ConditionRow.jsx:17
+msgid "Exclude"
+msgstr "Uitsluiten"
+
+#: includes/Admin/Data/Page/Scope/ArchiveScopeBuilder.php:36
+msgid "Archive"
+msgstr "Archiveren"
+
+#: includes/Admin/Data/Page/Scope/ArchiveScopeBuilder.php:56
+msgid "All Archives"
+msgstr "Alle archieven"
+
+#: includes/Admin/Data/Page/Scope/ArchiveScopeBuilder.php:60
+msgid "Author Archive"
+msgstr "Auteursarchief"
+
+#: includes/Admin/Data/Page/Scope/ArchiveScopeBuilder.php:64
+msgid "Date Archive"
+msgstr "Datumarchief"
+
+#: includes/Admin/Data/Page/Scope/ArchiveScopeBuilder.php:68
+msgid "Search Results"
+msgstr "Zoekresultaten"
+
+#. translators: %s: Post type label.
+#: includes/Admin/Data/Page/Scope/ArchiveScopeBuilder.php:93
+#, php-format
+msgid "%s: Archive"
+msgstr "%s : Archief"
+
+#. translators: 1: Post type label, 2: Taxonomy label.
+#: includes/Admin/Data/Page/Scope/ArchiveScopeBuilder.php:98
+#, php-format
+msgid "%1$s: %2$s"
+msgstr "%1$s: %2$s"
+
+#. translators: 1: Post type label, 2: Taxonomy label.
+#: includes/Admin/Data/Page/Scope/ArchiveScopeBuilder.php:113
+#, php-format
+msgid "%1$s: Direct Child %2$s Of"
+msgstr "%1$s: Rechtstreeks kind %2$s van"
+
+#. translators: 1: Post type label, 2: Taxonomy label.
+#: includes/Admin/Data/Page/Scope/ArchiveScopeBuilder.php:119
+#, php-format
+msgid "%1$s: Any Child %2$s Of"
+msgstr "%1$s: Elk kind %2$s van"
+
+#: includes/Admin/Data/Page/Scope/EntireSiteScope.php:30 build/index.js:1
+#: src/admin/components/Pages/ConditionRow.jsx:24
+msgid "Entire Site"
+msgstr "Hele website"
+
+#: includes/Admin/Data/Page/Scope/SingularScopeBuilder.php:36
+msgid "Singular"
+msgstr "Enkel"
+
+#: includes/Admin/Data/Page/Scope/SingularScopeBuilder.php:57
+msgid "All Singular"
+msgstr "Allemaal enkelvoud"
+
+#: includes/Admin/Data/Page/Scope/SingularScopeBuilder.php:61
+msgid "Front Page"
+msgstr "Voorpagina"
+
+#. translators: %s: Post type label.
+#: includes/Admin/Data/Page/Scope/SingularScopeBuilder.php:86
+#, php-format
+msgid "%s: Single"
+msgstr "%s Enkelvoudig"
+
+#. translators: 1: Post type label, 2: Taxonomy label.
+#: includes/Admin/Data/Page/Scope/SingularScopeBuilder.php:93
+#, php-format
+msgid "%1$s: In %2$s"
+msgstr "%1$s in %2$s."
+
+#. translators: 1: Post type label, 2: Taxonomy label.
+#: includes/Admin/Data/Page/Scope/SingularScopeBuilder.php:103
+#, php-format
+msgid "%1$s: In Child %2$s"
+msgstr "%1$s: In kind %2$s"
+
+#. translators: %s: Post type label.
+#: includes/Admin/Data/Page/Scope/SingularScopeBuilder.php:110
+#, php-format
+msgid "%s: By Author"
+msgstr "%s: Op auteur"
+
+#: includes/Admin/Data/Page/Scope/SingularScopeBuilder.php:128
+msgid "Direct Child Of"
+msgstr "Direct Child Van"
+
+#: includes/Admin/Data/Page/Scope/SingularScopeBuilder.php:132
+msgid "Any Child Of"
+msgstr "Elk child van"
+
+#: includes/Admin/Data/Page/Scope/SingularScopeBuilder.php:136
+msgid "By Author"
+msgstr "Auteur"
+
+#: includes/Admin/Data/Page/Scope/SingularScopeBuilder.php:140
+msgid "404 Page"
+msgstr "404 Pagina"
+
+#: includes/Admin/MenuItem.php:95 includes/Admin/SettingsController.php:73
+msgid "Invalid menu item."
+msgstr "Ongeldig menu-item."
+
+#: includes/Admin/MenuItem.php:122
+msgid "Conditions saved."
+msgstr "Voorwaarden opgeslagen."
+
+#: includes/Admin/SettingsController.php:129
+msgid "Settings saved."
+msgstr "De instellingen zijn opgeslagen."
+
+#: build/index.js:1 build/index.js:2
+#: src/admin/components/common/DisplayConditionsButton.jsx:11
+#: src/admin/components/Modal/ConditionsModal.jsx:48
+msgid "Display Conditions"
+msgstr "Weergave voorwaarden"
+
+#: build/index.js:1 src/admin/components/Pages/AsyncEntitySelect.jsx:56
+#: src/admin/components/Pages/fields/AdditionalField.jsx:23
+msgid "All"
+msgstr "Alles"
+
+#: build/index.js:1 src/admin/components/Pages/ConditionRow.jsx:105
+msgid "Remove rule"
+msgstr "Regel verwijderen"
+
+#: build/index.js:1 src/admin/components/Pages/PagesTab.jsx:74
+msgid "Add Condition"
+msgstr "Voorwaarde toevoegen"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:22
+msgid "User"
+msgstr "Gebruiker"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:23
+msgid "Control menu visibility based on who is visiting."
+msgstr ""
+"Beheer de zichtbaarheid van het menu op basis van wie er op bezoek is."
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:30
+msgid "Date & Time"
+msgstr "Datum & Tijd"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:31
+msgid "Schedule when links should appear."
+msgstr "Plan in wanneer links moeten verschijnen."
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:35
+msgid "URL & Campaign"
+msgstr "URL en campagne"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:36
+msgid "Leverage query strings and campaign parameters."
+msgstr "Maak gebruik van queryreeksen en campagneparameters."
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:47
+msgid "User Role"
+msgstr "Gebruikersrol"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:48
+msgid "Only show for selected WordPress roles."
+msgstr "Alleen weergeven voor geselecteerde WordPress-rollen."
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:68
+msgid "User Device"
+msgstr "Gebruikersapparaat"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:69
+msgid "Restrict to visitors on mobile, tablet, or desktop."
+msgstr "Beperk je tot bezoekers op mobiel, tablet of desktop."
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:89
+msgid "Login Status"
+msgstr "Aanmeldingsstatus"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:90
+msgid "Target visitors who are logged in or logged out."
+msgstr "Target bezoekers die ingelogd of uitgelogd zijn."
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:100
+msgid "Any"
+msgstr "Elke"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:103
+msgid "Logged in"
+msgstr "Ingelogd"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:107
+msgid "Logged out"
+msgstr "Uitgelogd"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:118
+msgid "Signup Date"
+msgstr "Datum van inschrijving"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:119
+msgid "Compare against the user registration date."
+msgstr "Vergelijk met de registratiedatum van de gebruiker."
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:132
+msgid "After"
+msgstr "Na"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:136
+msgid "Before"
+msgstr "Voor"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:154
+msgid "Browser Language"
+msgstr "Browsertaal"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:155
+msgid "Match the visitor language preference sent by the browser."
+msgstr ""
+"Overeenkomen met de taalvoorkeur van de bezoeker die door de browser wordt "
+"verzonden"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:181
+msgid "Days of the Week"
+msgstr "Dagen van de week"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:182
+msgid "Display only on the selected weekdays."
+msgstr "Alleen weergeven op de geselecteerde weekdagen."
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:202
+msgid "Within Date Range"
+msgstr "Binnen datumbereik"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:203
+msgid "Activate only between two calendar dates."
+msgstr "Activeer alleen tussen twee kalenderdatums."
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:213
+msgid "Start date"
+msgstr "Startdatum"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:220
+msgid "End date"
+msgstr "Einddatum"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:231
+msgid "Within Time Window"
+msgstr "Binnen tijdvenster"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:232
+msgid "Activate during the selected time of day."
+msgstr "Activeer tijdens het geselecteerde tijdstip van de dag."
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:242
+msgid "Start time"
+msgstr "Begin uur en -datum"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:249
+msgid "End time"
+msgstr "Eindtijd"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:260
+msgid "URL Query Parameter"
+msgstr "Zoekopdracht parameter"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:261
+msgid "Check for a specific query-string key/value."
+msgstr "Controleer op een specifieke query-tekenreekstoets/-waarde."
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:270
+#: src/admin/components/AdvancedConditions/definitions.js:315
+msgid "Mode"
+msgstr "Mode"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:275
+#: src/admin/components/AdvancedConditions/definitions.js:320
+msgid "Exists"
+msgstr "Bestaan"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:279
+#: src/admin/components/AdvancedConditions/definitions.js:324
+msgid "Equals"
+msgstr "Is gelijk aan"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:286
+msgid "Key"
+msgstr "Legenda"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:292
+#: src/admin/components/AdvancedConditions/definitions.js:331
+msgid "Value"
+msgstr "Waarde"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:306
+msgid "Require a matching campaign parameter."
+msgstr "Een overeenkomende campagneparameter vereisen."
+
+#: build/index.js:1 src/admin/components/Modal/ConditionsFooter.jsx:7
+msgid "Cancel"
+msgstr "Annuleren"
+
+#: build/index.js:1 src/admin/components/Modal/ConditionsFooter.jsx:16
+msgid "Saving…"
+msgstr "Opslaan…"
+
+#: build/index.js:1 src/admin/components/Modal/ConditionsFooter.jsx:17
+msgid "Save & Close"
+msgstr "Opslaan"
+
+#: build/index.js:1 src/admin/components/Modal/ConditionsModal.jsx:16
+msgid "Pages"
+msgstr "Pagina's"
+
+#: build/index.js:1 src/admin/components/Modal/ConditionsModal.jsx:20
+msgid "Advanced Rules"
+msgstr "Geavanceerde regels"
+
+#. translators: %s: menu item title.
+#: build/index.js:2 src/admin/components/Modal/ConditionsModal.jsx:43
+#, js-format
+msgid "%s - Display Conditions"
+msgstr "%s - Weergavevoorwaarden"
+
+#: build/index.js:2 src/admin/components/Modal/ConditionsModal.jsx:69
+msgid "Unable to save changes. Please try again."
+msgstr "Kon niet opslaan. Probeer het later opnieuw."
