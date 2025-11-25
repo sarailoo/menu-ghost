@@ -100,4 +100,10 @@
 		font-weight: 400;
 		color: vars.$color-text;
 	}
+
+	// RTL: realign the checkmark SVG that WordPress positions via a left offset.
+	[dir="rtl"] & .components-checkbox-control__checked {
+		right: auto;
+		left: vars.$spacing-xs;
+	}
 }
