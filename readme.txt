@@ -3,7 +3,7 @@ Contributors: sarailoo
 Tags: menu visibility, conditional menus, user roles, navigation, personalization
 Requires at least: 6.6
 Tested up to: 6.8
-Stable tag: 1.0.1
+Stable tag: 2.0.0
 Requires PHP: 8.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -125,6 +125,16 @@ The source code for Menu Ghost lives in the public repository at https://github.
 10. Display Conditions button inside the block editor Navigation inspector for block themes.
 
 == Changelog ==
+
+= 2.0.0 =
+* Block editor themes support
+* New languages support
+* RTL support
+
+= 1.0.1 =
+* Update readme
+* Add screenshots
+* Add plugin logo
 
 = 1.0.0 =
 * Initial public release with menu item display rules, advanced campaign targeting, and REST-powered async selectors.
