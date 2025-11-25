@@ -3,7 +3,7 @@ const React = require( 'react' );
 const Button = ( { label, children, ...props } ) =>
 	React.createElement(
 		'button',
-		{ ...props, 'aria-label': props['aria-label'] || label },
+		{ ...props, 'aria-label': props[ 'aria-label' ] || label },
 		children
 	);
 

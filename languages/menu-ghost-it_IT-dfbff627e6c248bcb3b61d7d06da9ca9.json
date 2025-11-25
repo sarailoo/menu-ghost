@@ -168,6 +168,12 @@
             ],
             "Unable to save changes. Please try again.": [
                 "Impossibile salvare le modifiche. Riprova."
+            ],
+            "Unable to load conditions.": [
+                ""
+            ],
+            "Edit Conditions": [
+                "Aggiungi condizioni"
             ]
         }
     }

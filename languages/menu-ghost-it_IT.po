@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Menu Ghost 1.0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/menu-ghost\n"
-"POT-Creation-Date: 2025-11-20T00:58:16+00:00\n"
+"POT-Creation-Date: 2025-11-25T19:16:58+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -42,7 +42,7 @@ msgid "Reza Sarailoo"
 msgstr "Reza Sarailoo"
 
 #: includes/Admin/AdvancedController.php:61 includes/Admin/MenuItem.php:72
-#: includes/Admin/SettingsController.php:63
+#: includes/Admin/SettingsController.php:62
 msgid "Forbidden."
 msgstr "Vietato"
 
@@ -58,50 +58,50 @@ msgstr "Payload della richiesta non valido."
 msgid "Rules saved."
 msgstr "Regole salvate."
 
-#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:51
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:50
 msgid "Sunday"
 msgstr "Domenica"
 
-#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:55
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:54
 msgid "Monday"
 msgstr "Lunedì"
 
-#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:59
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:58
 msgid "Tuesday"
 msgstr "Martedì"
 
-#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:63
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:62
 msgid "Wednesday"
 msgstr "Mercoledì"
 
-#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:67
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:66
 msgid "Thursday"
 msgstr "Giovedì"
 
-#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:71
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:70
 msgid "Friday"
 msgstr "Venerdì"
 
-#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:75
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:74
 msgid "Saturday"
 msgstr "Sabato"
 
-#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:91
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:90
 msgid "Mobile"
 msgstr "Mobilità"
 
-#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:95
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:94
 msgid "Tablet"
 msgstr "Tablet"
 
-#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:99
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:98
 msgid "Desktop"
 msgstr "Desktop"
 
 #. translators: %d: post ID.
 #: includes/Admin/Data/Page/AdditionalLabelResolver.php:143
-#: includes/Admin/SearchController.php:173
-#: includes/Admin/SearchController.php:266
+#: includes/Admin/SearchController.php:172
+#: includes/Admin/SearchController.php:265
 #, php-format
 msgid "Untitled (%d)"
 msgstr "Senza titolo (%d)"
@@ -217,7 +217,7 @@ msgstr "Da Autore"
 msgid "404 Page"
 msgstr "Pagina 404"
 
-#: includes/Admin/MenuItem.php:95 includes/Admin/SettingsController.php:73
+#: includes/Admin/MenuItem.php:95 includes/Admin/SettingsController.php:72
 msgid "Invalid menu item."
 msgstr "Voce di menu non valida."
 
@@ -225,13 +225,15 @@ msgstr "Voce di menu non valida."
 msgid "Conditions saved."
 msgstr "Condizioni salvate."
 
-#: includes/Admin/SettingsController.php:129
+#: includes/Admin/NavigationController.php:145
+#: includes/Admin/SettingsController.php:128
 msgid "Settings saved."
 msgstr "Impostazioni salvate."
 
 #: build/index.js:1 build/index.js:2
 #: src/admin/components/common/DisplayConditionsButton.jsx:11
 #: src/admin/components/Modal/ConditionsModal.jsx:48
+#: src/admin/navigation/index.js:189 src/admin/navigation/sidebar-panel.jsx:121
 msgid "Display Conditions"
 msgstr "Mostra condizioni"
 
@@ -382,8 +384,7 @@ msgstr "URL query parameter key"
 #: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:261
 msgid "Check for a specific query-string key/value."
 msgstr ""
-"Verificare la presenza di una specifica chiave/valore della stringa di "
-"query."
+"Verificare la presenza di una specifica chiave/valore della stringa di query."
 
 #: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:270
 #: src/admin/components/AdvancedConditions/definitions.js:315
@@ -435,10 +436,22 @@ msgstr "Regole avanzate"
 
 #. translators: %s: menu item title.
 #: build/index.js:2 src/admin/components/Modal/ConditionsModal.jsx:43
-#, js-format
 msgid "%s - Display Conditions"
 msgstr "%s - Condizioni di visualizzazione"
 
 #: build/index.js:2 src/admin/components/Modal/ConditionsModal.jsx:69
+#: src/admin/navigation/index.js:129 src/admin/navigation/index.js:160
+#: src/admin/navigation/sidebar-panel.jsx:99
 msgid "Unable to save changes. Please try again."
 msgstr "Impossibile salvare le modifiche. Riprova."
+
+#: build/index.js:2 src/admin/navigation/index.js:102
+#: src/admin/navigation/sidebar-panel.jsx:42
+msgid "Unable to load conditions."
+msgstr ""
+
+#: build/index.js:2 src/admin/navigation/index.js:197
+#: src/admin/navigation/sidebar-panel.jsx:130
+#, fuzzy
+msgid "Edit Conditions"
+msgstr "Aggiungi condizioni"

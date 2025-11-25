@@ -168,6 +168,12 @@
             ],
             "Unable to save changes. Please try again.": [
                 "Por el momento no es posible guardar los ajustes. Intenta nuevamente m\u00e1s tarde."
+            ],
+            "Unable to load conditions.": [
+                ""
+            ],
+            "Edit Conditions": [
+                "A\u00f1adir condiciones"
             ]
         }
     }

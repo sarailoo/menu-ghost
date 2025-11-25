@@ -168,6 +168,12 @@
             ],
             "Unable to save changes. Please try again.": [
                 "\u65e0\u6cd5\u4fdd\u5b58\u66f4\u6539\u3002\u8bf7\u91cd\u8bd5\u3002"
+            ],
+            "Unable to load conditions.": [
+                ""
+            ],
+            "Edit Conditions": [
+                "\u6dfb\u52a0\u6761\u4ef6"
             ]
         }
     }

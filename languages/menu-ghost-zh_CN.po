@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Menu Ghost 1.0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/menu-ghost\n"
-"POT-Creation-Date: 2025-11-20T00:58:16+00:00\n"
+"POT-Creation-Date: 2025-11-25T19:16:58+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -31,7 +31,9 @@ msgstr "https://github.com/sarailoo/menu-ghost"
 msgid ""
 "Target menu items by role, device, schedule, and campaign rules using a "
 "fast, native conditions interface inside the menu editor."
-msgstr "使用菜单编辑器中的快速本机条件界面，按角色、设备、时间表和活动规则定位菜单项。"
+msgstr ""
+"使用菜单编辑器中的快速本机条件界面，按角色、设备、时间表和活动规则定位菜单"
+"项。"
 
 #. Author of the plugin
 #: menu-ghost.php
@@ -39,7 +41,7 @@ msgid "Reza Sarailoo"
 msgstr "Reza Sarailoo"
 
 #: includes/Admin/AdvancedController.php:61 includes/Admin/MenuItem.php:72
-#: includes/Admin/SettingsController.php:63
+#: includes/Admin/SettingsController.php:62
 msgid "Forbidden."
 msgstr "禁止。"
 
@@ -55,50 +57,50 @@ msgstr "请求的有效数据无效"
 msgid "Rules saved."
 msgstr "规则已保存。"
 
-#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:51
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:50
 msgid "Sunday"
 msgstr "周日"
 
-#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:55
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:54
 msgid "Monday"
 msgstr "星期一"
 
-#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:59
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:58
 msgid "Tuesday"
 msgstr "星期二"
 
-#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:63
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:62
 msgid "Wednesday"
 msgstr "周三"
 
-#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:67
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:66
 msgid "Thursday"
 msgstr "星期四"
 
-#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:71
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:70
 msgid "Friday"
 msgstr "星期五"
 
-#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:75
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:74
 msgid "Saturday"
 msgstr "星期六"
 
-#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:91
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:90
 msgid "Mobile"
 msgstr "移动设备"
 
-#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:95
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:94
 msgid "Tablet"
 msgstr "平板电脑"
 
-#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:99
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:98
 msgid "Desktop"
 msgstr "桌面"
 
 #. translators: %d: post ID.
 #: includes/Admin/Data/Page/AdditionalLabelResolver.php:143
-#: includes/Admin/SearchController.php:173
-#: includes/Admin/SearchController.php:266
+#: includes/Admin/SearchController.php:172
+#: includes/Admin/SearchController.php:265
 #, php-format
 msgid "Untitled (%d)"
 msgstr "无标题%d"
@@ -214,7 +216,7 @@ msgstr "作者："
 msgid "404 Page"
 msgstr "404页"
 
-#: includes/Admin/MenuItem.php:95 includes/Admin/SettingsController.php:73
+#: includes/Admin/MenuItem.php:95 includes/Admin/SettingsController.php:72
 msgid "Invalid menu item."
 msgstr "菜单项无效。"
 
@@ -222,13 +224,15 @@ msgstr "菜单项无效。"
 msgid "Conditions saved."
 msgstr "条件已保存。"
 
-#: includes/Admin/SettingsController.php:129
+#: includes/Admin/NavigationController.php:145
+#: includes/Admin/SettingsController.php:128
 msgid "Settings saved."
 msgstr "设置已保存。"
 
 #: build/index.js:1 build/index.js:2
 #: src/admin/components/common/DisplayConditionsButton.jsx:11
 #: src/admin/components/Modal/ConditionsModal.jsx:48
+#: src/admin/navigation/index.js:189 src/admin/navigation/sidebar-panel.jsx:121
 msgid "Display Conditions"
 msgstr "显示条件"
 
@@ -427,10 +431,22 @@ msgstr "先进的规则"
 
 #. translators: %s: menu item title.
 #: build/index.js:2 src/admin/components/Modal/ConditionsModal.jsx:43
-#, js-format
 msgid "%s - Display Conditions"
 msgstr "%s -显示条件"
 
 #: build/index.js:2 src/admin/components/Modal/ConditionsModal.jsx:69
+#: src/admin/navigation/index.js:129 src/admin/navigation/index.js:160
+#: src/admin/navigation/sidebar-panel.jsx:99
 msgid "Unable to save changes. Please try again."
 msgstr "无法保存更改。请重试。"
+
+#: build/index.js:2 src/admin/navigation/index.js:102
+#: src/admin/navigation/sidebar-panel.jsx:42
+msgid "Unable to load conditions."
+msgstr ""
+
+#: build/index.js:2 src/admin/navigation/index.js:197
+#: src/admin/navigation/sidebar-panel.jsx:130
+#, fuzzy
+msgid "Edit Conditions"
+msgstr "添加条件"

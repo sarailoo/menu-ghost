@@ -15,7 +15,8 @@ const SidebarPanel = ( { block, navigationId } ) => {
 	const [ advanced, setAdvanced ] = useState( [] );
 	const mounted = useRef( true );
 
-	const linkKey = window.mnghNavigation?.keyFromAttributes?.( block?.attributes ) ||
+	const linkKey =
+		window.mnghNavigation?.keyFromAttributes?.( block?.attributes ) ||
 		`${ block?.clientId || '' }`;
 
 	const fetchSettings = useCallback( async () => {
@@ -26,7 +27,9 @@ const SidebarPanel = ( { block, navigationId } ) => {
 		setError( null );
 		try {
 			const data = await apiFetch( {
-				path: `/menu-ghost/v1/navigation/${ navigationId }/${ encodeURIComponent( linkKey ) }/settings`,
+				path: `/menu-ghost/v1/navigation/${ navigationId }/${ encodeURIComponent(
+					linkKey
+				) }/settings`,
 			} );
 			if ( mounted.current && data ) {
 				setPages( data.pages || [] );
@@ -34,7 +37,10 @@ const SidebarPanel = ( { block, navigationId } ) => {
 			}
 		} catch ( e ) {
 			if ( mounted.current ) {
-				setError( e?.message || __( 'Unable to load conditions.', 'menu-ghost' ) );
+				setError(
+					e?.message ||
+						__( 'Unable to load conditions.', 'menu-ghost' )
+				);
 			}
 		} finally {
 			if ( mounted.current ) {
@@ -57,18 +63,30 @@ const SidebarPanel = ( { block, navigationId } ) => {
 	const handleSave = useCallback(
 		async ( payload ) => {
 			if ( ! navigationId || ! linkKey ) {
-				return { ok: false, error: new Error( 'Missing navigation or link identifier.' ) };
+				return {
+					ok: false,
+					error: new Error(
+						'Missing navigation or link identifier.'
+					),
+				};
 			}
 			setLoading( true );
 			setError( null );
 			try {
 				await apiFetch( {
-					path: `/menu-ghost/v1/navigation/${ navigationId }/${ encodeURIComponent( linkKey ) }/settings`,
+					path: `/menu-ghost/v1/navigation/${ navigationId }/${ encodeURIComponent(
+						linkKey
+					) }/settings`,
 					method: 'POST',
 					body: JSON.stringify( payload ),
 				} );
 				// Mark navigation entity dirty so user can save.
-				await saveEntityRecord( 'postType', 'wp_navigation', navigationId, {} );
+				await saveEntityRecord(
+					'postType',
+					'wp_navigation',
+					navigationId,
+					{}
+				);
 				if ( mounted.current ) {
 					setPages( payload.pages || [] );
 					setAdvanced( payload.advanced || [] );
@@ -76,7 +94,13 @@ const SidebarPanel = ( { block, navigationId } ) => {
 				return { ok: true };
 			} catch ( e ) {
 				if ( mounted.current ) {
-					setError( e?.message || __( 'Unable to save changes. Please try again.', 'menu-ghost' ) );
+					setError(
+						e?.message ||
+							__(
+								'Unable to save changes. Please try again.',
+								'menu-ghost'
+							)
+					);
 				}
 				return { ok: false, error: e };
 			} finally {
@@ -107,8 +131,14 @@ const SidebarPanel = ( { block, navigationId } ) => {
 			</Button>
 			{ isOpen && (
 				<ConditionsModal
-					menuTitle={ block?.attributes?.label || block?.attributes?.title || '' }
-					pageConditions={ window.mnghMenuGhost?.page_conditions || {} }
+					menuTitle={
+						block?.attributes?.label ||
+						block?.attributes?.title ||
+						''
+					}
+					pageConditions={
+						window.mnghMenuGhost?.page_conditions || {}
+					}
 					advancedMeta={ window.mnghMenuGhost?.advanced_meta || {} }
 					initialPages={ pages }
 					initialAdvanced={ advanced }
@@ -125,7 +155,9 @@ const SidebarPanel = ( { block, navigationId } ) => {
 					} }
 				/>
 			) }
-			{ error && <p className="mngh-navigation-panel__error">{ error }</p> }
+			{ error && (
+				<p className="mngh-navigation-panel__error">{ error }</p>
+			) }
 		</PluginDocumentSettingPanel>
 	);
 };

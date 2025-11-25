@@ -168,6 +168,12 @@
             ],
             "Unable to save changes. Please try again.": [
                 "Impossible d'enregistrer vos modifications, veuillez essayer \u00e0 nouveau."
+            ],
+            "Unable to load conditions.": [
+                ""
+            ],
+            "Edit Conditions": [
+                "\ufeffAjouter une condition"
             ]
         }
     }

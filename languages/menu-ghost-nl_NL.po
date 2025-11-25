@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Menu Ghost 1.0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/menu-ghost\n"
-"POT-Creation-Date: 2025-11-20T00:58:16+00:00\n"
+"POT-Creation-Date: 2025-11-25T19:16:58+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -41,7 +41,7 @@ msgid "Reza Sarailoo"
 msgstr "Reza Sarailoo"
 
 #: includes/Admin/AdvancedController.php:61 includes/Admin/MenuItem.php:72
-#: includes/Admin/SettingsController.php:63
+#: includes/Admin/SettingsController.php:62
 msgid "Forbidden."
 msgstr "Verboden"
 
@@ -57,50 +57,50 @@ msgstr "Ongeldig aanvraag-payload."
 msgid "Rules saved."
 msgstr "Regels opgeslagen."
 
-#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:51
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:50
 msgid "Sunday"
 msgstr "Zondag"
 
-#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:55
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:54
 msgid "Monday"
 msgstr "Maandag"
 
-#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:59
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:58
 msgid "Tuesday"
 msgstr "Dinsdag"
 
-#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:63
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:62
 msgid "Wednesday"
 msgstr "Woensdag"
 
-#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:67
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:66
 msgid "Thursday"
 msgstr "Donderdag"
 
-#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:71
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:70
 msgid "Friday"
 msgstr "Vrijdag"
 
-#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:75
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:74
 msgid "Saturday"
 msgstr "Zaterdag"
 
-#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:91
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:90
 msgid "Mobile"
 msgstr "Mobiel"
 
-#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:95
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:94
 msgid "Tablet"
 msgstr "Tablet"
 
-#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:99
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:98
 msgid "Desktop"
 msgstr "Computer"
 
 #. translators: %d: post ID.
 #: includes/Admin/Data/Page/AdditionalLabelResolver.php:143
-#: includes/Admin/SearchController.php:173
-#: includes/Admin/SearchController.php:266
+#: includes/Admin/SearchController.php:172
+#: includes/Admin/SearchController.php:265
 #, php-format
 msgid "Untitled (%d)"
 msgstr "Naamloos #%d"
@@ -216,7 +216,7 @@ msgstr "Auteur"
 msgid "404 Page"
 msgstr "404 Pagina"
 
-#: includes/Admin/MenuItem.php:95 includes/Admin/SettingsController.php:73
+#: includes/Admin/MenuItem.php:95 includes/Admin/SettingsController.php:72
 msgid "Invalid menu item."
 msgstr "Ongeldig menu-item."
 
@@ -224,13 +224,15 @@ msgstr "Ongeldig menu-item."
 msgid "Conditions saved."
 msgstr "Voorwaarden opgeslagen."
 
-#: includes/Admin/SettingsController.php:129
+#: includes/Admin/NavigationController.php:145
+#: includes/Admin/SettingsController.php:128
 msgid "Settings saved."
 msgstr "De instellingen zijn opgeslagen."
 
 #: build/index.js:1 build/index.js:2
 #: src/admin/components/common/DisplayConditionsButton.jsx:11
 #: src/admin/components/Modal/ConditionsModal.jsx:48
+#: src/admin/navigation/index.js:189 src/admin/navigation/sidebar-panel.jsx:121
 msgid "Display Conditions"
 msgstr "Weergave voorwaarden"
 
@@ -253,8 +255,7 @@ msgstr "Gebruiker"
 
 #: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:23
 msgid "Control menu visibility based on who is visiting."
-msgstr ""
-"Beheer de zichtbaarheid van het menu op basis van wie er op bezoek is."
+msgstr "Beheer de zichtbaarheid van het menu op basis van wie er op bezoek is."
 
 #: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:30
 msgid "Date & Time"
@@ -432,10 +433,22 @@ msgstr "Geavanceerde regels"
 
 #. translators: %s: menu item title.
 #: build/index.js:2 src/admin/components/Modal/ConditionsModal.jsx:43
-#, js-format
 msgid "%s - Display Conditions"
 msgstr "%s - Weergavevoorwaarden"
 
 #: build/index.js:2 src/admin/components/Modal/ConditionsModal.jsx:69
+#: src/admin/navigation/index.js:129 src/admin/navigation/index.js:160
+#: src/admin/navigation/sidebar-panel.jsx:99
 msgid "Unable to save changes. Please try again."
 msgstr "Kon niet opslaan. Probeer het later opnieuw."
+
+#: build/index.js:2 src/admin/navigation/index.js:102
+#: src/admin/navigation/sidebar-panel.jsx:42
+msgid "Unable to load conditions."
+msgstr ""
+
+#: build/index.js:2 src/admin/navigation/index.js:197
+#: src/admin/navigation/sidebar-panel.jsx:130
+#, fuzzy
+msgid "Edit Conditions"
+msgstr "Voorwaarde toevoegen"

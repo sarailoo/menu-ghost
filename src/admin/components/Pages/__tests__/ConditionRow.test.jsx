@@ -3,13 +3,19 @@ import userEvent from '@testing-library/user-event';
 import ConditionRow from '../ConditionRow';
 
 jest.mock( '../fields/ConditionTypeSelect', () => ( props ) => (
-	<button data-testid="type-select" onClick={ () => props.onChange( 'exclude' ) }>
+	<button
+		data-testid="type-select"
+		onClick={ () => props.onChange( 'exclude' ) }
+	>
 		Type: { props.value }
 	</button>
 ) );
 
 jest.mock( '../fields/ScopeSelect', () => ( props ) => (
-	<button data-testid="scope-select" onClick={ () => props.onChange( 'archive' ) }>
+	<button
+		data-testid="scope-select"
+		onClick={ () => props.onChange( 'archive' ) }
+	>
 		Scope: { props.value }
 	</button>
 ) );
@@ -59,7 +65,9 @@ describe( 'ConditionRow', () => {
 		expect( screen.getByTestId( 'additional-field' ) ).toBeInTheDocument();
 
 		const user = userEvent.setup();
-		await user.click( screen.getByRole( 'button', { name: /remove rule/i } ) );
+		await user.click(
+			screen.getByRole( 'button', { name: /remove rule/i } )
+		);
 		expect( onRemove ).toHaveBeenCalled();
 	} );
 

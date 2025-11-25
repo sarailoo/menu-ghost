@@ -1,7 +1,10 @@
 import { __ } from '@wordpress/i18n';
 import { addFilter } from '@wordpress/hooks';
 import { createHigherOrderComponent } from '@wordpress/compose';
-import { InspectorControls, store as blockEditorStore } from '@wordpress/block-editor';
+import {
+	InspectorControls,
+	store as blockEditorStore,
+} from '@wordpress/block-editor';
 import { PanelBody, Button } from '@wordpress/components';
 import { useDispatch, useSelect } from '@wordpress/data';
 import { useState, useEffect, useCallback, useRef } from '@wordpress/element';
@@ -47,14 +50,22 @@ const withNavigationPanel = createHigherOrderComponent(
 		const { navigationId } = useSelect(
 			( select ) => {
 				const editorSelect = select( blockEditorStore );
-				const postId = select( editorStore )?.getCurrentPostId?.() || null;
+				const postId =
+					select( editorStore )?.getCurrentPostId?.() || null;
 				const parents = editorSelect?.getBlockParents( clientId ) || [];
 				const navClient = parents.find( ( parentClientId ) => {
 					const parent = editorSelect.getBlock( parentClientId );
 					return parent?.name === 'core/navigation';
 				} );
-				const navBlock = navClient ? editorSelect.getBlock( navClient ) : null;
-				const navId = navBlock?.attributes?.ref ?? navBlock?.context?.navigationId ?? context?.navigationId ?? postId ?? null;
+				const navBlock = navClient
+					? editorSelect.getBlock( navClient )
+					: null;
+				const navId =
+					navBlock?.attributes?.ref ??
+					navBlock?.context?.navigationId ??
+					context?.navigationId ??
+					postId ??
+					null;
 				return { navigationId: navId };
 			},
 			[ clientId, context?.navigationId ]
@@ -86,7 +97,10 @@ const withNavigationPanel = createHigherOrderComponent(
 				}
 			} catch ( e ) {
 				if ( mounted.current ) {
-					setError( e?.message || __( 'Unable to load conditions.', 'menu-ghost' ) );
+					setError(
+						e?.message ||
+							__( 'Unable to load conditions.', 'menu-ghost' )
+					);
 				}
 			} finally {
 				if ( mounted.current ) {
@@ -112,7 +126,10 @@ const withNavigationPanel = createHigherOrderComponent(
 					return {
 						ok: false,
 						error: new Error(
-							__( 'Unable to save changes. Please try again.', 'menu-ghost' )
+							__(
+								'Unable to save changes. Please try again.',
+								'menu-ghost'
+							)
 						),
 					};
 				}
@@ -125,7 +142,12 @@ const withNavigationPanel = createHigherOrderComponent(
 						body: JSON.stringify( payload ),
 					} );
 					// Mark navigation entity dirty so user can save.
-					await saveEntityRecord( 'postType', 'wp_navigation', navigationId, {} );
+					await saveEntityRecord(
+						'postType',
+						'wp_navigation',
+						navigationId,
+						{}
+					);
 					if ( mounted.current ) {
 						setPages( payload.pages || [] );
 						setAdvanced( payload.advanced || [] );
@@ -133,7 +155,13 @@ const withNavigationPanel = createHigherOrderComponent(
 					return { ok: true };
 				} catch ( e ) {
 					if ( mounted.current ) {
-						setError( e?.message || __( 'Unable to save changes. Please try again.', 'menu-ghost' ) );
+						setError(
+							e?.message ||
+								__(
+									'Unable to save changes. Please try again.',
+									'menu-ghost'
+								)
+						);
 					}
 					return { ok: false, error: e };
 				} finally {
@@ -145,7 +173,9 @@ const withNavigationPanel = createHigherOrderComponent(
 			[ navigationId, linkKey, saveEntityRecord ]
 		);
 
-		const isNavigationItem = name === 'core/navigation-link' || name === 'core/navigation-submenu';
+		const isNavigationItem =
+			name === 'core/navigation-link' ||
+			name === 'core/navigation-submenu';
 
 		if ( ! isNavigationItem || ! navigationId ) {
 			return <BlockEdit { ...props } />;
@@ -155,7 +185,9 @@ const withNavigationPanel = createHigherOrderComponent(
 			<>
 				<BlockEdit { ...props } />
 				<InspectorControls>
-					<PanelBody title={ __( 'Display Conditions', 'menu-ghost' ) }>
+					<PanelBody
+						title={ __( 'Display Conditions', 'menu-ghost' ) }
+					>
 						<Button
 							variant="secondary"
 							onClick={ () => setIsOpen( true ) }
@@ -164,14 +196,24 @@ const withNavigationPanel = createHigherOrderComponent(
 						>
 							{ __( 'Edit Conditions', 'menu-ghost' ) }
 						</Button>
-						{ error && <p className="mngh-navigation-panel__error">{ error }</p> }
+						{ error && (
+							<p className="mngh-navigation-panel__error">
+								{ error }
+							</p>
+						) }
 					</PanelBody>
 				</InspectorControls>
 				{ isOpen && (
 					<ConditionsModal
-						menuTitle={ attributes?.label || attributes?.title || '' }
-						pageConditions={ window.mnghMenuGhost?.page_conditions || {} }
-						advancedMeta={ window.mnghMenuGhost?.advanced_meta || {} }
+						menuTitle={
+							attributes?.label || attributes?.title || ''
+						}
+						pageConditions={
+							window.mnghMenuGhost?.page_conditions || {}
+						}
+						advancedMeta={
+							window.mnghMenuGhost?.advanced_meta || {}
+						}
 						initialPages={ pages }
 						initialAdvanced={ advanced }
 						onRequestClose={ () => setIsOpen( false ) }

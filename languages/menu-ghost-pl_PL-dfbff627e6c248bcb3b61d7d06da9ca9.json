@@ -168,6 +168,12 @@
             ],
             "Unable to save changes. Please try again.": [
                 ""
+            ],
+            "Unable to load conditions.": [
+                ""
+            ],
+            "Edit Conditions": [
+                ""
             ]
         }
     }

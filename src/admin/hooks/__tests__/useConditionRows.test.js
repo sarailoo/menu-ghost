@@ -26,14 +26,18 @@ describe( 'useConditionRows', () => {
 	} );
 
 	it( 'resets dependent fields when scope or subscope change', () => {
-		const initialRows = [ { ...DEFAULT_CONDITION, scope: 'entire_site', additional: 'foo' } ];
+		const initialRows = [
+			{ ...DEFAULT_CONDITION, scope: 'entire_site', additional: 'foo' },
+		];
 		const { result } = renderRowsHook( initialRows );
 
 		act( () => result.current.handleFieldChange( 0, 'scope', 'archive' ) );
 		expect( result.current.rows[ 0 ].subScope ).toBe( 'archive_date' );
 		expect( result.current.rows[ 0 ].additional ).toBe( '' );
 
-		act( () => result.current.handleFieldChange( 0, 'subScope', 'archive_author' ) );
+		act( () =>
+			result.current.handleFieldChange( 0, 'subScope', 'archive_author' )
+		);
 		expect( result.current.rows[ 0 ].additional ).toBe( '' );
 	} );
 

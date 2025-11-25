@@ -21,7 +21,10 @@ describe( 'conditions utils', () => {
 	} );
 
 	it( 'strips internal keys from conditions', () => {
-		const normalized = stripConditionExtras( { ...DEFAULT_CONDITION, _key: 'row-1' } );
+		const normalized = stripConditionExtras( {
+			...DEFAULT_CONDITION,
+			_key: 'row-1',
+		} );
 		expect( normalized._key ).toBeUndefined();
 		const list = stripConditions( [ { _key: 'row-2', type: 'include' } ] );
 		expect( list[ 0 ]._key ).toBeUndefined();

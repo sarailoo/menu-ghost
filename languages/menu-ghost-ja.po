@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Menu Ghost 1.0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/menu-ghost\n"
-"POT-Creation-Date: 2025-11-20T00:58:16+00:00\n"
+"POT-Creation-Date: 2025-11-25T19:16:58+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -32,7 +32,9 @@ msgid ""
 "Target menu items by role, device, schedule, and campaign rules using a "
 "fast, native conditions interface inside the menu editor."
 msgstr ""
-"メニューエディター内の高速なネイティブ条件インターフェースを使用して、ロール、デバイス、スケジュール、キャンペーンルールごとにメニューアイテムをターゲットにします。"
+"メニューエディター内の高速なネイティブ条件インターフェースを使用して、ロー"
+"ル、デバイス、スケジュール、キャンペーンルールごとにメニューアイテムをター"
+"ゲットにします。"
 
 #. Author of the plugin
 #: menu-ghost.php
@@ -40,7 +42,7 @@ msgid "Reza Sarailoo"
 msgstr "Reza Sarailoo"
 
 #: includes/Admin/AdvancedController.php:61 includes/Admin/MenuItem.php:72
-#: includes/Admin/SettingsController.php:63
+#: includes/Admin/SettingsController.php:62
 msgid "Forbidden."
 msgstr "禁止データ"
 
@@ -56,50 +58,50 @@ msgstr "無効な要求ペイロードです。"
 msgid "Rules saved."
 msgstr "ルールを保存しました。"
 
-#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:51
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:50
 msgid "Sunday"
 msgstr "日曜日"
 
-#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:55
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:54
 msgid "Monday"
 msgstr "月曜"
 
-#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:59
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:58
 msgid "Tuesday"
 msgstr "火曜日"
 
-#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:63
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:62
 msgid "Wednesday"
 msgstr "水曜"
 
-#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:67
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:66
 msgid "Thursday"
 msgstr "木曜"
 
-#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:71
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:70
 msgid "Friday"
 msgstr "金曜"
 
-#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:75
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:74
 msgid "Saturday"
 msgstr "土"
 
-#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:91
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:90
 msgid "Mobile"
 msgstr "モバイル版"
 
-#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:95
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:94
 msgid "Tablet"
 msgstr "タブレット"
 
-#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:99
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:98
 msgid "Desktop"
 msgstr "デスクトップ"
 
 #. translators: %d: post ID.
 #: includes/Admin/Data/Page/AdditionalLabelResolver.php:143
-#: includes/Admin/SearchController.php:173
-#: includes/Admin/SearchController.php:266
+#: includes/Admin/SearchController.php:172
+#: includes/Admin/SearchController.php:265
 #, php-format
 msgid "Untitled (%d)"
 msgstr "無題 #%d"
@@ -215,7 +217,7 @@ msgstr "著者より"
 msgid "404 Page"
 msgstr "404 ページ"
 
-#: includes/Admin/MenuItem.php:95 includes/Admin/SettingsController.php:73
+#: includes/Admin/MenuItem.php:95 includes/Admin/SettingsController.php:72
 msgid "Invalid menu item."
 msgstr "無効なメニュー項目です。"
 
@@ -223,13 +225,15 @@ msgstr "無効なメニュー項目です。"
 msgid "Conditions saved."
 msgstr "条件を保存しました。"
 
-#: includes/Admin/SettingsController.php:129
+#: includes/Admin/NavigationController.php:145
+#: includes/Admin/SettingsController.php:128
 msgid "Settings saved."
 msgstr "設定が保存されました。"
 
 #: build/index.js:1 build/index.js:2
 #: src/admin/components/common/DisplayConditionsButton.jsx:11
 #: src/admin/components/Modal/ConditionsModal.jsx:48
+#: src/admin/navigation/index.js:189 src/admin/navigation/sidebar-panel.jsx:121
 msgid "Display Conditions"
 msgstr "表示条件"
 
@@ -316,7 +320,9 @@ msgstr "ユーザー登録日と比較します。"
 
 #: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:132
 msgid "After"
-msgstr "負荷が 60 分間実行されると、タイムアウトによりコントローラーはバルク充電に戻り、その後再び吸収段階に戻ります。"
+msgstr ""
+"負荷が 60 分間実行されると、タイムアウトによりコントローラーはバルク充電に戻"
+"り、その後再び吸収段階に戻ります。"
 
 #: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:136
 msgid "Before"
@@ -428,10 +434,22 @@ msgstr "上級ルール"
 
 #. translators: %s: menu item title.
 #: build/index.js:2 src/admin/components/Modal/ConditionsModal.jsx:43
-#, js-format
 msgid "%s - Display Conditions"
 msgstr "%s -表示条件"
 
 #: build/index.js:2 src/admin/components/Modal/ConditionsModal.jsx:69
+#: src/admin/navigation/index.js:129 src/admin/navigation/index.js:160
+#: src/admin/navigation/sidebar-panel.jsx:99
 msgid "Unable to save changes. Please try again."
 msgstr "変更を保存できません。もう一度お試しください。"
+
+#: build/index.js:2 src/admin/navigation/index.js:102
+#: src/admin/navigation/sidebar-panel.jsx:42
+msgid "Unable to load conditions."
+msgstr ""
+
+#: build/index.js:2 src/admin/navigation/index.js:197
+#: src/admin/navigation/sidebar-panel.jsx:130
+#, fuzzy
+msgid "Edit Conditions"
+msgstr "条件を追加"

@@ -168,6 +168,12 @@
             ],
             "Unable to save changes. Please try again.": [
                 "Speichern nicht m\u00f6glich, bitte sp\u00e4ter nochmal versuchen."
+            ],
+            "Unable to load conditions.": [
+                ""
+            ],
+            "Edit Conditions": [
+                "Bedingung hinzuf\u00fcgen"
             ]
         }
     }
