@@ -9,6 +9,8 @@ declare(strict_types=1);
 
 namespace MenuGhost\Admin\Data\Page\Scope;
 
+use function __;
+
 /**
  * Provides the "Entire Site" scope definition.
  *
@@ -25,7 +27,7 @@ class EntireSiteScope {
 	public static function definition(): array {
 		return array(
 			'value'   => 'entire_site',
-			'label'   => 'Entire Site',
+			'label'   => __( 'Entire Site', 'menu-ghost' ),
 			'options' => array(),
 		);
 	}

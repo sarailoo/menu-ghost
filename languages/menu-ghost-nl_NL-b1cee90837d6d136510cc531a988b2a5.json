@@ -1,0 +1,132 @@
+{
+    "translation-revision-date": "YEAR-MO-DA HO:MI+ZONE",
+    "generator": "WP-CLI\/2.12.0",
+    "source": "src\/admin\/components\/AdvancedConditions\/definitions.js",
+    "domain": "messages",
+    "locale_data": {
+        "messages": {
+            "": {
+                "domain": "messages",
+                "lang": "nl_NL",
+                "plural-forms": "nplurals=2; plural=(n != 1);"
+            },
+            "User": [
+                "Gebruiker"
+            ],
+            "Control menu visibility based on who is visiting.": [
+                "Beheer de zichtbaarheid van het menu op basis van wie er op bezoek is."
+            ],
+            "Date & Time": [
+                "Datum & Tijd"
+            ],
+            "Schedule when links should appear.": [
+                "Plan in wanneer links moeten verschijnen."
+            ],
+            "URL & Campaign": [
+                "URL en campagne"
+            ],
+            "Leverage query strings and campaign parameters.": [
+                "Maak gebruik van queryreeksen en campagneparameters."
+            ],
+            "User Role": [
+                "Gebruikersrol"
+            ],
+            "Only show for selected WordPress roles.": [
+                "Alleen weergeven voor geselecteerde WordPress-rollen."
+            ],
+            "User Device": [
+                "Gebruikersapparaat"
+            ],
+            "Restrict to visitors on mobile, tablet, or desktop.": [
+                "Beperk je tot bezoekers op mobiel, tablet of desktop."
+            ],
+            "Login Status": [
+                "Aanmeldingsstatus"
+            ],
+            "Target visitors who are logged in or logged out.": [
+                "Target bezoekers die ingelogd of uitgelogd zijn."
+            ],
+            "Any": [
+                "Elke"
+            ],
+            "Logged in": [
+                "Ingelogd"
+            ],
+            "Logged out": [
+                "Uitgelogd"
+            ],
+            "Signup Date": [
+                "Datum van inschrijving"
+            ],
+            "Compare against the user registration date.": [
+                "Vergelijk met de registratiedatum van de gebruiker."
+            ],
+            "After": [
+                "Na"
+            ],
+            "Before": [
+                "Voor"
+            ],
+            "Browser Language": [
+                "Browsertaal"
+            ],
+            "Match the visitor language preference sent by the browser.": [
+                "Overeenkomen met de taalvoorkeur van de bezoeker die door de browser wordt verzonden"
+            ],
+            "Days of the Week": [
+                "Dagen van de week"
+            ],
+            "Display only on the selected weekdays.": [
+                "Alleen weergeven op de geselecteerde weekdagen."
+            ],
+            "Within Date Range": [
+                "Binnen datumbereik"
+            ],
+            "Activate only between two calendar dates.": [
+                "Activeer alleen tussen twee kalenderdatums."
+            ],
+            "Start date": [
+                "Startdatum"
+            ],
+            "End date": [
+                "Einddatum"
+            ],
+            "Within Time Window": [
+                "Binnen tijdvenster"
+            ],
+            "Activate during the selected time of day.": [
+                "Activeer tijdens het geselecteerde tijdstip van de dag."
+            ],
+            "Start time": [
+                "Begin uur en -datum"
+            ],
+            "End time": [
+                "Eindtijd"
+            ],
+            "URL Query Parameter": [
+                "Zoekopdracht parameter"
+            ],
+            "Check for a specific query-string key\/value.": [
+                "Controleer op een specifieke query-tekenreekstoets\/-waarde."
+            ],
+            "Mode": [
+                "Mode"
+            ],
+            "Exists": [
+                "Bestaan"
+            ],
+            "Equals": [
+                "Is gelijk aan"
+            ],
+            "Key": [
+                "Legenda"
+            ],
+            "Value": [
+                "Waarde"
+            ],
+            "Require a matching campaign parameter.": [
+                "Een overeenkomende campagneparameter vereisen."
+            ]
+        }
+    }
+}

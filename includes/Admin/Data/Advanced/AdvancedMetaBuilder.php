@@ -10,7 +10,9 @@ declare(strict_types=1);
 namespace MenuGhost\Admin\Data\Advanced;
 
 use MenuGhost\Admin\Data\Advanced\Languages\LanguageOptions;
+use function translate_user_role;
 use function wp_roles;
+use function __;
 
 /**
  * Builds advanced condition metadata consumed by the admin UI.
@@ -45,31 +47,31 @@ class AdvancedMetaBuilder {
 		return array(
 			array(
 				'value' => 0,
-				'label' => 'Sunday',
+				'label' => __( 'Sunday', 'menu-ghost' ),
 			),
 			array(
 				'value' => 1,
-				'label' => 'Monday',
+				'label' => __( 'Monday', 'menu-ghost' ),
 			),
 			array(
 				'value' => 2,
-				'label' => 'Tuesday',
+				'label' => __( 'Tuesday', 'menu-ghost' ),
 			),
 			array(
 				'value' => 3,
-				'label' => 'Wednesday',
+				'label' => __( 'Wednesday', 'menu-ghost' ),
 			),
 			array(
 				'value' => 4,
-				'label' => 'Thursday',
+				'label' => __( 'Thursday', 'menu-ghost' ),
 			),
 			array(
 				'value' => 5,
-				'label' => 'Friday',
+				'label' => __( 'Friday', 'menu-ghost' ),
 			),
 			array(
 				'value' => 6,
-				'label' => 'Saturday',
+				'label' => __( 'Saturday', 'menu-ghost' ),
 			),
 		);
 	}
@@ -85,15 +87,15 @@ class AdvancedMetaBuilder {
 		return array(
 			array(
 				'value' => 'mobile',
-				'label' => 'Mobile',
+				'label' => __( 'Mobile', 'menu-ghost' ),
 			),
 			array(
 				'value' => 'tablet',
-				'label' => 'Tablet',
+				'label' => __( 'Tablet', 'menu-ghost' ),
 			),
 			array(
 				'value' => 'desktop',
-				'label' => 'Desktop',
+				'label' => __( 'Desktop', 'menu-ghost' ),
 			),
 		);
 	}
@@ -112,7 +114,8 @@ class AdvancedMetaBuilder {
 			array_map(
 				static fn( string $role_key, array $role ): array => array(
 					'value' => $role_key,
-					'label' => isset( $role['name'] ) ? (string) $role['name'] : $role_key,
+					// Use WordPress' role translations when available.
+					'label' => isset( $role['name'] ) ? translate_user_role( (string) $role['name'] ) : $role_key,
 				),
 				array_keys( $roles ),
 				$roles

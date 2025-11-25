@@ -12,6 +12,8 @@ namespace MenuGhost\Admin\Data\Page\Scope;
 use WP_Post_Type;
 use WP_Taxonomy;
 use MenuGhost\Admin\Data\AsyncConfigFactory;
+use function __;
+use function sprintf;
 
 /**
  * Builds the Archive scope definition along with its option metadata.
@@ -31,7 +33,7 @@ class ArchiveScopeBuilder {
 	public function build( array $post_types ): array {
 		return array(
 			'value'          => 'archive',
-			'label'          => 'Archive',
+			'label'          => __( 'Archive', 'menu-ghost' ),
 			'options'        => array_merge(
 				$this->static_options(),
 				$this->post_type_options( $post_types )
@@ -51,19 +53,19 @@ class ArchiveScopeBuilder {
 		return array(
 			array(
 				'value' => 'archive_all',
-				'label' => 'All Archives',
+				'label' => __( 'All Archives', 'menu-ghost' ),
 			),
 			array(
 				'value' => 'archive_author',
-				'label' => 'Author Archive',
+				'label' => __( 'Author Archive', 'menu-ghost' ),
 			),
 			array(
 				'value' => 'archive_date',
-				'label' => 'Date Archive',
+				'label' => __( 'Date Archive', 'menu-ghost' ),
 			),
 			array(
 				'value' => 'archive_search',
-				'label' => 'Search Results',
+				'label' => __( 'Search Results', 'menu-ghost' ),
 			),
 		);
 	}
@@ -87,11 +89,13 @@ class ArchiveScopeBuilder {
 
 			$options[] = array(
 				'value' => "archive_{$post_type->name}",
-				'label' => "{$post_type->labels->name}: Archive",
+				/* translators: %s: Post type label. */
+				'label' => sprintf( __( '%s: Archive', 'menu-ghost' ), $post_type->labels->name ),
 			);
 
 			foreach ( $this->taxonomies_for( $post_type ) as $taxonomy ) {
-				$label = "{$post_type->labels->name}: {$taxonomy->labels->name}";
+				/* translators: 1: Post type label, 2: Taxonomy label. */
+				$label = sprintf( __( '%1$s: %2$s', 'menu-ghost' ), $post_type->labels->name, $taxonomy->labels->name );
 				$value = "archive_{$post_type->name}_{$taxonomy->name}";
 
 				$options[] = array(
@@ -105,12 +109,14 @@ class ArchiveScopeBuilder {
 
 				$options[] = array(
 					'value' => "child_of_{$post_type->name}_{$taxonomy->name}",
-					'label' => "{$post_type->labels->name}: Direct Child {$taxonomy->labels->name} Of",
+					/* translators: 1: Post type label, 2: Taxonomy label. */
+					'label' => sprintf( __( '%1$s: Direct Child %2$s Of', 'menu-ghost' ), $post_type->labels->name, $taxonomy->labels->name ),
 				);
 
 				$options[] = array(
 					'value' => "any_child_of_{$post_type->name}_{$taxonomy->name}",
-					'label' => "{$post_type->labels->name}: Any Child {$taxonomy->labels->name} Of",
+					/* translators: 1: Post type label, 2: Taxonomy label. */
+					'label' => sprintf( __( '%1$s: Any Child %2$s Of', 'menu-ghost' ), $post_type->labels->name, $taxonomy->labels->name ),
 				);
 			}
 		}

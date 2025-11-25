@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/11.4/phpunit.xsd"
+	bootstrap="tests/bootstrap.php"
+	colors="true"
+	backupGlobals="false"
+>
+	<php>
+		<env name="PATCHWORK_CACHE_USE_SYSTEM_TEMP_DIR" value="true"/>
+	</php>
+
+	<testsuites>
+		<testsuite name="Menu Ghost php unit tests">
+			<directory suffix="Test.php">./tests/Unit</directory>
+		</testsuite>
+	</testsuites>
+
+	<coverage>
+		<include>
+			<directory suffix=".php">includes</directory>
+		</include>
+		<exclude>
+			<directory>tests</directory>
+			<directory>vendor</directory>
+		</exclude>
+		<report>
+			<html outputDirectory="tmp"/>
+		</report>
+	</coverage>
+</phpunit>

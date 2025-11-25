@@ -1,0 +1,180 @@
+{
+    "translation-revision-date": "YEAR-MO-DA HO:MI+ZONE",
+    "generator": "WP-CLI\/2.12.0",
+    "source": "build\/index.js",
+    "domain": "messages",
+    "locale_data": {
+        "messages": {
+            "": {
+                "domain": "messages",
+                "lang": "pl_PL",
+                "plural-forms": "nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);"
+            },
+            "Include": [
+                ""
+            ],
+            "Exclude": [
+                ""
+            ],
+            "Entire Site": [
+                ""
+            ],
+            "Display Conditions": [
+                ""
+            ],
+            "All": [
+                ""
+            ],
+            "Remove rule": [
+                ""
+            ],
+            "Add Condition": [
+                ""
+            ],
+            "User": [
+                ""
+            ],
+            "Control menu visibility based on who is visiting.": [
+                ""
+            ],
+            "Date & Time": [
+                ""
+            ],
+            "Schedule when links should appear.": [
+                ""
+            ],
+            "URL & Campaign": [
+                ""
+            ],
+            "Leverage query strings and campaign parameters.": [
+                ""
+            ],
+            "User Role": [
+                ""
+            ],
+            "Only show for selected WordPress roles.": [
+                ""
+            ],
+            "User Device": [
+                ""
+            ],
+            "Restrict to visitors on mobile, tablet, or desktop.": [
+                ""
+            ],
+            "Login Status": [
+                ""
+            ],
+            "Target visitors who are logged in or logged out.": [
+                ""
+            ],
+            "Any": [
+                ""
+            ],
+            "Logged in": [
+                ""
+            ],
+            "Logged out": [
+                ""
+            ],
+            "Signup Date": [
+                ""
+            ],
+            "Compare against the user registration date.": [
+                ""
+            ],
+            "After": [
+                ""
+            ],
+            "Before": [
+                ""
+            ],
+            "Browser Language": [
+                ""
+            ],
+            "Match the visitor language preference sent by the browser.": [
+                ""
+            ],
+            "Days of the Week": [
+                ""
+            ],
+            "Display only on the selected weekdays.": [
+                ""
+            ],
+            "Within Date Range": [
+                ""
+            ],
+            "Activate only between two calendar dates.": [
+                ""
+            ],
+            "Start date": [
+                ""
+            ],
+            "End date": [
+                ""
+            ],
+            "Within Time Window": [
+                ""
+            ],
+            "Activate during the selected time of day.": [
+                ""
+            ],
+            "Start time": [
+                ""
+            ],
+            "End time": [
+                ""
+            ],
+            "URL Query Parameter": [
+                ""
+            ],
+            "Check for a specific query-string key\/value.": [
+                ""
+            ],
+            "Mode": [
+                ""
+            ],
+            "Exists": [
+                ""
+            ],
+            "Equals": [
+                ""
+            ],
+            "Key": [
+                ""
+            ],
+            "Value": [
+                ""
+            ],
+            "Require a matching campaign parameter.": [
+                ""
+            ],
+            "Cancel": [
+                ""
+            ],
+            "Saving\u2026": [
+                ""
+            ],
+            "Save & Close": [
+                ""
+            ],
+            "Pages": [
+                ""
+            ],
+            "Advanced Rules": [
+                ""
+            ],
+            "%s - Display Conditions": [
+                ""
+            ],
+            "Unable to save changes. Please try again.": [
+                ""
+            ],
+            "Unable to load conditions.": [
+                ""
+            ],
+            "Edit Conditions": [
+                ""
+            ]
+        }
+    }
+}

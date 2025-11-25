@@ -1,0 +1,452 @@
+# Copyright (C) 2025 Reza Sarailoo
+# This file is distributed under the GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Menu Ghost 2.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/menu-ghost\n"
+"POT-Creation-Date: 2025-11-25T19:16:58+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Domain: menu-ghost\n"
+"X-Generator: WP-CLI 2.12.0\n"
+
+#. Plugin Name of the plugin
+#: menu-ghost.php
+msgid "Menu Ghost"
+msgstr "Menu Ghost"
+
+#. Plugin URI of the plugin
+#: menu-ghost.php
+msgid "https://github.com/sarailoo/menu-ghost"
+msgstr "https://github.com/sarailoo/menu-ghost"
+
+#. Description of the plugin
+#: menu-ghost.php
+msgid ""
+"Target menu items by role, device, schedule, and campaign rules using a "
+"fast, native conditions interface inside the menu editor."
+msgstr ""
+"使用菜单编辑器中的快速本机条件界面，按角色、设备、时间表和活动规则定位菜单"
+"项。"
+
+#. Author of the plugin
+#: menu-ghost.php
+msgid "Reza Sarailoo"
+msgstr "Reza Sarailoo"
+
+#: includes/Admin/AdvancedController.php:61 includes/Admin/MenuItem.php:72
+#: includes/Admin/SettingsController.php:62
+msgid "Forbidden."
+msgstr "禁止。"
+
+#: includes/Admin/AdvancedController.php:69 includes/Admin/MenuItem.php:80
+msgid "Invalid nonce."
+msgstr "无效随机数。"
+
+#: includes/Admin/AdvancedController.php:85
+msgid "Invalid request payload."
+msgstr "请求的有效数据无效"
+
+#: includes/Admin/AdvancedController.php:106
+msgid "Rules saved."
+msgstr "规则已保存。"
+
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:50
+msgid "Sunday"
+msgstr "周日"
+
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:54
+msgid "Monday"
+msgstr "星期一"
+
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:58
+msgid "Tuesday"
+msgstr "星期二"
+
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:62
+msgid "Wednesday"
+msgstr "周三"
+
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:66
+msgid "Thursday"
+msgstr "星期四"
+
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:70
+msgid "Friday"
+msgstr "星期五"
+
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:74
+msgid "Saturday"
+msgstr "星期六"
+
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:90
+msgid "Mobile"
+msgstr "移动设备"
+
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:94
+msgid "Tablet"
+msgstr "平板电脑"
+
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:98
+msgid "Desktop"
+msgstr "桌面"
+
+#. translators: %d: post ID.
+#: includes/Admin/Data/Page/AdditionalLabelResolver.php:143
+#: includes/Admin/SearchController.php:172
+#: includes/Admin/SearchController.php:265
+#, php-format
+msgid "Untitled (%d)"
+msgstr "无标题%d"
+
+#: includes/Admin/Data/Page/ConditionTypes.php:31 build/index.js:1
+#: src/admin/components/Pages/ConditionRow.jsx:13
+msgid "Include"
+msgstr "包含"
+
+#: includes/Admin/Data/Page/ConditionTypes.php:35 build/index.js:1
+#: src/admin/components/Pages/ConditionRow.jsx:17
+msgid "Exclude"
+msgstr "排除"
+
+#: includes/Admin/Data/Page/Scope/ArchiveScopeBuilder.php:36
+msgid "Archive"
+msgstr "存档"
+
+#: includes/Admin/Data/Page/Scope/ArchiveScopeBuilder.php:56
+msgid "All Archives"
+msgstr "全部存档"
+
+#: includes/Admin/Data/Page/Scope/ArchiveScopeBuilder.php:60
+msgid "Author Archive"
+msgstr "作者存档"
+
+#: includes/Admin/Data/Page/Scope/ArchiveScopeBuilder.php:64
+msgid "Date Archive"
+msgstr "日期存档"
+
+#: includes/Admin/Data/Page/Scope/ArchiveScopeBuilder.php:68
+msgid "Search Results"
+msgstr "搜尋結果"
+
+#. translators: %s: Post type label.
+#: includes/Admin/Data/Page/Scope/ArchiveScopeBuilder.php:93
+#, php-format
+msgid "%s: Archive"
+msgstr "%s 存档"
+
+#. translators: 1: Post type label, 2: Taxonomy label.
+#: includes/Admin/Data/Page/Scope/ArchiveScopeBuilder.php:98
+#, php-format
+msgid "%1$s: %2$s"
+msgstr "%1$s：%2$s"
+
+#. translators: 1: Post type label, 2: Taxonomy label.
+#: includes/Admin/Data/Page/Scope/ArchiveScopeBuilder.php:113
+#, php-format
+msgid "%1$s: Direct Child %2$s Of"
+msgstr "%1$s ：直系子级%2$s ，共"
+
+#. translators: 1: Post type label, 2: Taxonomy label.
+#: includes/Admin/Data/Page/Scope/ArchiveScopeBuilder.php:119
+#, php-format
+msgid "%1$s: Any Child %2$s Of"
+msgstr "%1$s ：任何子级%2$s ，共"
+
+#: includes/Admin/Data/Page/Scope/EntireSiteScope.php:30 build/index.js:1
+#: src/admin/components/Pages/ConditionRow.jsx:24
+msgid "Entire Site"
+msgstr "整个网站"
+
+#: includes/Admin/Data/Page/Scope/SingularScopeBuilder.php:36
+msgid "Singular"
+msgstr "单数"
+
+#: includes/Admin/Data/Page/Scope/SingularScopeBuilder.php:57
+msgid "All Singular"
+msgstr "全部单数"
+
+#: includes/Admin/Data/Page/Scope/SingularScopeBuilder.php:61
+msgid "Front Page"
+msgstr "首页"
+
+#. translators: %s: Post type label.
+#: includes/Admin/Data/Page/Scope/SingularScopeBuilder.php:86
+#, php-format
+msgid "%s: Single"
+msgstr "%s 单个"
+
+#. translators: 1: Post type label, 2: Taxonomy label.
+#: includes/Admin/Data/Page/Scope/SingularScopeBuilder.php:93
+#, php-format
+msgid "%1$s: In %2$s"
+msgstr "%1$s 于 %2$s"
+
+#. translators: 1: Post type label, 2: Taxonomy label.
+#: includes/Admin/Data/Page/Scope/SingularScopeBuilder.php:103
+#, php-format
+msgid "%1$s: In Child %2$s"
+msgstr "%1$s ：在子级%2$s中"
+
+#. translators: %s: Post type label.
+#: includes/Admin/Data/Page/Scope/SingularScopeBuilder.php:110
+#, php-format
+msgid "%s: By Author"
+msgstr "%s 作者"
+
+#: includes/Admin/Data/Page/Scope/SingularScopeBuilder.php:128
+msgid "Direct Child Of"
+msgstr "指定一个子项"
+
+#: includes/Admin/Data/Page/Scope/SingularScopeBuilder.php:132
+msgid "Any Child Of"
+msgstr "任何一个子项"
+
+#: includes/Admin/Data/Page/Scope/SingularScopeBuilder.php:136
+msgid "By Author"
+msgstr "作者："
+
+#: includes/Admin/Data/Page/Scope/SingularScopeBuilder.php:140
+msgid "404 Page"
+msgstr "404页"
+
+#: includes/Admin/MenuItem.php:95 includes/Admin/SettingsController.php:72
+msgid "Invalid menu item."
+msgstr "菜单项无效。"
+
+#: includes/Admin/MenuItem.php:122
+msgid "Conditions saved."
+msgstr "条件已保存。"
+
+#: includes/Admin/NavigationController.php:145
+#: includes/Admin/SettingsController.php:128
+msgid "Settings saved."
+msgstr "设置已保存。"
+
+#: build/index.js:1 build/index.js:2
+#: src/admin/components/common/DisplayConditionsButton.jsx:11
+#: src/admin/components/Modal/ConditionsModal.jsx:48
+#: src/admin/navigation/index.js:189 src/admin/navigation/sidebar-panel.jsx:121
+msgid "Display Conditions"
+msgstr "显示条件"
+
+#: build/index.js:1 src/admin/components/Pages/AsyncEntitySelect.jsx:56
+#: src/admin/components/Pages/fields/AdditionalField.jsx:23
+msgid "All"
+msgstr "全部"
+
+#: build/index.js:1 src/admin/components/Pages/ConditionRow.jsx:105
+msgid "Remove rule"
+msgstr "删除规则"
+
+#: build/index.js:1 src/admin/components/Pages/PagesTab.jsx:74
+msgid "Add Condition"
+msgstr "添加条件"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:22
+msgid "User"
+msgstr "用户"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:23
+msgid "Control menu visibility based on who is visiting."
+msgstr "根据访问者控制菜单可见性。"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:30
+msgid "Date & Time"
+msgstr "时间"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:31
+msgid "Schedule when links should appear."
+msgstr "安排应显示链接的时间。"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:35
+msgid "URL & Campaign"
+msgstr "网址和营销活动"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:36
+msgid "Leverage query strings and campaign parameters."
+msgstr "利用查询字符串和活动参数。"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:47
+msgid "User Role"
+msgstr "用户权限"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:48
+msgid "Only show for selected WordPress roles."
+msgstr "仅显示所选WordPress角色。"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:68
+msgid "User Device"
+msgstr "用户设备"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:69
+msgid "Restrict to visitors on mobile, tablet, or desktop."
+msgstr "仅限使用手机、平板电脑或电脑的访客。"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:89
+msgid "Login Status"
+msgstr "登录状态"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:90
+msgid "Target visitors who are logged in or logged out."
+msgstr "锁定已登录或注销的访客。"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:100
+msgid "Any"
+msgstr "不筛选"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:103
+msgid "Logged in"
+msgstr "已登录"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:107
+msgid "Logged out"
+msgstr "已退出"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:118
+msgid "Signup Date"
+msgstr "注册日期"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:119
+msgid "Compare against the user registration date."
+msgstr "与用户注册日期进行比较。"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:132
+msgid "After"
+msgstr "之后"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:136
+msgid "Before"
+msgstr "之前"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:154
+msgid "Browser Language"
+msgstr "先按 IP 地址，然后按浏览器语言"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:155
+msgid "Match the visitor language preference sent by the browser."
+msgstr "匹配浏览器发送的访问者语言首选项。"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:181
+msgid "Days of the Week"
+msgstr "星期"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:182
+msgid "Display only on the selected weekdays."
+msgstr "仅在选定的工作日显示。"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:202
+msgid "Within Date Range"
+msgstr "在日期區間中"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:203
+msgid "Activate only between two calendar dates."
+msgstr "仅在两个日历日期之间激活。"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:213
+msgid "Start date"
+msgstr "起始日期"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:220
+msgid "End date"
+msgstr "结束日期"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:231
+msgid "Within Time Window"
+msgstr "在时间窗口内"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:232
+msgid "Activate during the selected time of day."
+msgstr "在一天中选定的时间激活。"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:242
+msgid "Start time"
+msgstr "开始时间"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:249
+msgid "End time"
+msgstr "结束时间"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:260
+msgid "URL Query Parameter"
+msgstr "URL查询关键参数"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:261
+msgid "Check for a specific query-string key/value."
+msgstr "检查特定的查询字符串键/值。"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:270
+#: src/admin/components/AdvancedConditions/definitions.js:315
+msgid "Mode"
+msgstr "模式"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:275
+#: src/admin/components/AdvancedConditions/definitions.js:320
+msgid "Exists"
+msgstr "存在"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:279
+#: src/admin/components/AdvancedConditions/definitions.js:324
+msgid "Equals"
+msgstr "等于"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:286
+msgid "Key"
+msgstr "项目名"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:292
+#: src/admin/components/AdvancedConditions/definitions.js:331
+msgid "Value"
+msgstr "内容"
+
+#: build/index.js:1 src/admin/components/AdvancedConditions/definitions.js:306
+msgid "Require a matching campaign parameter."
+msgstr "需要匹配的活动参数。"
+
+#: build/index.js:1 src/admin/components/Modal/ConditionsFooter.jsx:7
+msgid "Cancel"
+msgstr "取消"
+
+#: build/index.js:1 src/admin/components/Modal/ConditionsFooter.jsx:16
+msgid "Saving…"
+msgstr "正在保存…"
+
+#: build/index.js:1 src/admin/components/Modal/ConditionsFooter.jsx:17
+msgid "Save & Close"
+msgstr "保存&关闭"
+
+#: build/index.js:1 src/admin/components/Modal/ConditionsModal.jsx:16
+msgid "Pages"
+msgstr "页面"
+
+#: build/index.js:1 src/admin/components/Modal/ConditionsModal.jsx:20
+msgid "Advanced Rules"
+msgstr "先进的规则"
+
+#. translators: %s: menu item title.
+#: build/index.js:2 src/admin/components/Modal/ConditionsModal.jsx:43
+msgid "%s - Display Conditions"
+msgstr "%s -显示条件"
+
+#: build/index.js:2 src/admin/components/Modal/ConditionsModal.jsx:69
+#: src/admin/navigation/index.js:129 src/admin/navigation/index.js:160
+#: src/admin/navigation/sidebar-panel.jsx:99
+msgid "Unable to save changes. Please try again."
+msgstr "无法保存更改。请重试。"
+
+#: build/index.js:2 src/admin/navigation/index.js:102
+#: src/admin/navigation/sidebar-panel.jsx:42
+msgid "Unable to load conditions."
+msgstr ""
+
+#: build/index.js:2 src/admin/navigation/index.js:197
+#: src/admin/navigation/sidebar-panel.jsx:130
+#, fuzzy
+msgid "Edit Conditions"
+msgstr "添加条件"

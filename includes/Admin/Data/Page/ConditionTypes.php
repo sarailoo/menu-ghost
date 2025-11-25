@@ -9,6 +9,8 @@ declare(strict_types=1);
 
 namespace MenuGhost\Admin\Data\Page;
 
+use function __;
+
 /**
  * Provides available condition types for the menu UI.
  *
@@ -26,11 +28,11 @@ class ConditionTypes {
 		return array(
 			array(
 				'value' => 'include',
-				'label' => 'Include',
+				'label' => __( 'Include', 'menu-ghost' ),
 			),
 			array(
 				'value' => 'exclude',
-				'label' => 'Exclude',
+				'label' => __( 'Exclude', 'menu-ghost' ),
 			),
 		);
 	}
