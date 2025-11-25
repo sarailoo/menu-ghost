@@ -101,6 +101,7 @@ Yes. As long as the menu item exists in WordPress, you can apply Menu Ghost rule
 
 = Where are the translations stored? =
 If you upload the plugin to WordPress.org, translations are managed by GlotPress. Custom translations can be placed in `wp-content/languages/plugins/menu-ghost-*.mo`.
+Bundled locales: es_ES, fr_FR, de_DE, pt_BR, ru_RU, it_IT, nl_NL, ja, zh_CN, pl_PL, fa_IR (RTL styles included).
 
 = Can I migrate settings between sites? =
 All data is stored in post meta, so it travels with standard WordPress export/import tools, backup plugins, or site migration services.
