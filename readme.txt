@@ -14,7 +14,7 @@ Target menu items by role, device, schedule, and campaign rules using a fast, na
 
 Menu Ghost lets you conditionally display each menu item based on factors like user role, device, date, pages, and more.
 
-Design frictionless navigation experiences and boost conversions by only showing relevant menu items to each visitor. Menu Ghost integrates with the native WordPress menu editor and adds a modern conditions interface that feels like it belongs in core. Everything happens inside **Appearance → Menus** no shortcodes or template edits required.
+Design frictionless navigation experiences and boost conversions by only showing relevant menu items to each visitor. Menu Ghost integrates with the native WordPress menu editor and adds a modern conditions interface that feels like it belongs in core. Everything happens inside **Appearance → Menus** (classic themes) or **Site Editor → Navigation** (block themes) no shortcodes or template edits required.
 
 == What does Menu Ghost do? ==
 
@@ -76,7 +76,7 @@ The interface is built with React and uses WordPress components so it remains re
 
 1. Upload the `menu-ghost` folder to `/wp-content/plugins/` or install via the Plugins screen.
 2. Activate Menu Ghost through **Plugins → Installed Plugins**.
-3. Go to **Appearance → Menus**, open a menu item, and click **Display Conditions** to start adding rules.
+3. Go to **Appearance → Menus** (or **Site Editor → Navigation** in block themes), open a menu item, and click **Display Conditions** to start adding rules.
 
 
 == Frequently Asked Questions ==
@@ -101,6 +101,7 @@ Yes. As long as the menu item exists in WordPress, you can apply Menu Ghost rule
 
 = Where are the translations stored? =
 If you upload the plugin to WordPress.org, translations are managed by GlotPress. Custom translations can be placed in `wp-content/languages/plugins/menu-ghost-*.mo`.
+Bundled locales: es_ES, fr_FR, de_DE, pt_BR, ru_RU, it_IT, nl_NL, ja, zh_CN, pl_PL, fa_IR (RTL styles included).
 
 = Can I migrate settings between sites? =
 All data is stored in post meta, so it travels with standard WordPress export/import tools, backup plugins, or site migration services.
@@ -121,13 +122,9 @@ The source code for Menu Ghost lives in the public repository at https://github.
 7. Expanded User panel with role/device/login toggles enabled for desktop, tablet, and mobile.
 8. Date & Time editor displaying weekday picker, date range, and time window controls.
 9. URL & Campaign detail editor configuring a query parameter and UTM campaign value.
+10. Display Conditions button inside the block editor Navigation inspector for block themes.
 
 == Changelog ==
 
 = 1.0.0 =
 * Initial public release with menu item display rules, advanced campaign targeting, and REST-powered async selectors.
-
-== Upgrade Notice ==
-
-= 1.0.0 =
-First release. Configure your menus after activation to start controlling visibility.

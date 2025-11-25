@@ -14,7 +14,7 @@
 	"scripts": {
 		"phpcs": "vendor/bin/phpcs . --standard=phpcs.xml --extensions=php",
 		"phpcbf": "vendor/bin/phpcbf .",
-		"language": "wp i18n make-pot . languages/menu-ghost.pot",
+		"language": "wp i18n make-pot . languages/menu-ghost.pot && wp i18n make-json languages --no-purge --pretty-print",
 		"test": "./vendor/bin/phpunit"
 	},
 	"autoload": {

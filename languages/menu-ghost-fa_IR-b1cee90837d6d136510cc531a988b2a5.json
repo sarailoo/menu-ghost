@@ -1,0 +1,132 @@
+{
+    "translation-revision-date": "2025-11-19T21:19:42+00:00",
+    "generator": "WP-CLI\/2.12.0",
+    "source": "src\/admin\/components\/AdvancedConditions\/definitions.js",
+    "domain": "messages",
+    "locale_data": {
+        "messages": {
+            "": {
+                "domain": "messages",
+                "lang": "fa",
+                "plural-forms": "nplurals=2; plural=(n != 1);"
+            },
+            "User": [
+                "\u06a9\u0627\u0631\u0628\u0631"
+            ],
+            "Control menu visibility based on who is visiting.": [
+                "\u0646\u0645\u0627\u06cc\u0634 \u0645\u0646\u0648 \u0631\u0627 \u0628\u0631 \u0627\u0633\u0627\u0633 \u0647\u0648\u06cc\u062a \u0628\u0627\u0632\u062f\u06cc\u062f\u06a9\u0646\u0646\u062f\u0647 \u06a9\u0646\u062a\u0631\u0644 \u06a9\u0646\u06cc\u062f."
+            ],
+            "Date & Time": [
+                "\u062a\u0627\u0631\u06cc\u062e \u0648 \u0632\u0645\u0627\u0646"
+            ],
+            "Schedule when links should appear.": [
+                "\u0632\u0645\u0627\u0646 \u0646\u0645\u0627\u06cc\u0634 \u0644\u06cc\u0646\u06a9\u200c\u0647\u0627 \u0631\u0627 \u0632\u0645\u0627\u0646\u200c\u0628\u0646\u062f\u06cc \u06a9\u0646\u06cc\u062f."
+            ],
+            "URL & Campaign": [
+                "\u0622\u062f\u0631\u0633 URL \u0648 \u06a9\u0645\u067e\u06cc\u0646"
+            ],
+            "Leverage query strings and campaign parameters.": [
+                "\u0627\u0632 query string\u200c\u0647\u0627 \u0648 \u067e\u0627\u0631\u0627\u0645\u062a\u0631\u0647\u0627\u06cc \u06a9\u0645\u067e\u06cc\u0646 \u0628\u0647\u0631\u0647 \u0628\u0628\u0631\u06cc\u062f."
+            ],
+            "User Role": [
+                "\u0646\u0642\u0634 \u06a9\u0627\u0631\u0628\u0631"
+            ],
+            "Only show for selected WordPress roles.": [
+                "\u0641\u0642\u0637 \u0628\u0631\u0627\u06cc \u0646\u0642\u0634\u200c\u0647\u0627\u06cc \u0627\u0646\u062a\u062e\u0627\u0628\u200c\u0634\u062f\u0647\u0654 \u0648\u0631\u062f\u067e\u0631\u0633 \u0646\u0645\u0627\u06cc\u0634 \u062f\u0627\u062f\u0647 \u0634\u0648\u062f."
+            ],
+            "User Device": [
+                "\u062f\u0633\u062a\u06af\u0627\u0647 \u06a9\u0627\u0631\u0628\u0631"
+            ],
+            "Restrict to visitors on mobile, tablet, or desktop.": [
+                "\u0641\u0642\u0637 \u0628\u0631\u0627\u06cc \u0628\u0627\u0632\u062f\u06cc\u062f\u06a9\u0646\u0646\u062f\u06af\u0627\u0646 \u0631\u0648\u06cc \u0645\u0648\u0628\u0627\u06cc\u0644\u060c \u062a\u0628\u0644\u062a \u06cc\u0627 \u062f\u0633\u06a9\u062a\u0627\u067e \u0645\u062d\u062f\u0648\u062f \u06a9\u0646\u06cc\u062f."
+            ],
+            "Login Status": [
+                "\u0648\u0636\u0639\u06cc\u062a \u0648\u0631\u0648\u062f"
+            ],
+            "Target visitors who are logged in or logged out.": [
+                "\u0628\u0627\u0632\u062f\u06cc\u062f\u06a9\u0646\u0646\u062f\u06af\u0627\u0646\u0650 \u0648\u0627\u0631\u062f \u0634\u062f\u0647 \u06cc\u0627 \u062e\u0627\u0631\u062c \u0634\u062f\u0647 \u0631\u0627 \u0647\u062f\u0641 \u0628\u06af\u06cc\u0631\u06cc\u062f."
+            ],
+            "Any": [
+                "\u0647\u0631 \u0648\u0636\u0639\u06cc\u062a\u06cc"
+            ],
+            "Logged in": [
+                "\u0648\u0627\u0631\u062f \u0634\u062f\u0647"
+            ],
+            "Logged out": [
+                "\u062e\u0627\u0631\u062c \u0634\u062f\u0647"
+            ],
+            "Signup Date": [
+                "\u062a\u0627\u0631\u06cc\u062e \u062b\u0628\u062a\u200c\u0646\u0627\u0645"
+            ],
+            "Compare against the user registration date.": [
+                "\u0628\u0627 \u062a\u0627\u0631\u06cc\u062e \u062b\u0628\u062a\u200c\u0646\u0627\u0645 \u06a9\u0627\u0631\u0628\u0631 \u0645\u0642\u0627\u06cc\u0633\u0647 \u06a9\u0646\u06cc\u062f."
+            ],
+            "After": [
+                "\u0628\u0639\u062f \u0627\u0632"
+            ],
+            "Before": [
+                "\u0642\u0628\u0644 \u0627\u0632"
+            ],
+            "Browser Language": [
+                "\u0632\u0628\u0627\u0646 \u0645\u0631\u0648\u0631\u06af\u0631"
+            ],
+            "Match the visitor language preference sent by the browser.": [
+                "\u0628\u0627 \u062a\u0646\u0638\u06cc\u0645\u0627\u062a \u0632\u0628\u0627\u0646 \u0627\u0631\u0633\u0627\u0644\u200c\u0634\u062f\u0647 \u062a\u0648\u0633\u0637 \u0645\u0631\u0648\u0631\u06af\u0631\u0650 \u0628\u0627\u0632\u062f\u06cc\u062f\u06a9\u0646\u0646\u062f\u0647 \u062a\u0637\u0628\u06cc\u0642 \u062f\u0647\u06cc\u062f."
+            ],
+            "Days of the Week": [
+                "\u0631\u0648\u0632\u0647\u0627\u06cc \u0647\u0641\u062a\u0647"
+            ],
+            "Display only on the selected weekdays.": [
+                "\u0641\u0642\u0637 \u062f\u0631 \u0631\u0648\u0632\u0647\u0627\u06cc \u0627\u0646\u062a\u062e\u0627\u0628\u200c\u0634\u062f\u0647\u0654 \u0647\u0641\u062a\u0647 \u0646\u0645\u0627\u06cc\u0634 \u062f\u0647\u06cc\u062f."
+            ],
+            "Within Date Range": [
+                "\u062f\u0627\u062e\u0644 \u0628\u0627\u0632\u0647\u0654 \u062a\u0627\u0631\u06cc\u062e"
+            ],
+            "Activate only between two calendar dates.": [
+                "\u0641\u0642\u0637 \u0628\u06cc\u0646 \u062f\u0648 \u062a\u0627\u0631\u06cc\u062e \u062a\u0642\u0648\u06cc\u0645\u06cc \u0641\u0639\u0627\u0644 \u0634\u0648\u062f."
+            ],
+            "Start date": [
+                "\u062a\u0627\u0631\u06cc\u062e \u0634\u0631\u0648\u0639"
+            ],
+            "End date": [
+                "\u062a\u0627\u0631\u06cc\u062e \u067e\u0627\u06cc\u0627\u0646"
+            ],
+            "Within Time Window": [
+                "\u062f\u0627\u062e\u0644 \u0628\u0627\u0632\u0647\u0654 \u0632\u0645\u0627\u0646\u06cc"
+            ],
+            "Activate during the selected time of day.": [
+                "\u062f\u0631 \u0628\u0627\u0632\u0647\u0654 \u0632\u0645\u0627\u0646\u06cc \u0627\u0646\u062a\u062e\u0627\u0628\u200c\u0634\u062f\u0647\u0654 \u0631\u0648\u0632 \u0641\u0639\u0627\u0644 \u0634\u0648\u062f."
+            ],
+            "Start time": [
+                "\u0632\u0645\u0627\u0646 \u0634\u0631\u0648\u0639"
+            ],
+            "End time": [
+                "\u0632\u0645\u0627\u0646 \u067e\u0627\u06cc\u0627\u0646"
+            ],
+            "URL Query Parameter": [
+                "\u067e\u0627\u0631\u0627\u0645\u062a\u0631 \u06a9\u0648\u0626\u0631\u06cc URL"
+            ],
+            "Check for a specific query-string key\/value.": [
+                "\u0648\u062c\u0648\u062f \u06cc\u06a9 \u06a9\u0644\u06cc\u062f\/\u0645\u0642\u062f\u0627\u0631 \u062e\u0627\u0635 \u062f\u0631 query string \u0631\u0627 \u0628\u0631\u0631\u0633\u06cc \u06a9\u0646\u06cc\u062f."
+            ],
+            "Mode": [
+                "\u062d\u0627\u0644\u062a"
+            ],
+            "Exists": [
+                "\u0648\u062c\u0648\u062f \u062f\u0627\u0631\u062f"
+            ],
+            "Equals": [
+                "\u0628\u0631\u0627\u0628\u0631 \u0627\u0633\u062a \u0628\u0627"
+            ],
+            "Key": [
+                "\u06a9\u0644\u06cc\u062f"
+            ],
+            "Value": [
+                "\u0645\u0642\u062f\u0627\u0631"
+            ],
+            "Require a matching campaign parameter.": [
+                "\u0646\u06cc\u0627\u0632 \u0628\u0647 \u06cc\u06a9 \u067e\u0627\u0631\u0627\u0645\u062a\u0631 \u06a9\u0645\u067e\u06cc\u0646\u0650 \u0645\u0637\u0627\u0628\u0642 \u062f\u0627\u0631\u062f."
+            ]
+        }
+    }
+}

@@ -12,6 +12,8 @@ namespace MenuGhost\Admin\Data\Page\Scope;
 use WP_Post_Type;
 use WP_Taxonomy;
 use MenuGhost\Admin\Data\AsyncConfigFactory;
+use function __;
+use function sprintf;
 
 /**
  * Builds the Singular scope definition the admin UI consumes.
@@ -31,7 +33,7 @@ class SingularScopeBuilder {
 	public function build( array $post_types ): array {
 		return array(
 			'value'          => 'singular',
-			'label'          => 'Singular',
+			'label'          => __( 'Singular', 'menu-ghost' ),
 			'options'        => array_merge(
 				$this->static_options(),
 				$this->post_type_options( $post_types ),
@@ -52,11 +54,11 @@ class SingularScopeBuilder {
 		return array(
 			array(
 				'value' => 'singular_all',
-				'label' => 'All Singular',
+				'label' => __( 'All Singular', 'menu-ghost' ),
 			),
 			array(
 				'value' => 'front_page',
-				'label' => 'Front Page',
+				'label' => __( 'Front Page', 'menu-ghost' ),
 			),
 		);
 	}
@@ -80,13 +82,15 @@ class SingularScopeBuilder {
 
 			$options[] = array(
 				'value' => "singular_{$post_type->name}",
-				'label' => "{$post_type->labels->name}: Single",
+				/* translators: %s: Post type label. */
+				'label' => sprintf( __( '%s: Single', 'menu-ghost' ), $post_type->labels->name ),
 			);
 
 			foreach ( $this->taxonomies_for( $post_type ) as $taxonomy ) {
 				$options[] = array(
 					'value' => "singular_{$post_type->name}_in_{$taxonomy->name}",
-					'label' => "{$post_type->labels->name}: In {$taxonomy->labels->name}",
+					/* translators: 1: Post type label, 2: Taxonomy label. */
+					'label' => sprintf( __( '%1$s: In %2$s', 'menu-ghost' ), $post_type->labels->name, $taxonomy->labels->name ),
 				);
 
 				if ( ! $taxonomy->hierarchical ) {
@@ -95,13 +99,15 @@ class SingularScopeBuilder {
 
 				$options[] = array(
 					'value' => "singular_{$post_type->name}_in_child_{$taxonomy->name}",
-					'label' => "{$post_type->labels->name}: In Child {$taxonomy->labels->name}",
+					/* translators: 1: Post type label, 2: Taxonomy label. */
+					'label' => sprintf( __( '%1$s: In Child %2$s', 'menu-ghost' ), $post_type->labels->name, $taxonomy->labels->name ),
 				);
 			}
 
 			$options[] = array(
 				'value' => "singular_{$post_type->name}_by_author",
-				'label' => "{$post_type->labels->name}: By Author",
+				/* translators: %s: Post type label. */
+				'label' => sprintf( __( '%s: By Author', 'menu-ghost' ), $post_type->labels->name ),
 			);
 		}
 
@@ -119,19 +125,19 @@ class SingularScopeBuilder {
 		return array(
 			array(
 				'value' => 'child_of',
-				'label' => 'Direct Child Of',
+				'label' => __( 'Direct Child Of', 'menu-ghost' ),
 			),
 			array(
 				'value' => 'any_child_of',
-				'label' => 'Any Child Of',
+				'label' => __( 'Any Child Of', 'menu-ghost' ),
 			),
 			array(
 				'value' => 'by_author',
-				'label' => 'By Author',
+				'label' => __( 'By Author', 'menu-ghost' ),
 			),
 			array(
 				'value' => 'not_found404',
-				'label' => '404 Page',
+				'label' => __( '404 Page', 'menu-ghost' ),
 			),
 		);
 	}

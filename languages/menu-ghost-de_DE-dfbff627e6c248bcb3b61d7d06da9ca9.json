@@ -1,0 +1,180 @@
+{
+    "translation-revision-date": "YEAR-MO-DA HO:MI+ZONE",
+    "generator": "WP-CLI\/2.12.0",
+    "source": "build\/index.js",
+    "domain": "messages",
+    "locale_data": {
+        "messages": {
+            "": {
+                "domain": "messages",
+                "lang": "de_DE",
+                "plural-forms": "nplurals=2; plural=(n != 1);"
+            },
+            "Include": [
+                "Einschlie\u00dfen"
+            ],
+            "Exclude": [
+                "Ausschlie\u00dfen"
+            ],
+            "Entire Site": [
+                "Ganze Website"
+            ],
+            "Display Conditions": [
+                "Anzeigebedingungen"
+            ],
+            "All": [
+                "Alle"
+            ],
+            "Remove rule": [
+                "Regel entfernen"
+            ],
+            "Add Condition": [
+                "Bedingung hinzuf\u00fcgen"
+            ],
+            "User": [
+                "Benutzer"
+            ],
+            "Control menu visibility based on who is visiting.": [
+                "Kontrollieren Sie die Sichtbarkeit des Men\u00fcs basierend darauf, wer Sie besucht."
+            ],
+            "Date & Time": [
+                "Datum und Zeit"
+            ],
+            "Schedule when links should appear.": [
+                "Planen Sie, wann Links angezeigt werden sollen."
+            ],
+            "URL & Campaign": [
+                "URL & Kampagne"
+            ],
+            "Leverage query strings and campaign parameters.": [
+                "Nutzen Sie Abfragezeichenfolgen und Kampagnenparameter."
+            ],
+            "User Role": [
+                "Mitgliedsrolle"
+            ],
+            "Only show for selected WordPress roles.": [
+                "Nur f\u00fcr ausgew\u00e4hlte WordPress-Rollen anzeigen."
+            ],
+            "User Device": [
+                "Benutzer, ger\u00e4t"
+            ],
+            "Restrict to visitors on mobile, tablet, or desktop.": [
+                "Beschr\u00e4nken Sie sich auf Besucher auf Mobilger\u00e4ten, Tablets oder Desktops."
+            ],
+            "Login Status": [
+                "Anmeldestatus"
+            ],
+            "Target visitors who are logged in or logged out.": [
+                "Richten Sie sich an Besucher, die eingeloggt oder abgemeldet sind."
+            ],
+            "Any": [
+                "Jeder"
+            ],
+            "Logged in": [
+                "Angemeldet"
+            ],
+            "Logged out": [
+                "Abgemeldet"
+            ],
+            "Signup Date": [
+                "Datum der Registrierung"
+            ],
+            "Compare against the user registration date.": [
+                "Vergleichen Sie mit dem Registrierungsdatum des Benutzers."
+            ],
+            "After": [
+                "Nachher"
+            ],
+            "Before": [
+                "Vorher"
+            ],
+            "Browser Language": [
+                "Browser-Sprache"
+            ],
+            "Match the visitor language preference sent by the browser.": [
+                "Passen Sie die vom Browser gesendete Spracheinstellung des Besuchers an."
+            ],
+            "Days of the Week": [
+                "Wochentage"
+            ],
+            "Display only on the selected weekdays.": [
+                "Nur an den ausgew\u00e4hlten Wochentagen anzeigen."
+            ],
+            "Within Date Range": [
+                "Innerhalb eines Zeitraums"
+            ],
+            "Activate only between two calendar dates.": [
+                "Nur zwischen zwei Kalenderdaten aktivieren."
+            ],
+            "Start date": [
+                "Startdatum"
+            ],
+            "End date": [
+                "Enddatum"
+            ],
+            "Within Time Window": [
+                "Innerhalb des Zeitfensters"
+            ],
+            "Activate during the selected time of day.": [
+                "Aktivieren Sie w\u00e4hrend der ausgew\u00e4hlten Tageszeit."
+            ],
+            "Start time": [
+                "Startzeit"
+            ],
+            "End time": [
+                "Ende"
+            ],
+            "URL Query Parameter": [
+                "URL Abfrage Schl\u00fcsselparameter"
+            ],
+            "Check for a specific query-string key\/value.": [
+                "Suchen Sie nach einem bestimmten Query-String-Schl\u00fcssel\/-Wert."
+            ],
+            "Mode": [
+                "Modus"
+            ],
+            "Exists": [
+                "Vorhanden"
+            ],
+            "Equals": [
+                "Ist gleich"
+            ],
+            "Key": [
+                "Kennungl"
+            ],
+            "Value": [
+                "Wert"
+            ],
+            "Require a matching campaign parameter.": [
+                "Erfordert einen passenden Kampagnenparameter."
+            ],
+            "Cancel": [
+                "Abbrechen"
+            ],
+            "Saving\u2026": [
+                "Sichern\u00a0\u2026"
+            ],
+            "Save & Close": [
+                "Speichern & Schlie\u00dfen"
+            ],
+            "Pages": [
+                "Seiten"
+            ],
+            "Advanced Rules": [
+                "Erweiterte Regeln"
+            ],
+            "%s - Display Conditions": [
+                "%s - Anzeigebedingungen"
+            ],
+            "Unable to save changes. Please try again.": [
+                "Speichern nicht m\u00f6glich, bitte sp\u00e4ter nochmal versuchen."
+            ],
+            "Unable to load conditions.": [
+                ""
+            ],
+            "Edit Conditions": [
+                "Bedingung hinzuf\u00fcgen"
+            ]
+        }
+    }
+}

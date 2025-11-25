@@ -1,6 +1,7 @@
 import { createRoot, render } from '@wordpress/element';
 import App from './App';
 import './styles/admin.scss';
+import './navigation';
 
 const globalSettings = window.mnghMenuGhost || {};
 const {

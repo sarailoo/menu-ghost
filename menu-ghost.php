@@ -35,6 +35,11 @@ if ( ! defined( 'MNGH_VERSION' ) ) {
 	define( 'MNGH_VERSION', '1.0.0' );
 }
 
+// Plugin main file.
+if ( ! defined( 'MNGH_PLUGIN_FILE' ) ) {
+	define( 'MNGH_PLUGIN_FILE', __FILE__ );
+}
+
 // Plugin directory.
 if ( ! defined( 'MNGH_DIR' ) ) {
 	define( 'MNGH_DIR', plugin_dir_path( __FILE__ ) );
