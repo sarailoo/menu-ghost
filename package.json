@@ -1,6 +1,6 @@
 {
 	"name": "menu-ghost",
-	"version": "2.0.0",
+	"version": "2.0.1",
 	"description": "Target menu items by role, device, schedule, and campaign rules from a native conditions panel.",
 	"author": "Reza Sarailoo",
 	"license": "GPL-2.0",
