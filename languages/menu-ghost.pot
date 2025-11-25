@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-11-20T00:58:16+00:00\n"
+"POT-Creation-Date: 2025-11-25T17:15:03+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: menu-ghost\n"
@@ -36,7 +36,7 @@ msgstr ""
 
 #: includes/Admin/AdvancedController.php:61
 #: includes/Admin/MenuItem.php:72
-#: includes/Admin/SettingsController.php:63
+#: includes/Admin/SettingsController.php:62
 msgid "Forbidden."
 msgstr ""
 
@@ -53,50 +53,50 @@ msgstr ""
 msgid "Rules saved."
 msgstr ""
 
-#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:51
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:50
 msgid "Sunday"
 msgstr ""
 
-#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:55
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:54
 msgid "Monday"
 msgstr ""
 
-#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:59
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:58
 msgid "Tuesday"
 msgstr ""
 
-#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:63
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:62
 msgid "Wednesday"
 msgstr ""
 
-#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:67
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:66
 msgid "Thursday"
 msgstr ""
 
-#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:71
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:70
 msgid "Friday"
 msgstr ""
 
-#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:75
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:74
 msgid "Saturday"
 msgstr ""
 
-#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:91
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:90
 msgid "Mobile"
 msgstr ""
 
-#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:95
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:94
 msgid "Tablet"
 msgstr ""
 
-#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:99
+#: includes/Admin/Data/Advanced/AdvancedMetaBuilder.php:98
 msgid "Desktop"
 msgstr ""
 
 #. translators: %d: post ID.
 #: includes/Admin/Data/Page/AdditionalLabelResolver.php:143
-#: includes/Admin/SearchController.php:173
-#: includes/Admin/SearchController.php:266
+#: includes/Admin/SearchController.php:172
+#: includes/Admin/SearchController.php:265
 #, php-format
 msgid "Untitled (%d)"
 msgstr ""
@@ -216,7 +216,7 @@ msgid "404 Page"
 msgstr ""
 
 #: includes/Admin/MenuItem.php:95
-#: includes/Admin/SettingsController.php:73
+#: includes/Admin/SettingsController.php:72
 msgid "Invalid menu item."
 msgstr ""
 
@@ -224,7 +224,8 @@ msgstr ""
 msgid "Conditions saved."
 msgstr ""
 
-#: includes/Admin/SettingsController.php:129
+#: includes/Admin/NavigationController.php:145
+#: includes/Admin/SettingsController.php:128
 msgid "Settings saved."
 msgstr ""
 
@@ -232,6 +233,8 @@ msgstr ""
 #: build/index.js:2
 #: src/admin/components/common/DisplayConditionsButton.jsx:11
 #: src/admin/components/Modal/ConditionsModal.jsx:48
+#: src/admin/navigation/index.js:158
+#: src/admin/navigation/sidebar-panel.jsx:97
 msgid "Display Conditions"
 msgstr ""
 
@@ -484,5 +487,20 @@ msgstr ""
 
 #: build/index.js:2
 #: src/admin/components/Modal/ConditionsModal.jsx:69
+#: src/admin/navigation/index.js:115
+#: src/admin/navigation/index.js:136
+#: src/admin/navigation/sidebar-panel.jsx:79
 msgid "Unable to save changes. Please try again."
+msgstr ""
+
+#: build/index.js:2
+#: src/admin/navigation/index.js:89
+#: src/admin/navigation/sidebar-panel.jsx:37
+msgid "Unable to load conditions."
+msgstr ""
+
+#: build/index.js:2
+#: src/admin/navigation/index.js:165
+#: src/admin/navigation/sidebar-panel.jsx:106
+msgid "Edit Conditions"
 msgstr ""

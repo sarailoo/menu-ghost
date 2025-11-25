@@ -69,7 +69,7 @@ msgstr "آیتم منو نامعتبر است."
 msgid "Conditions saved."
 msgstr "شرایط ذخیره شد."
 
-#: includes/Admin/SettingsController.php:129
+#: includes/Admin/NavigationController.php:129 includes/Admin/SettingsController.php:129
 msgid "Settings saved."
 msgstr "تنظیمات ذخیره شد."
 

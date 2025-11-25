@@ -11,6 +11,7 @@ namespace MenuGhost\Admin\Assets;
 
 use MenuGhost\Admin\DataProvider;
 use MenuGhost\SettingsRepository;
+use function get_current_screen;
 use function add_action;
 use function admin_url;
 use function wp_create_nonce;
@@ -37,6 +38,7 @@ class AdminAssets {
 		$instance = new self();
 
 		add_action( 'admin_enqueue_scripts', array( $instance, 'enqueue' ) );
+		add_action( 'enqueue_block_editor_assets', array( $instance, 'enqueue_block_editor' ) );
 	}
 
 	/**
@@ -61,6 +63,34 @@ class AdminAssets {
 		wp_enqueue_style( 'wp-components' );
 
 		$this->localize_script();
+	}
+
+	/**
+	 * Enqueue assets inside the block editor (navigation block / site editor).
+	 *
+	 * @return void
+	 */
+	public function enqueue_block_editor(): void {
+		$screen = get_current_screen();
+
+		if ( ! $screen ) {
+			return;
+		}
+
+		// Only load for navigation editor contexts.
+		$is_navigation_editor = 'wp_navigation' === ( $screen->post_type ?? '' ) || 'site-editor' === ( $screen->id ?? '' );
+
+		if ( ! $is_navigation_editor ) {
+			return;
+		}
+
+		$asset_file = include MNGH_BUILD_DIR . 'index.asset.php';
+
+		$this->enqueue_scripts( $asset_file );
+		$this->enqueue_styles( $asset_file );
+
+		// Minimal data needed in the block editor; menu items/saved settings are fetched per link.
+		$this->localize_script( array(), array() );
 	}
 
 	/**
@@ -113,10 +143,13 @@ class AdminAssets {
 	 *
 	 * @since 1.1.0
 	 *
+	 * @param array<int,array<string,mixed>>|null $menu_items     Optional precomputed menu items.
+	 * @param array<int,array<string,mixed>>|null $saved_settings Optional precomputed saved settings.
+	 *
 	 * @return void
 	 */
-	private function localize_script(): void {
-		$menu_items    = DataProvider::generate_menu_items_data();
+	private function localize_script( ?array $menu_items = null, ?array $saved_settings = null ): void {
+		$menu_items    = null === $menu_items ? DataProvider::generate_menu_items_data() : $menu_items;
 		$menu_item_ids = array_map(
 			static fn( array $menu_item ): int => (int) ( $menu_item['id'] ?? 0 ),
 			$menu_items
@@ -124,7 +157,7 @@ class AdminAssets {
 
 		$page_conditions   = DataProvider::generate_page_conditions();
 		$additional_lookup = DataProvider::build_additional_lookup( $page_conditions['scopes'] ?? array() );
-		$saved_settings    = SettingsRepository::get_many( $menu_item_ids );
+		$saved_settings    = null === $saved_settings ? SettingsRepository::get_many( $menu_item_ids ) : $saved_settings;
 
 		foreach ( $saved_settings as $menu_id => $settings ) {
 			if ( empty( $settings['pages'] ) || ! is_array( $settings['pages'] ) ) {

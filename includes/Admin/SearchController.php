@@ -9,12 +9,11 @@ declare(strict_types=1);
 
 namespace MenuGhost\Admin;
 
-use function __;
-use function absint;
-
 use WP_REST_Request;
 use WP_REST_Response;
 use WP_REST_Server;
+use function __;
+use function absint;
 
 /**
  * Registers REST API endpoints used by the admin async search controls.

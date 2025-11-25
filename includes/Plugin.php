@@ -14,6 +14,7 @@ use MenuGhost\Admin\MenuItem;
 use MenuGhost\Admin\AdvancedController;
 use MenuGhost\Admin\SettingsController;
 use MenuGhost\Admin\SearchController;
+use MenuGhost\Admin\NavigationController;
 use MenuGhost\Frontend\MenuVisibility;
 use function add_action;
 use function add_filter;
@@ -60,6 +61,7 @@ class Plugin {
 
 		AdminAssets::register();
 		SearchController::register();
+		NavigationController::register();
 
 		if ( ! is_admin() ) {
 			MenuVisibility::instance();
