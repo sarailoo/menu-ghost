@@ -19,7 +19,7 @@ use MenuGhost\Frontend\MenuVisibility;
 use function add_action;
 use function add_filter;
 use function determine_locale;
-use function load_plugin_textdomain;
+use function load_textdomain;
 use function plugin_basename;
 use function dirname;
 use function is_admin;
@@ -80,7 +80,12 @@ class Plugin {
 	 * @return void
 	 */
 	public function load_textdomain(): void {
-		load_plugin_textdomain( 'menu-ghost', false, dirname( plugin_basename( MNGH_PLUGIN_FILE ) ) . '/languages' );
+		$locale = determine_locale();
+		$mofile = sprintf( '%1$slanguages/menu-ghost-%2$s.mo', MNGH_DIR, $locale );
+
+		if ( is_readable( $mofile ) ) {
+			load_textdomain( 'menu-ghost', $mofile );
+		}
 	}
 
 	/**
