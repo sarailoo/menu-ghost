@@ -126,15 +126,18 @@ The source code for Menu Ghost lives in the public repository at https://github.
 
 == Changelog ==
 
+= 2.0.1 =
+* Bugfix: RTL style for checkboxes.
+
 = 2.0.0 =
-* Block editor themes support
-* New languages support
-* RTL support
+* Block editor themes support.
+* New languages support.
+* RTL support.
 
 = 1.0.1 =
-* Update readme
-* Add screenshots
-* Add plugin logo
+* Update readme.
+* Add screenshots.
+* Add plugin logo.
 
 = 1.0.0 =
 * Initial public release with menu item display rules, advanced campaign targeting, and REST-powered async selectors.
