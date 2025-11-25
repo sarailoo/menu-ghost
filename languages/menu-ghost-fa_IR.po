@@ -2,7 +2,7 @@
 # This file is distributed under the GPL v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Menu Ghost 1.0.1\n"
+"Project-Id-Version: Menu Ghost 2.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/menu-ghost\n"
 "POT-Creation-Date: 2025-11-25T19:16:58+00:00\n"
 "PO-Revision-Date: 2025-11-19T21:19:42+00:00\n"
